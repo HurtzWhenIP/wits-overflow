@@ -4,23 +4,29 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import Homepage from './Homepage'
 import Login from './Login'
 import Siginup from './Signup'
-import Questions from './Questions'
+import Questions from '../components/Questions'
 import Profile from './Profile'
 import Notfound from './Notfound'
-import verifyPlayer from './verifyPlayer';
+import Verifyplayer from './Verifyplayer';
+import useStore from '../hooks/useStore';
+
+/*
+TODO LOGIK TO CHECK IF USER IS LOGGED IN => ternary operator based on user
+Object in state*/
 
 function App() {
+
+  //Pull useriobj from store
+  const userObj = useStore(state => state.userObj);
+
   return (
     <Router>
-      <>
-
-
-        <Switch>
+      <Switch>
           <Route path="/" exact>
-            <Homepage/>
+            {userObj ? <Homepage/> : <Verifyplayer/>}
           </Route>
           <Route path="/homepage">
-            <Homepage/>
+          {userObj ? <Homepage/> : <Verifyplayer/>}
           </Route>
           <Route path='/login'>
             <Login/>
@@ -32,13 +38,10 @@ function App() {
             <Profile/>
           </Route>
           <Route path='/questions'>
-            <Questions/>
+          {userObj ? <Questions/> : <Verifyplayer/>}
           </Route>
-          <Route path='/error' component={Notfound}/>
-          <Route path='/verification' component={verifyPlayer}/>
-          
+          <Route component={Notfound}/>
         </Switch>
-      </>
     </Router>
   );
 }
