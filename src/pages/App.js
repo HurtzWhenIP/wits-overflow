@@ -35,7 +35,7 @@ function App() {
             <Siginup/>
           </Route>
           <Route path='/profile'>
-            <Profile/>
+            {userObj ? <Profile/> : <Verifyplayer/>}
           </Route>
           <Route path='/questions'>
           {userObj ? <Questions/> : <Verifyplayer/>}

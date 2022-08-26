@@ -1,0 +1,57 @@
+.verificationBox{
+    display: flex;
+    flex-flow: column;
+    max-height: 50%;
+    max-width: 55vw;
+    margin: 8% auto;
+    text-align: center;
+    font-size: larger;
+    border: 2.5px solid rgb(0,59,92);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.witsLogo{
+    width: 10em;
+    height: 10em;
+    background-image: url("../imgs/witsLogo.jpeg");
+    background-size: contain;
+    margin-right: 1em;
+}
+
+.titleBox{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnBox{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.descriptionBox{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.witsKudu{
+    background-image: url("../imgs/witsKudu.png");
+    height: 10em;
+    width: 50em;
+    background-size: cover;
+    margin-bottom: 3em;
+}
+
+.witsKudu2{
+    background-image: url("../imgs/witsKudu2.png");
+    height: 10em;
+    width: 50em;
+    background-size: cover;
+    margin-bottom: 3em;
+}
