@@ -10,6 +10,12 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     border-radius: 5px;
     padding: 2em;
+    background-color: rgba(250,250,250,0.5);
+}
+
+.title{
+    font-size: 5rem;
+    margin: 0;
 }
 
 .witsLogo{
@@ -54,4 +60,33 @@
     width: 50em;
     background-size: cover;
     margin-bottom: 3em;
+}
+
+.questions{
+    color: rgb(0, 92, 145);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.answers{
+    color:rgb(189, 101, 0);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.desc{
+    width: 140em;
+}
+
+.descSpan{
+    font-size: larger;
+}
+
+.btnSpan{
+    font-size: medium;
+}
+
+.btnDiv{
+    display: flex;
+    flex-flow: column;
 }

@@ -1,16 +1,25 @@
 import '../styles/verifyPlayer.css';
 import React from 'react';
 import {useHistory} from 'react-router-dom'
+import { useState } from 'react';
 
 function Verifyplayer() {
 
     const history = useHistory();
 
+    const [flag,setFlag] = useState(true);
+
+    const timeout = setTimeout(() => {
+        setFlag(!flag);
+    },2500);
+
     const signIn = () => {
+        clearTimeout(timeout);
         history.push('/login');
     }
 
     const signUp = () => {
+        clearTimeout(timeout);
         history.push('signup');
     }
 
@@ -20,20 +29,30 @@ function Verifyplayer() {
                 <div className="witsLogo"></div>
                 <h1 className="title">Wits-Overflow</h1>
             </div>
-            <h3 className="slogan">Slogan</h3>
+            {flag ? <h3 className="questions">Questons? Yes.</h3> : <h3 className="answers">Answers? Maybe...</h3>}
             <div className="descriptionBox">
-            <div className="witsKudu"></div>
-                <p>
-Lorem ipsum dolor sit amet, ctae eros tempus, quis consectetur quam tincidunt. Nulla aliquam velit eu cursus molestie. Nulla facilisi. Mauris consequat risus id purus scelerisque varius. Aenean ut purus ut metus fringilla rhoncus. Suspendisse vel porttitor ipsum, ac euismod mi. Duis et arcu ut purus convallis posuere ut in orci. Sed vel risus eu risus semper tincidunt. Maecenas feugiat ornare lectus, non tempor neque pretium a. </p>
+                <div className="witsKudu"></div>
+                    <ul className="desc">
+                        <span className="descSpan">
+                        Welcome to Wits-Overflow, an online discussion forum for 
+                        the Wits CSAM community.
+                        </span>
+                    </ul>
                 <div className="witsKudu2"></div>
             </div>
             <div className="btnBox">
-                <button onClick={signIn}>
-                    Sign In
-                </button>
-                <button onClick={signUp}>
-                    Sign Up
-                </button>
+                <div className="btnDiv">
+                    <button onClick={signIn}>
+                        <strong>Sign In</strong>
+                    </button>
+                    <span className="btnSpan">Already have an Account.</span>
+                </div>
+                <div className="btnDiv">
+                    <button onClick={signUp}> 
+                        <strong>Sign Up</strong>
+                    </button>
+                    <span className="btnSpan">Need a new Account?</span>
+                </div>
 
             </div>
             

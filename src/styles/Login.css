@@ -1,0 +1,112 @@
+.loginBox{
+	width: fit-content;
+    padding: 2em 5em;border: 2.5px solid rgb(0,59,92);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    border-radius: 5px;
+	margin: 9% auto;
+	font-size: larger;
+	color: rgb(0,59,92);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.loginBtn{
+	margin: 1em;
+	width: 12em;
+}
+
+.form{
+	width: fit-content;
+}
+
+.group { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.label          {
+  color:#999; 
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.input:focus ~ .label, .input:valid ~ .label    {
+  top:-20px;
+  font-size:14px;
+  color:rgb(0,59,92);
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:rgb(0,59,92); 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:rgb(0,59,92); }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:rgb(0,59,92); }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:rgb(0,59,92); }
+  to  { width:0; background:transparent; }
+}
