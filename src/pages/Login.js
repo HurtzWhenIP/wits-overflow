@@ -10,14 +10,14 @@ function Login(){
                     <input className="input" type="text" required/>
                     
                     <span className="bar"></span>
-                    <label className='label'>Name</label>
+                    <label className='label'>Username</label>
                 </div>
                 
                 <div class="group">      
-                    <input className="input" type="text" required/>
+                    <input className="input" type="password" required/>
                     
                     <span className="bar"></span>
-                    <label className='label'>Email</label>
+                    <label className='label'>Password</label>
                 </div>
             </form>
             <button className='loginBtn'>Login</button>

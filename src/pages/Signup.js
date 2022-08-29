@@ -4,8 +4,8 @@ import '../styles/Signup.css'
 function Signup(){
     return(
         <div className="SignupBox">
-            <h1>Create an account with Wits-Overflow</h1>
             <div className="witsLogo"></div>
+            <h1>Create an account with Wits-Overflow</h1>
 
             <form className="SignUpForm">
                 <div className="grid-container">
@@ -37,7 +37,7 @@ function Signup(){
                     </div>
                 </div>
             </form>
-            <button className='loginBtn'>Login</button>
+            <button className='loginBtn'>Sign Up</button>
 
         </div>
     )
