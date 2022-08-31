@@ -6,7 +6,7 @@ http://34.175.29.208
 
 ## login.php
 
-### Parameters
+### Parameters:
 
 Email
 
