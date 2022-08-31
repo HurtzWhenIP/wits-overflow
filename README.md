@@ -24,7 +24,7 @@ Email
 ]
 ```
 
-## register.php:
+## register.php
 
 ### Parameters:
 
