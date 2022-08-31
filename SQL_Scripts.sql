@@ -14,7 +14,7 @@ CREATE TABLE QuestionPost(
     PRIMARY KEY(PostNumber)
 );
 
-CREATE TABLE AnswersPost(
+CREATE TABLE AnswerPost(
     AnswerID INT NOT NULL AUTO_INCREMENT, 
     ParentPostID INT NOT NULL, 
     Username VARCHAR(20),
