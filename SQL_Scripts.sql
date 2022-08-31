@@ -3,7 +3,7 @@ CREATE TABLE User(
     FirstName VARCHAR(20), 
     LastName VARCHAR(20), 
     HashedPassword VARCHAR(40)
-    );
+);
 
 CREATE TABLE QuestionPost(
     PostID INT NOT NULL AUTO_INCREMENT,
@@ -12,7 +12,7 @@ CREATE TABLE QuestionPost(
     PostContent TEXT,
     isSolved BOOLEAN NOT NULL,
     PRIMARY KEY(PostNumber)
-    );
+);
 
 CREATE TABLE AnswersPost(
     AnswerID INT NOT NULL AUTO_INCREMENT, 
@@ -21,7 +21,7 @@ CREATE TABLE AnswersPost(
     AnswerContent TEXT, 
     isEdited BOOLEAN NOT NULL,
     PRIMARY KEY(PostNumber, ParentPostNumber)
-    );
+);
 
 /*Basic 3 tables. User, posts and answers
 User stores Email, First name, Last name , hashed password
