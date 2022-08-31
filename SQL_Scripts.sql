@@ -2,7 +2,6 @@ CREATE TABLE User (
     UserID INT NOT NULL AUTO_INCREMENT,
     FirstName VARCHAR(20), 
     LastName VARCHAR(20), 
-    Username VARCHAR(20),
     Email VARCHAR(40),
     HashedPassword VARCHAR(40),
     PRIMARY KEY(UserID)
