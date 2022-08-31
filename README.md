@@ -6,34 +6,46 @@ http://34.175.29.208
 
 ## login.php
 
-### Parameters
+### Sample Requst
 
-```
-Email
+```json
+{
+    "data": {
+        "Email": "sample@gmail.com"
+    },
+    "signal": {}
+}
 ```
 
 ### Sample Response
 
-```
+```json
 [
     {
-        "UserID": 3,
-        "FirstName": "My",
-        "LastName": "Name",
-        "Email": "Jeff",
-        "HashedPassword": "hgfyt"
+        "UserID": 12,
+        "FirstName": "Simple",
+        "LastName": "Sample",
+        "Email": "sample@gmail.com",
+        "HashedPassword": "69420"
     }
 ]
 ```
 
 ## register.php
 
-### Parameters
+### Sample Request
 
-    FirstName
-    LastName
-    Email
-    HashedPassword
+```json
+{
+    "data": {
+        "FirstName": "Mike",
+        "LastName": "Oxmall",
+        "Email": "mikeoxmall@gmail.com",
+        "HashedPassword": "sdkajs"
+    },
+    "signal": {}
+}
+```
 
 ### Response
 
