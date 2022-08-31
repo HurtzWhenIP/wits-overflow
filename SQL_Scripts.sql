@@ -25,7 +25,8 @@ CREATE TABLE AnswerPost (
     AnswerContent TEXT, 
     Edited BOOLEAN NOT NULL,
     PRIMARY KEY(AnswerID),
-    FOREIGN KEY (UserID) REFERENCES User(UserID)
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (ParentPostID) REFERENCES QuestionPost(PostID)
 );
 
 /*Basic 3 tables. User, posts and answers
