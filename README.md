@@ -12,20 +12,17 @@ Email
 
 ### Response
 
----
-
+```
 [
-{
-"UserID": 3,
-"FirstName": "My",
-"LastName": "Name",
-"Email": "Jeff",
-"HashedPassword": "hgfyt"
-}
+    {
+        "UserID": 3,
+        "FirstName": "My",
+        "LastName": "Name",
+        "Email": "Jeff",
+        "HashedPassword": "hgfyt"
+    }
 ]
-output: JSON
-
----
+```
 
 ## register.php:
 
