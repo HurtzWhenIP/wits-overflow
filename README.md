@@ -6,7 +6,7 @@ http://34.175.29.208
 
 ## login.php
 
-### Parameters:
+### Parameters
 
 Email
 
@@ -26,12 +26,13 @@ Email
 
 ## register.php
 
-### Parameters:
+### Parameters
 
     FirstName
     LastName
     Email
     HashedPassword
 
-###Response:
+### Response
+
 None
