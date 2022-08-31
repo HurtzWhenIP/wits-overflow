@@ -1,26 +1,31 @@
-CREATE TABLE User(
-    Email VARCHAR(40) PRIMARY KEY, 
+CREATE TABLE User (
+    UserID INT NOT NULL AUTO_INCREMENT,
     FirstName VARCHAR(20), 
     LastName VARCHAR(20), 
-    HashedPassword VARCHAR(40)
+    Username VARCHAR(20),
+    Email VARCHAR(40),
+    HashedPassword VARCHAR(40),
+    PRIMARY KEY(UserID)
 );
 
-CREATE TABLE QuestionPost(
+CREATE TABLE QuestionPost (
     PostID INT NOT NULL AUTO_INCREMENT,
-    Username VARCHAR(20),
+    UserID INT,
     PostTitle TEXT, 
     PostContent TEXT,
-    isSolved BOOLEAN NOT NULL,
-    PRIMARY KEY(PostNumber)
+    Solved BOOLEAN NOT NULL,
+    PRIMARY KEY(PostID),
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
-CREATE TABLE AnswerPost(
+CREATE TABLE AnswerPost (
     AnswerID INT NOT NULL AUTO_INCREMENT, 
     ParentPostID INT NOT NULL, 
-    Username VARCHAR(20),
+    UserID INT,
     AnswerContent TEXT, 
-    isEdited BOOLEAN NOT NULL,
-    PRIMARY KEY(PostNumber, ParentPostNumber)
+    Edited BOOLEAN NOT NULL,
+    PRIMARY KEY(AnswerID),
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
 /*Basic 3 tables. User, posts and answers
