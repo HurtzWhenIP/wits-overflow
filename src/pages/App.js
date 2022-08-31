@@ -9,6 +9,9 @@ import Profile from './Profile'
 import Notfound from './Notfound'
 import Verifyplayer from './Verifyplayer';
 import useStore from '../hooks/useStore';
+import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
+import {FcHome,FcExpand} from 'react-icons/fc';
+
 
 /*
 TODO LOGIK TO CHECK IF USER IS LOGGED IN => ternary operator based on user
@@ -20,29 +23,37 @@ function App() {
   const userObj = useStore(state => state.userObj);
 
   return (
-    <Router>
-      <Switch>
-          <Route path="/" exact>
+    <>
+      <Router>
+        <Navbar>
+          <NavItem icon={<FcHome size={100}/>}/>
+          <NavItem icon={<FcExpand size={100}/>} clickable={true}>
+            <DropdownMenu/>
+          </NavItem>
+        </Navbar>
+        <Switch>
+            <Route path="/" exact>
+              {userObj ? <Homepage/> : <Verifyplayer/>}
+            </Route>
+            <Route path="/homepage">
             {userObj ? <Homepage/> : <Verifyplayer/>}
-          </Route>
-          <Route path="/homepage">
-          {userObj ? <Homepage/> : <Verifyplayer/>}
-          </Route>
-          <Route path='/login'>
-            <Login/>
-          </Route>
-          <Route path='/signup'>
-            <Siginup/>
-          </Route>
-          <Route path='/profile'>
-            {userObj ? <Profile/> : <Verifyplayer/>}
-          </Route>
-          <Route path='/questions'>
-          {userObj ? <Questions/> : <Verifyplayer/>}
-          </Route>
-          <Route component={Notfound}/>
-        </Switch>
-    </Router>
+            </Route>
+            <Route path='/login'>
+              <Login/>
+            </Route>
+            <Route path='/signup'>
+              <Siginup/>
+            </Route>
+            <Route path='/profile'>
+              {userObj ? <Profile/> : <Verifyplayer/>}
+            </Route>
+            <Route path='/questions'>
+            {userObj ? <Questions/> : <Verifyplayer/>}
+            </Route>
+            <Route component={Notfound}/>
+          </Switch>
+      </Router>
+    </>
   );
 }
 
