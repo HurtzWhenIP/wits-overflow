@@ -11,21 +11,24 @@ http://34.175.29.208
 ```json
 {
     "data": {
-        "Email": "sample@gmail.com"
+        "Email": "verushan69@gmail.com",
+        "HashedPassword": "69420"
     },
     "signal": {}
 }
 ```
+
+If the user does not exist in the database, an empty JSON will be returned
 
 ### Sample Response
 
 ```json
 [
     {
-        "UserID": 12,
-        "FirstName": "Simple",
-        "LastName": "Sample",
-        "Email": "sample@gmail.com",
+        "UserID": 20,
+        "FirstName": "Verunathan",
+        "LastName": "Muthusamy",
+        "Email": "verushan69@gmail.com",
         "HashedPassword": "69420"
     }
 ]
@@ -62,6 +65,22 @@ http://34.175.29.208
 }
 ```
 
+## getAllQuestions.php
+
+### Sample response
+
+```json
+[
+    {
+        "PostID": 1,
+        "UserID": 1,
+        "PostTitle": "How to fix a segmentation fault",
+        "PostContent": "Can someone explain why values[n] raises segmentation fault",
+        "Solved": 0
+    }
+]
+```
+
 ## addAnswer.php
 
 ### Sample Post request
@@ -76,3 +95,28 @@ http://34.175.29.208
     "signal": {}
 }
 ```
+
+## validateUser.php
+
+### Sample Post request
+
+```json
+{
+    "data": {
+        "Email": "verushannaidoo@gmail.com"
+    },
+    "signal": {}
+}
+```
+
+### Sample response
+
+```json
+[
+    {
+        "UserID": 22
+    }
+]
+```
+
+If the user does not exist in the table, an empty JSON string will be returned

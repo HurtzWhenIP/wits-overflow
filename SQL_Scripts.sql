@@ -12,7 +12,7 @@ CREATE TABLE QuestionPost (
     UserID INT,
     PostTitle TEXT, 
     PostContent TEXT,
-    Solved BOOLEAN NOT NULL,
+    Solved BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY(PostID),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
@@ -22,7 +22,7 @@ CREATE TABLE AnswerPost (
     ParentPostID INT NOT NULL, 
     UserID INT,
     AnswerContent TEXT, 
-    Edited BOOLEAN NOT NULL,
+    Edited BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY(AnswerID),
     FOREIGN KEY (UserID) REFERENCES User(UserID),
     FOREIGN KEY (ParentPostID) REFERENCES QuestionPost(PostID)
