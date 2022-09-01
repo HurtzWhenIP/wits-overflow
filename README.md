@@ -33,7 +33,7 @@ http://34.175.29.208
 
 ## register.php
 
-### Sample Request
+### Sample Post Request
 
 ```json
 {
@@ -47,6 +47,32 @@ http://34.175.29.208
 }
 ```
 
-### Response
+## addQuestion.php
 
-None
+### Sample Post request
+
+```json
+{
+    "data": {
+        "UserID": 4,
+        "PostTitle": "How to fix a segmentation fault",
+        "PostContent": "Can someone explain why values[n] raises  segmentation fault"
+    },
+    "signal": {}
+}
+```
+
+## addAnswer.php
+
+### Sample Post request
+
+```json
+{
+    "data": {
+        "UserID": 4,
+        "ParentPostID": 6,
+        "AnswerContent": "The array only goes up to index n - 1"
+    },
+    "signal": {}
+}
+```
