@@ -26,7 +26,7 @@ function App() {
   //history hook for redirection
   const history = useHistory();
 
-  const goHome = () => {
+  var goHome = () => {
     history.push('/homepage');
   }
 
