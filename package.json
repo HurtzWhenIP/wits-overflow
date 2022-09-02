@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
+    "axios": "^0.27.2",
     "react-helmet": "^6.1.0",
     "zustand": "^4.1.0"
   }
