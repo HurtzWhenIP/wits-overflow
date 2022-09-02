@@ -41,8 +41,10 @@ function Login(){
                 method: 'POST',
                 url: 'login.php',
                 requestConfig: {
-                    "Email": username,
-                    "HashedPassword": pswd,
+                    data: {
+                        "Email": username,
+                        "HashedPassword": pswd,
+                    }
                 }
             });
         }
@@ -62,7 +64,7 @@ function Login(){
             <div className="witsLogo"></div>
             <h1>Wits-Overflow Login</h1>
             <form className='form'>
-                <div class="group">      
+                <div className="group">      
                     <input className="input" type="text" required
                     onChange={(e) => {setUsername(e.target.value)}}/>
                     
@@ -70,7 +72,7 @@ function Login(){
                     <label className='label'>Username</label>
                 </div>
                 
-                <div class="group">      
+                <div className="group">      
                     <input className="input" type="password" required
                     onChange={(e) => {setPswd(e.target.value)}}/>
                     

@@ -70,7 +70,9 @@ function Signup(){
                 method: "POST",
                 url: "validateUser.php",
                 requestConfig: {
-                    "Email": email
+                    data: {
+                        "Email": email
+                    }
                 }
             });
         }
@@ -83,10 +85,12 @@ function Signup(){
             method: "POST",
             url: "register.php",
             requestConfig: {
-                "FirstName": fname,
-		        "LastName": lname,
-		        "Email": email,
-		        "HashedPassword": pswd
+                data: {
+                    "FirstName": fname,
+		            "LastName": lname,
+		            "Email": email,
+		            "HashedPassword": pswd
+                }
             }
         })
     }
