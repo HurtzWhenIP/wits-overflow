@@ -19,13 +19,13 @@ function Homepage() {
     });
 
     useEffect(() => {
-        const result = Array.isArray(response);
+        const result = Array.isArray(response) && Array(response);
         if(response && (result.length>0)){
             console.log("Questions stored");
             setData(result);
         }
 
-        return(() => {console.log(data)})
+        return(() => {console.log(data);})
     },[response])
 
     return (
