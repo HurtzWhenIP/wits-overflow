@@ -14,9 +14,7 @@ function Homepage(){
     },[response])
 
     return(
-        <>
-            {(loading && response) ? <h1>Homepage</h1> : <h1>{response}</h1>}
-        </>
+        <h1>Homepage</h1>
     )
 }
 
