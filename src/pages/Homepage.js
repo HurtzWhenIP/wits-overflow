@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import '../styles/Homepage.css'
 import { FcSearch } from "react-icons/fc";
 import Loading from "../components/Loading";
+import Questions from "../components/Questions";
 
 
 function Homepage() {
@@ -19,7 +20,7 @@ function Homepage() {
     });
 
     useEffect(() => {
-        const result = Array.isArray(response);
+        const result = Array.isArray(response) && Array(response);
         if (response && (result.length > 0)) {
             console.log("Questions stored");
             setData(result);
@@ -58,10 +59,10 @@ function Homepage() {
                     </div>
                     <button className="search_button">{<FcSearch size={35} />}</button>
                 </div>
+                <Questions data={data} /> 
             </div>
 
             
-           
         </>
     );
 };

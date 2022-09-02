@@ -21,6 +21,7 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    z-index: 10;
 }
 
 .nav-item{
