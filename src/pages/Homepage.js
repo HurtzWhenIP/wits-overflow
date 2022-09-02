@@ -21,6 +21,7 @@ function Homepage() {
             setData(result);
         }
 
+        return(() => {console.log(data)})
     },[response])
 
     return (

@@ -34,7 +34,7 @@ function Signup(){
         }
     }
 
-    const namesValidation = () => {
+    const namesValidation = async () => {
         if (!fname) {
             setErrorcaption('Invalid First Name');
             setErrorprompt(true);
@@ -52,7 +52,8 @@ function Signup(){
         }
         else{
             //hash password
-            setPswd(hash(pswd));
+            let str = await hash(pswd);
+            setPswd(str);
         }
         return (true);
     }
@@ -98,29 +99,30 @@ function Signup(){
     }
 
     useEffect(() => {
-       if(register){
-        console.log(typeof response);
-        console.log(response);
-        //check if user is registered 
-        if(response.status == "success"){
-            setUserobj(response);
-            history.push('/homepage');
-        }
-       }
-       else{
-        //check response of username validation
-        const result = Array.isArray(response) && Array(response);
-        console.log(result[0]);
-        if(response && (result[0].length === 0)){
-            // this means that user is not in db
-            console.log("Attempting to register user");
-            setRegister(true);
-            registerUser();
-        }else{
-            console.log('User already exists');
-            setErrorcaption("User Already Exists")
-            setErrorprompt(true);
-        }
+       if(namesValidation() && emailValidation()){
+            setErrorprompt(false);
+            if(register){
+                console.log(response);
+                //check if user is registered 
+                if(response){
+                    setUserobj(response);
+                    history.push('/homepage');
+                }
+            }
+            else{
+                //check response of username validation
+                const result = Array.isArray(response) && Array(response);
+                if(response && (result[0].length === 0)){
+                    // this means that user is not in db
+                    console.log("Attempting to register user");
+                    setRegister(true);
+                    registerUser();
+                }else{
+                    console.log('User already exists');
+                    setErrorcaption("User Already Exists")
+                    setErrorprompt(true);
+                }
+            }
        }
     }, [response]);
 

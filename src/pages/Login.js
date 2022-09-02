@@ -37,7 +37,8 @@ function Login(){
         return (true);
     }
 
-    const login = () => {
+    const login = async () => {
+        let str = await hash(pswd)
         if(validation()){
             //launch request to signin 
             axiosFetch({
@@ -47,7 +48,7 @@ function Login(){
                 requestConfig: {
                     data: {
                         "Email": username,
-                        "HashedPassword": pswd,
+                        "HashedPassword": str,
                     }
                 }
             });
