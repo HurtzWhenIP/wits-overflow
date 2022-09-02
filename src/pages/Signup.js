@@ -1,5 +1,5 @@
 import '../styles/Signup.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import useAxiosFunction from '../hooks/useAxiosFunction';
 import Loading from '../components/Loading'
 import axios from '../apis/ForumServer'
@@ -7,6 +7,7 @@ import hash from '../components/Hash'
 
 
 function Signup(){
+    //TODO validate user for sign up then register user
     //state to hold registration info
     const [fname,setFname] = useState('');
     const [lname,setLname] = useState('');
@@ -14,10 +15,12 @@ function Signup(){
     const [pswd,setPswd] = useState('');
     const [errorPrompt, setErrorprompt] = useState(false); //handle error prompt state
     const [errorCaption, setErrorcaption] = useState("Loading...");
+    const [register,setRegister] = useState(false);
 
       //functions to vaidate data fields
       const emailValidation = () => {
         //eslint-disable-next-line
+        //TODO find regex for wits email
         let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!regEmail.test(email)) {
             setErrorcaption('Invalid Email Address');
@@ -41,7 +44,7 @@ function Signup(){
             return (false);
         }
         if (!pswd) {
-            setErrorcaption('Invalid Username');
+            setErrorcaption('Invalid Password');
             setErrorprompt(true);
             return (false);
         }
@@ -52,6 +55,53 @@ function Signup(){
         return (true);
     }
 
+    //check if user is valid
+    const [response,error,loading,axiosFetch] = useAxiosFunction();
+
+    const checkUser = () => {
+        if(namesValidation() && emailValidation()){
+            setRegister(false);
+            axiosFetch({
+                axiosInstance: axios,
+                method: "POST",
+                url: "validateUser.php",
+                requestConfig: {
+                    "Email": email
+                }
+            });
+        }
+    }
+
+    const registerUser = () => {
+        //at this point user is ready to be registered
+        axiosFetch({
+            axiosInstance: axios,
+            method: "POST",
+            url: "register.php",
+            requestConfig: {
+                "FirstName": fname,
+		        "LastName": lname,
+		        "Email": email,
+		        "HashedPassword": pswd
+            }
+        })
+    }
+
+    useEffect(() => {
+       if(register){
+        //check if user is registered 
+        
+       }
+       else{
+        //check response of username validation
+        const result = Array.isArray(response);
+        if(response && (result.length === 0)){
+            // this means that user is not in db
+            setRegister(true);
+            registerUser();
+        }
+       }
+    }, [response,register]);
 
     return(
         <div className="SignupBox">

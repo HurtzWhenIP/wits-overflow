@@ -3,6 +3,10 @@ import axios from '../apis/ForumServer';
 import { useState,useEffect } from "react";
 
 function Homepage(){
+
+    //state to hold question data
+    const [data,setData] = useState([]);
+
     const [response,error,loading,refetch] = useAxios({
         axiosInstance: axios,
         method: 'GET',
@@ -10,8 +14,16 @@ function Homepage(){
     });
 
     useEffect(() => {
-        console.log(response);
-    },[response])
+        const result = Array.isArray(response);
+        if(response && (result.length>0)){
+            console.log("Questions stored");
+            setData(result);
+        }
+
+        return(() => {
+            console.log(data);
+        })
+    },[response,data])
 
     return(
         <h1>Homepage</h1>
