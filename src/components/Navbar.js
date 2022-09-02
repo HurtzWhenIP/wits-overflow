@@ -21,6 +21,8 @@ export function NavItem({icon,path,clickable,children}){
 export function Navbar({children}){
     return(
         <nav className="navbar">
+            <div className="WitsLogo"></div>
+            <h1 className="Title">Wits-Overflow</h1>
             <ul className="navbar-nav ul">{children}</ul>
         </nav>
     );

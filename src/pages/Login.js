@@ -68,6 +68,10 @@ function Login(){
                     history.push('/homepage');
                 }  
             }
+            if(response.length === 0){
+                setErrorcaption("Invalid Username/Password");
+                setErrorprompt(true);
+            }
         }
     }, [response]);
 
@@ -76,6 +80,7 @@ function Login(){
             {loading && <Loading caption={"Attempting Log In"}/>}
             <div className="witsLogo"></div>
             <h1>Wits-Overflow Login</h1>
+            {errorPrompt && <h4 style={{color: "red", marginTop: 0}}>{errorCaption}</h4>}
             <form className='form'>
                 <div className="group">      
                     <input className="input" type="text" required
