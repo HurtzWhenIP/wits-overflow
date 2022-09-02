@@ -29,7 +29,7 @@ function Verifyplayer() {
                 <div className="witsLogo"></div>
                 <h1 className="title">Wits-Overflow</h1>
             </div>
-            {flag ? <h3 className="questions">Questons? Yes.</h3> : <h3 className="answers">Answers? Maybe...</h3>}
+            {flag ? <h3 className="questions">Questions? Yes.</h3> : <h3 className="answers">Answers? Maybe...</h3>}
             <div className="descriptionBox">
                 <div className="witsKudu"></div>
                     <ul className="desc">
