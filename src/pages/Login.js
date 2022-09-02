@@ -3,6 +3,8 @@ import { useState,useEffect } from 'react';
 import useAxiosFunction from '../hooks/useAxiosFunction';
 import hash from '../components/Hash';
 import axios from '../apis/ForumServer'
+import useStore from '../hooks/useStore';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Login(){
     //state to hold sign in data
@@ -13,6 +15,8 @@ function Login(){
 
     //hook to make request
     const [response, error, loading, axiosFetch] = useAxiosFunction();
+
+    const history = useHistory();
 
     //functons to validate sign up
     const validation = () => {
@@ -28,7 +32,7 @@ function Login(){
         }
         else{
             //hash password
-            setPswd(hash(pswd));
+            //setPswd(hash(pswd));
         }
         return (true);
     }
@@ -50,12 +54,18 @@ function Login(){
         }
     }
 
+    const setUserobj = useStore((state) => {return(state.setUserobj)});
+
     //useEffect to detect changes in reply
     useEffect(() => {
-        const result = Array.isArray(response);
-        if(response && (result.length > 0)){
-            console.log(result);
-            
+        if(response){
+            const result = Array.isArray(response) && Array(response);
+            if(response && (result.length > 0)){
+                if(response[0]){
+                    setUserobj(response[0]);
+                    history.push('/homepage');
+                }  
+            }
         }
     }, [response]);
 

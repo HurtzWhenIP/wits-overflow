@@ -61,8 +61,10 @@ function Signup(){
     const [response,error,loading,axiosFetch] = useAxiosFunction();
 
     const setUserobj = useStore(state => {return(state.setUserobj)});
+    const history = useHistory();
 
     const checkUser = () => {
+        setErrorprompt(false);
         if(namesValidation() && emailValidation()){
             setRegister(false);
             axiosFetch({
@@ -97,22 +99,27 @@ function Signup(){
 
     useEffect(() => {
        if(register){
+        console.log(typeof response);
+        console.log(response);
         //check if user is registered 
-        if(response){
-            const result = JSON.parse(response);
-            if(result){
-                setUserobj(result);
-            }
+        if(response.status == "success"){
+            setUserobj(response);
+            history.push('/homepage');
         }
        }
        else{
         //check response of username validation
-        const result = Array.isArray(response);
-        if(response && (result.length === 0)){
+        const result = Array.isArray(response) && Array(response);
+        console.log(result[0]);
+        if(response && (result[0].length === 0)){
             // this means that user is not in db
             console.log("Attempting to register user");
             setRegister(true);
             registerUser();
+        }else{
+            console.log('User already exists');
+            setErrorcaption("User Already Exists")
+            setErrorprompt(true);
         }
        }
     }, [response]);
