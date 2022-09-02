@@ -1,8 +1,8 @@
 .loginBox{
 	width: fit-content;
-    padding: 2em 5em;border: 2.5px solid rgb(0,59,92);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    border-radius: 5px;
+  padding: 2em 5em;border: 2.5px solid rgb(0,59,92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border-radius: 5px;
 	margin: 9% auto;
 	font-size: larger;
 	color: rgb(0,59,92);

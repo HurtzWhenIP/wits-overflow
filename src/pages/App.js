@@ -26,7 +26,7 @@ function App() {
             {userObj ? <Homepage/> : <Verifyplayer/>}
           </Route>
           <Route path="/homepage">
-          {userObj ? <Homepage/> : <Verifyplayer/>}
+           <Homepage/>
           </Route>
           <Route path='/login'>
             <Login/>

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+
+.wrapper{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.01em 6em;
+    border: 2.5px solid rgb(0,59,92);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    border-radius: 5px;
+	margin: 9% auto;
+	font-size: larger;
+	color: rgb(0,59,92);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wrapper .search_box{
+  width: 500px;
+  height: fit-content;
+  border: 2.5px solid rgb(0,59,92);
+  background: #fff;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    border-radius: 2px;
+	margin: 4% auto;
+  
+}
+
+.wrapper .search_box .dropdown{
+  width: 10rem;
+  border-right: 2px solid #1038b0;
+  color: #020615;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.wrapper .search_box .dropdown .default_option{
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 20px;
+  
+  
+}
+
+.wrapper .search_box .dropdown .ul{
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  background: #fff;
+  width: 150px;
+  border-radius: 5px;
+  padding: 20px;
+  display: none;
+  box-shadow: 8px 8px 6px -10px #b3c6ff;
+  
+}
+
+.wrapper .search_box .dropdown .ul_active{
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow:  8px 8px 6px -10px #193a9d;
+  position: absolute;
+  
+
+}
+
+.wrapper .search_box .dropdown ul li{  
+  background-color: #b3c6ff;
+  border-radius: 1px solid black;
+
+}
+
+.wrapper .search_box .dropdown ul li:last-child{
+  padding-bottom: 0;
+}
+
+.wrapper .search_box .dropdown ul li:hover{
+  color: #6f768d;
+}
+
+.wrapper .search_box .dropdown:before{
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: 8px solid;
+  border-color: #5078ef transparent transparent transparent;
+}
+
+.wrapper .search_box .search_field{
+  width: 350px;
+  height: fit-content;
+  position: relative;
+
+}
+
+.wrapper .search_box .search_field .input{
+  width: fit-content;
+  height: fit-content;
+  border: 0px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #6f768d;
+}
+
+.wrapper .search_box .search_field .fas{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: #5078ef;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #9fa3b1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ color: #9fa3b1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #9fa3b1;
+}
