@@ -1,6 +1,9 @@
 import useAxios from "../hooks/useAxios";
 import axios from '../apis/ForumServer';
 import { useState,useEffect } from "react";
+import '../styles/Homepage.css'
+import { FcSearch } from "react-icons/fc";
+
 
 function Homepage() {
     //state to hold question data
@@ -15,7 +18,7 @@ function Homepage() {
     });
 
     useEffect(() => {
-        const result = Array.isArray(response) && Array(response);
+        const result = Array.isArray(response);
         if(response && (result.length>0)){
             console.log("Questions stored");
             setData(result);
@@ -25,36 +28,36 @@ function Homepage() {
     },[response])
 
     return (
+
         <div className="wrapper">
-            <h1>Search For a Question</h1>
+            <h2>Search For a Question</h2>
             <div className="search_box">
-                <div className="dropdown" onClick={() => {
+                <div className="dropdown_items" onClick={() => {
                     setIsopen(!isOpen);
                 }}>
                     <div className="default_option">{query}</div>
-                    <ul className={isOpen ? "ul_active" : "ul"} >
+                    <ul className={isOpen ? "ul_active" : "ul_search"} >
 
-                        <li key={0} onClick={() => {
+                        < div className = 'li_search' key={0} onClick={() => {
                             setQuery("All");
-                        }} >All </li>
-                        <li key={1} onClick={() => {
+                        }} >All </div>
+                        <div className="li_search" key={1} onClick={() => {
                             setQuery("Recent");
-                        }} >Recent </li>
-                        <li key={2} onClick={() => {
+                        }} >Recent </div>
+                        <div className="li_search" key={2} onClick={() => {
                             setQuery("Popular");
-                        }}>Popular</li>
-                
+                        }}>Popular</div>
+
                     </ul>
                 </div>
                 <div className="search_field">
                     <input type="text" className="input" placeholder="Search" />
                     <i className="fas fa-search"></i>
                 </div>
-                <button>Search</button>
+                <button className="search_button">{<FcSearch size={35}/>}</button>
             </div>
+            
         </div>
-
-
     )};
 
 export default Homepage;
