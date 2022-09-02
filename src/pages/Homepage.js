@@ -60,10 +60,8 @@ function Homepage() {
                 </div>
             </div>
 
-
-            <ul class="tilesWrap">
-               
-            </ul>
+            
+           
         </>
     );
 };
