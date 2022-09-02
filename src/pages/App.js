@@ -9,8 +9,10 @@ import Profile from './Profile'
 import Notfound from './Notfound'
 import Verifyplayer from './Verifyplayer';
 import useStore from '../hooks/useStore';
-import { Navbar, NavItem, DropdownMenu } from '../components/Navbar';
-import { FcHome, FcExpand } from 'react-icons/fc';
+import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
+import {FcHome,FcExpand} from 'react-icons/fc';
+import { useHistory } from 'react-router-dom';
+
 
 
 /*
@@ -22,10 +24,17 @@ function App() {
   //Pull useriobj from store
   const userObj = useStore(state => state.userObj);
 
+  //history hook for redirection
+  const history = useHistory();
+
+  const goHome = () => {
+    history.push('/homepage');
+  }
+
   return (
     <Router>
         <Navbar>
-          <NavItem icon={<FcHome size={100}/>}/>
+          <NavItem icon={<FcHome size={100} onClick={() => {goHome()}}/>}/>
           <NavItem icon={<FcExpand size={100}/>} clickable={true}>
             <DropdownMenu/>
           </NavItem>
