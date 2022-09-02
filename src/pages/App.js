@@ -1,6 +1,6 @@
 
 import '../styles/App.css';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage'
 import Login from './Login'
 import Siginup from './Signup'
@@ -12,6 +12,7 @@ import useStore from '../hooks/useStore';
 import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
 import { useHistory } from 'react-router-dom';
+
 
 
 /*
@@ -31,8 +32,7 @@ function App() {
   }
 
   return (
-    <>
-      <Router>
+    <Router>
         <Navbar>
           <NavItem icon={<FcHome size={100} onClick={() => {goHome()}}/>}/>
           <NavItem icon={<FcExpand size={100}/>} clickable={true}>
@@ -62,7 +62,7 @@ function App() {
             <Route component={Notfound}/>
           </Switch>
       </Router>
-    </>
+
   );
 }
 
