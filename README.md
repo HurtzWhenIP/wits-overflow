@@ -50,6 +50,21 @@ If the user does not exist in the database, an empty JSON will be returned
 }
 ```
 
+### Sample Response
+
+```json
+{
+    "data": {
+        "UserID": 4,
+        "FirstName": "Mike",
+        "LastName": "Oxmall",
+        "Email": "mikeoxmall@gmail.com",
+        "HashedPassword": "sdkajs"
+    },
+    "signal": {}
+}
+```
+
 ## addQuestion.php
 
 ### Sample Post request
@@ -121,7 +136,7 @@ If the user does not exist in the database, an empty JSON will be returned
 
 If the user does not exist in the table, an empty JSON string will be returned
 
-## removeUser.php
+## deleteUser.php
 
 ### Sample Post request
 
