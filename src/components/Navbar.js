@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {FcSettings,FcImport,FcContacts} from 'react-icons/fc'
 
 export function NavItem({icon,path,clickable,children}){
-
+    //TODO setup routing per click
     const [open,setOpen] = useState(false);
 
     return(
