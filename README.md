@@ -120,3 +120,16 @@ If the user does not exist in the database, an empty JSON will be returned
 ```
 
 If the user does not exist in the table, an empty JSON string will be returned
+
+## removeUser.php
+
+### Sample Post request
+
+```json
+{
+    "data": {
+        "UserID": 4
+    },
+    "signal": {}
+}
+```
