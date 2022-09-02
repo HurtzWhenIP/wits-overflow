@@ -1,5 +1,4 @@
 import '../styles/Loading.css';
-import React from 'react';
 
 function Loading({ caption }) {
     return (

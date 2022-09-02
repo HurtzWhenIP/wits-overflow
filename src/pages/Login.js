@@ -5,6 +5,7 @@ import hash from '../components/Hash';
 import axios from '../apis/ForumServer'
 import useStore from '../hooks/useStore';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import Loading from '../components/Loading';
 
 function Login(){
     //state to hold sign in data
@@ -72,6 +73,7 @@ function Login(){
 
     return(
         <div className="loginBox">
+            {loading && <Loading caption={"Attempting Log In"}/>}
             <div className="witsLogo"></div>
             <h1>Wits-Overflow Login</h1>
             <form className='form'>

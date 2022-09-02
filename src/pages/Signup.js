@@ -128,6 +128,7 @@ function Signup(){
 
     return(
         <div className="SignupBox">
+            {loading && <Loading caption={"Validating/Registering User"}/>}
             <div className="witsLogo"></div>
             <h1>Create an account with Wits-Overflow</h1>
             {errorPrompt && <h3 style={{color: "red"}}>{errorCaption}</h3>}

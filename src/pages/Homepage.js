@@ -3,6 +3,7 @@ import axios from '../apis/ForumServer';
 import { useState,useEffect } from "react";
 import '../styles/Homepage.css'
 import { FcSearch } from "react-icons/fc";
+import Loading from "../components/Loading";
 
 
 function Homepage() {
@@ -30,6 +31,7 @@ function Homepage() {
     return (
 
         <div className="wrapper">
+            {loading && <Loading caption={"Loading Data..."}/>}
             <h2>Search For a Question</h2>
             <div className="search_box">
                 <div className="dropdown_items" onClick={() => {
