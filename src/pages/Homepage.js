@@ -1,6 +1,6 @@
 import useAxios from "../hooks/useAxios";
 import axios from '../apis/ForumServer';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function Homepage(){
     const [response,error,loading,refetch] = useAxios({
@@ -9,9 +9,13 @@ function Homepage(){
         url: 'getAllQuestions.php',
     });
 
+    useEffect(() => {
+        console.log(response);
+    },[response])
+
     return(
         <>
-            {loading ? <h1>Homepage</h1> : <h1>{response}</h1>}
+            {(loading && response) ? <h1>Homepage</h1> : <h1>{response}</h1>}
         </>
     )
 }
