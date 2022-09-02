@@ -53,7 +53,7 @@ function Login(){
         const result = Array.isArray(response);
         if(response && (result.length > 0)){
             console.log(result);
-            //TODO if userobj is valid then update store
+            
         }
     }, [response]);
 
@@ -78,7 +78,7 @@ function Login(){
                     <label className='label'>Password</label>
                 </div>
             </form>
-            <button className='loginBtn'>Login</button>
+            <button className='loginBtn' onClick={login}>Login</button>
         </div>
     );
 }

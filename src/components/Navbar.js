@@ -4,12 +4,12 @@ import { useState } from 'react';
 import {FcSettings,FcImport,FcContacts} from 'react-icons/fc'
 
 export function NavItem({icon,path,clickable,children}){
-    //TODO setup routing per click
+    
     const [open,setOpen] = useState(false);
 
     return(
         <li className='nav-item'>
-            <Link className="icon-button" to={`/${path}`} onClick={() => {setOpen(!open)}}>
+            <Link className="icon-button" to={path} onClick={() => {setOpen(!open)}}>
                 {icon}
             </Link>
             {clickable && open && children}
@@ -29,9 +29,9 @@ export function DropdownMenu(){
 
     const style = {"background-color": "inherit"}
 
-    function DropdownItem({children,icon}){
+    function DropdownItem({children,icon,path}){
         return(
-            <Link className='menu-item'>
+            <Link className='menu-item' to={path}>
                 <span className='icon-button' style={style}>{icon}</span>
                 {children}
             </Link>
@@ -40,9 +40,9 @@ export function DropdownMenu(){
 
     return(
         <div className='dropdown'>
-            <DropdownItem icon={<FcContacts size={65}/>}>Profile</DropdownItem>
-            <DropdownItem icon={<FcImport size={65}/>}>Log-out</DropdownItem>
-            <DropdownItem icon={<FcSettings size={65}/>}>Settings</DropdownItem>
+            <DropdownItem icon={<FcContacts size={65}/>} path="/profile">Profile</DropdownItem>
+            <DropdownItem icon={<FcImport size={65}/>} path="#">Log-out</DropdownItem>
+            <DropdownItem icon={<FcSettings size={65}/>} path="/settings">Settings</DropdownItem>
         </div>
     )
 }

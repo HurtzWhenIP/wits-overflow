@@ -4,6 +4,8 @@ import useAxiosFunction from '../hooks/useAxiosFunction';
 import Loading from '../components/Loading'
 import axios from '../apis/ForumServer'
 import hash from '../components/Hash'
+import useStore from '../hooks/useStore';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 
 function Signup(){
@@ -58,6 +60,8 @@ function Signup(){
     //check if user is valid
     const [response,error,loading,axiosFetch] = useAxiosFunction();
 
+    const setUserobj = useStore(state => {return(state.setUserobj)});
+
     const checkUser = () => {
         if(namesValidation() && emailValidation()){
             setRegister(false);
@@ -90,23 +94,30 @@ function Signup(){
     useEffect(() => {
        if(register){
         //check if user is registered 
-        
+        if(response){
+            const result = JSON.parse(response);
+            if(result){
+                setUserobj(result);
+            }
+        }
        }
        else{
         //check response of username validation
         const result = Array.isArray(response);
         if(response && (result.length === 0)){
             // this means that user is not in db
+            console.log("Attempting to register user");
             setRegister(true);
             registerUser();
         }
        }
-    }, [response,register]);
+    }, [response]);
 
     return(
         <div className="SignupBox">
             <div className="witsLogo"></div>
             <h1>Create an account with Wits-Overflow</h1>
+            {errorPrompt && <h3 style={{color: "red"}}>{errorCaption}</h3>}
 
             <form className="SignUpForm">
                 <div className="grid-container">
@@ -116,7 +127,7 @@ function Signup(){
                         <label className='label'>First name</label>
                     </div>
 
-                    <div class="group">      
+                    <div className="group">      
                         <input className="input" type="text" required
                         onChange={(e) => setLname(e.target.value)}/>
                         
@@ -124,7 +135,7 @@ function Signup(){
                         <label className='label'>Last name</label>
                     </div>
 
-                    <div class="group">      
+                    <div className="group">      
                         <input className="input" type="text" required
                         onChange={(e) => setEmail(e.target.value)}/>
                         
@@ -132,7 +143,7 @@ function Signup(){
                         <label className='label'>Email</label>
                     </div>
 
-                    <div class="group">      
+                    <div className="group">      
                         <input className="input" type="password" required
                         onChange={(e) => setPswd(e.target.value)}/>
                         
@@ -141,7 +152,7 @@ function Signup(){
                     </div>
                 </div>
             </form>
-            <button className='loginBtn'>Sign Up</button>
+            <button className='loginBtn' onClick={checkUser}>Sign Up</button>
 
         </div>
     )

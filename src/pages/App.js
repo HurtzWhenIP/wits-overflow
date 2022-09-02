@@ -11,7 +11,6 @@ import Verifyplayer from './Verifyplayer';
 import useStore from '../hooks/useStore';
 import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
-import { useHistory } from 'react-router-dom';
 
 
 
@@ -24,18 +23,11 @@ function App() {
   //Pull useriobj from store
   const userObj = useStore(state => state.userObj);
 
-  //history hook for redirection
-  const history = useHistory();
-
-  var goHome = () => {
-    history.push('/homepage');
-  }
-
   return (
     <Router>
         <Navbar>
-          <NavItem icon={<FcHome size={100} onClick={() => {goHome()}}/>}/>
-          <NavItem icon={<FcExpand size={100}/>} clickable={true}>
+          <NavItem icon={<FcHome size={100}/>} path={"/homepage"}/>
+          <NavItem icon={<FcExpand size={100}/>} path="#" clickable={true}>
             <DropdownMenu/>
           </NavItem>
         </Navbar>
@@ -44,8 +36,7 @@ function App() {
               {userObj ? <Homepage/> : <Verifyplayer/>}
             </Route>
             <Route path="/homepage">
-            {/* {userObj ? <Homepage/> : <Verifyplayer/>} */}
-            <Homepage/>
+            {userObj ? <Homepage/> : <Verifyplayer/>}
             </Route>
             <Route path='/login'>
               <Login/>
@@ -55,9 +46,6 @@ function App() {
             </Route>
             <Route path='/profile'>
               {userObj ? <Profile/> : <Verifyplayer/>}
-            </Route>
-            <Route path='/questions'>
-            {userObj ? <Questions/> : <Verifyplayer/>}
             </Route>
             <Route component={Notfound}/>
           </Switch>
