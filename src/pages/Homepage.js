@@ -6,7 +6,7 @@ function Homepage(){
     const [response,error,loading,refetch] = useAxios({
         axiosInstance: axios,
         method: 'GET',
-        url: 'getUsers.php',
+        url: 'getAllQuestions.php',
     });
 
     return(
