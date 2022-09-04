@@ -13,11 +13,6 @@ import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
 
 
-
-/*
-TODO LOGIK TO CHECK IF USER IS LOGGED IN => ternary operator based on user
-Object in state*/
-
 function App() {
 
   //Pull useriobj from store

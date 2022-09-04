@@ -1,4 +1,4 @@
-import '../styles/Signup.css'
+ import '../styles/Signup.css'
 import { useState,useEffect } from 'react';
 import useAxiosFunction from '../hooks/useAxiosFunction';
 import Loading from '../components/Loading'
@@ -9,7 +9,6 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 
 function Signup(){
-    //TODO validate user for sign up then register user
     //state to hold registration info
     const [fname,setFname] = useState('');
     const [lname,setLname] = useState('');
@@ -22,15 +21,22 @@ function Signup(){
       //functions to vaidate data fields
       const emailValidation = () => {
         //eslint-disable-next-line
-        //TODO find regex for wits email
         let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!regEmail.test(email)) {
             setErrorcaption('Invalid Email Address');
             setErrorprompt(true);
             setEmail("");
-            return (false);
         } else {
-            return (true);
+            var index = email.indexOf("wits.ac.za");
+            if (index === -1) {
+                setErrorcaption('Please enter a Wits Domain');
+                setErrorprompt(true);
+                setEmail("");
+                return (false);
+             }
+             else{
+                return (true);
+             }
         }
     }
 
