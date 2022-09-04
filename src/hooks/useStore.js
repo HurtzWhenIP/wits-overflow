@@ -7,8 +7,7 @@ let store = (set) => ({
 });
 
 store = devtools(store);
-//TODO evaluate sign in options
-//store = persist(store, { name: 'user_data' });
+store = persist(store, { name: 'user_data' });
 
 const useStore = create(store);
 
