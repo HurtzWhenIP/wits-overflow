@@ -25,6 +25,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   border-radius: 1px;
 	margin: 4% auto;
+  padding: 0.4em 0.7em;
   
 }
 
@@ -124,6 +125,8 @@
   padding-left: 1rem;
   padding-right: 1rem;
   color: #6f768d;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 
 .wrapper .search_box .search_field .fas{
@@ -141,6 +144,14 @@
   background-color: inherit;
   align-items: flex-start;
   border: none;
+  padding: 0.5em;
+  margin: 0.3em;
+  transition: transform 200ms ease-in-out;
+}
+
+.search_button:hover{
+  cursor: pointer;
+  transform: scale(1.25);
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

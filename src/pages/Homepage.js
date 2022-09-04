@@ -57,7 +57,7 @@ function Homepage() {
                         <input type="text" className="input" placeholder="Search" />
                         <i className="fas fa-search"></i>
                     </div>
-                    <button className="search_button">{<FcSearch size={35} />}</button>
+                    <span className="search_button">{<FcSearch size={35} />}</span>
                 </div>
                 <Questions data={data} /> 
             </div>
