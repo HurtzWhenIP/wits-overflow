@@ -1,17 +1,18 @@
 CREATE TABLE User (
     UserID INT NOT NULL AUTO_INCREMENT,
-    FirstName VARCHAR(20), 
-    LastName VARCHAR(20), 
-    Email VARCHAR(40),
-    HashedPassword VARCHAR(40),
+    UserDescription VARCHAR(150),
+    FirstName VARCHAR(20) NOT NULL, 
+    LastName VARCHAR(20) NOT NULL, 
+    Email VARCHAR(40) NOT NULL,
+    HashedPassword VARCHAR(256) NOT NULL,
     PRIMARY KEY(UserID)
 );
 
 CREATE TABLE QuestionPost (
     PostID INT NOT NULL AUTO_INCREMENT,
-    UserID INT,
-    PostTitle TEXT, 
-    PostContent TEXT,
+    UserID INT NOT NULL,
+    PostTitle TEXT NOT NULL, 
+    PostContent TEXT NOT NULL,
     Solved BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY(PostID),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
@@ -20,8 +21,8 @@ CREATE TABLE QuestionPost (
 CREATE TABLE AnswerPost (
     AnswerID INT NOT NULL AUTO_INCREMENT, 
     ParentPostID INT NOT NULL, 
-    UserID INT,
-    AnswerContent TEXT, 
+    UserID INT NOT NULL,
+    AnswerContent TEXT NOT NULL, 
     Edited BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY(AnswerID),
     FOREIGN KEY (UserID) REFERENCES User(UserID),
