@@ -19,3 +19,8 @@
     padding: 1em;
     text-align: center;
 }
+
+.profileBox.userDetails{
+    width: 48em;
+    height: 43em;
+}
