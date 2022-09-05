@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
         <Navbar>
-          <NavItem icon={<FcHome size={100}/>} path={"/homepage"}/>
+          <NavItem icon={<FcHome size={100}/>} path={"/homepage"} clickable={false}/>
           <NavItem icon={<FcExpand size={100}/>} path="#" clickable={true}>
             <DropdownMenu/>
           </NavItem>

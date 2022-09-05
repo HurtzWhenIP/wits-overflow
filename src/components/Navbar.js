@@ -11,7 +11,11 @@ export function NavItem({icon,path,clickable,children}){
 
     return(
         <li className='nav-item'>
-            <Link className="icon-button" to={path} onClick={() => {setOpen(!open)}}>
+            <Link className="icon-button" to={path} onClick={() => {
+                if(clickable){
+                    setOpen(!open);
+                }
+            }}>
                 {icon}
             </Link>
             {clickable && open && children}
