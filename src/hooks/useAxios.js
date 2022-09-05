@@ -12,6 +12,7 @@ const useAxios = (configObj) => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [reload, setReload] = useState(true);
+  const [status,setStatus] = useState(-1);
 
   const refetch = () => setReload(!reload);
 
@@ -25,6 +26,7 @@ const useAxios = (configObj) => {
           ...requestConfig,
           signal: controller.signal
         });
+        setStatus(res.status);
         setResponse(res.data);
         //loading screen
         await new Promise(r => setTimeout(r, 2000));
@@ -45,7 +47,7 @@ const useAxios = (configObj) => {
     // eslint-disable-next-line
   }, [reload]);
 
-  return [response, error, loading, refetch];
+  return [status,response, error, loading, refetch];
 }
 
 export default useAxios

@@ -17,6 +17,7 @@ function Signup(){
     const [errorPrompt, setErrorprompt] = useState(false); //handle error prompt state
     const [errorCaption, setErrorcaption] = useState("Loading...");
     const [register,setRegister] = useState(false);
+    const [userDesc,setUserdesc] = useState('');
 
       //functions to vaidate data fields
       const emailValidation = () => {
@@ -98,7 +99,8 @@ function Signup(){
                     "FirstName": fname,
 		            "LastName": lname,
 		            "Email": email,
-		            "HashedPassword": pswd
+		            "HashedPassword": pswd,
+                    "UserDescription": userDesc,
                 }
             }
         })
@@ -169,6 +171,12 @@ function Signup(){
                         
                         <span className="bar"></span>
                         <label className='label'>Password</label>
+                    </div>
+
+                    <div className="userDesc">
+                        <textarea placeholder='Enter short user description' 
+                        className="descText" id="descText" cols="50" rows="2"
+                        onChange={(e) => {setUserdesc(e.target.value)}}></textarea>
                     </div>
                 </div>
             </form>

@@ -1,0 +1,24 @@
+.infoBox{
+    padding: 2em;
+    font-size: larger;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.infoBox1{
+    padding: 1em;
+    border: 2.5px solid rgb(0,59,92);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    display: flex;
+    flex-flow: row;
+    margin: 1em;
+}
+
+.profImg{
+    background-image: url('../imgs/witsKudu.png');
+    height: 12em;
+    width: 12em;
+    border-radius: 5px;
+    background-size: cover;
+}

@@ -6,7 +6,8 @@ import useStore from '../hooks/useStore';
 
 export function NavItem({icon,path,clickable,children}){
     
-    const [open,setOpen] = useState(false);
+    const open = useStore(state => {return(state.open)});
+    const setOpen = useStore(state => {return(state.setOpen)});
 
     return(
         <li className='nav-item'>
@@ -30,13 +31,15 @@ export function Navbar({children}){
 
 export function DropdownMenu(){
 
-    const setUserobj = useStore(state => {return(state.setUserobj)})
+    const setUserobj = useStore(state => {return(state.setUserobj)});
+    const setOpen = useStore(state => {return(state.setOpen)});
 
     const style = {"background-color": "inherit"}
 
     function DropdownItem({children,icon,path,log}){
 
         const logout = () => {
+            setOpen(false);
             if(log){
                 setUserobj(null);
             }

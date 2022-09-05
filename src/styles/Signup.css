@@ -1,9 +1,10 @@
 .SignupBox{
 	width: fit-content;
-    padding: 2em 5em;border: 2.5px solid rgb(0,59,92);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    border-radius: 5px;
-	margin: 5% auto;
+  padding: 2em 5em;
+  border: 2.5px solid rgb(0,59,92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border-radius: 5px;
+	margin: 3% auto;
 	font-size: larger;
 	color: rgb(0,59,92);
 	display: flex;
@@ -14,6 +15,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto min-content;
     column-gap: 50px;
     padding: 10px;
   }
@@ -22,4 +24,17 @@
 	width: fit-content;
 }
 
+.userDesc{
+  display: inline-grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
+.descText{
+  outline: none;
+  resize: none;
+  font: inherit;
+  font-size: medium;
+  box-shadow: 0 8px 8px -4px lightblue;
+  border-radius: 5px;
+}
