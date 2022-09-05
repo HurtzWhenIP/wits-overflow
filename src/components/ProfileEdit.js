@@ -3,6 +3,7 @@ import useAxiosFunction from "../hooks/useAxiosFunction";
 import axios from '../apis/ForumServer';
 import '../styles/ProfileEdit.css';
 import Loading from './Loading';
+import useStore from "../hooks/useStore";
 
 function ProfileEdit({userObj,edit,setEdit}){
 
@@ -10,6 +11,7 @@ function ProfileEdit({userObj,edit,setEdit}){
 
     const [status,response, error, loading, axiosFetch] = useAxiosFunction();
 
+    const setUserobj = useStore((state) => {return(state.setUserobj)});
     //attempt to update profile
     const editProfile = () => {
         axiosFetch({
@@ -31,7 +33,10 @@ function ProfileEdit({userObj,edit,setEdit}){
     //detect changes in response 
     useEffect(() => {
         if(status === 200){
-            userObj.UserDescription = userDesc;
+            setUserobj({
+                ...userObj,
+                UserDescription: userDesc,
+            })
             setEdit(!edit);
         }
     }, [response]);
