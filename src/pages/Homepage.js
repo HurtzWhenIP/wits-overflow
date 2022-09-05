@@ -13,7 +13,7 @@ function Homepage() {
     const [isOpen, setIsopen] = useState(false);
     const [query, setQuery] = useState("All");
 
-    const [response, error, loading, refetch] = useAxios({
+    const [status,response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
         method: 'GET',
         url: 'getAllQuestions.php',
@@ -21,7 +21,8 @@ function Homepage() {
 
     useEffect(() => {
         const result = Array.isArray(response) && Array(response);
-        if (response && (result.length > 0)) {
+        console.log(response);
+        if (response && (status === 200) && (result.length > 0)) {
             console.log("Questions stored");
             setData(result);
         }

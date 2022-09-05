@@ -5,6 +5,7 @@ const useAxiosFunction = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false); //different!
     const [controller, setController] = useState();
+    const [status,setStatus] = useState(-1);
 
     const axiosFetch = async (configObj) => {
         const {
@@ -24,6 +25,7 @@ const useAxiosFunction = () => {
                 signal: ctrl.signal
             });
             //console.log(res);
+            setStatus(res.status);
             setResponse(res.data);
             //loading screen
             //await new Promise(r => setTimeout(r, 2000));
@@ -43,7 +45,7 @@ const useAxiosFunction = () => {
 
     }, [controller]);
 
-    return [response, error, loading, axiosFetch];
+    return [status,response, error, loading, axiosFetch];
 }
 
 export default useAxiosFunction;

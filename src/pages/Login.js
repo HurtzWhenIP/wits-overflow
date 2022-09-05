@@ -15,7 +15,7 @@ function Login(){
     const [errorCaption, setErrorcaption] = useState("Loading...");
 
     //hook to make request
-    const [response, error, loading, axiosFetch] = useAxiosFunction();
+    const [status,response, error, loading, axiosFetch] = useAxiosFunction();
 
     const history = useHistory();
 
@@ -98,7 +98,10 @@ function Login(){
                     <label className='label'>Password</label>
                 </div>
             </form>
-            <button className='loginBtn' onClick={login}>Login</button>
+            <button className='loginBtn' onClick={(e) => {
+                login();
+                e.preventDefault();
+            }}>Login</button>
         </div>
     );
 }

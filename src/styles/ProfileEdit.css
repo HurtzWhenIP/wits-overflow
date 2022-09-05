@@ -1,0 +1,24 @@
+.profileEditBox{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 2em 1em;
+    padding: 4em;
+    align-content: space-around;
+}
+
+.editTextBlock{
+    margin: 1em 4em;
+}
+
+.editTextBlock:hover{
+    cursor: not-allowed;
+}
+
+.profileEditBtn{
+    margin: 0.5em 4em;
+}
+
+.userDesc.profileEditText{
+    margin: 1em 4em;
+}

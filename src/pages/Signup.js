@@ -66,7 +66,7 @@ function Signup(){
     }
 
     //check if user is valid
-    const [response,error,loading,axiosFetch] = useAxiosFunction();
+    const [status,response,error,loading,axiosFetch] = useAxiosFunction();
 
     const setUserobj = useStore(state => {return(state.setUserobj)});
     const history = useHistory();
@@ -180,7 +180,10 @@ function Signup(){
                     </div>
                 </div>
             </form>
-            <button className='loginBtn' onClick={checkUser}>Sign Up</button>
+            <button className='loginBtn' onClick={(e) => {
+                checkUser();
+                e.preventDefault();
+            }}>Sign Up</button>
 
         </div>
     )
