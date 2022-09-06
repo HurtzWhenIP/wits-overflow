@@ -12,7 +12,7 @@ $lastName = $json['LastName'];
 $userDescription = $json['UserDescription'];
 $userID = $json['UserID'];
 
-// Generating and executing the SQL
+// Updating the user's information
 $sql = "UPDATE User SET HashedPassword = ?, firstName = ?, lastName = ?, UserDescription = ?" . 
 " WHERE (UserID = ?)";
 
