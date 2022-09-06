@@ -16,6 +16,7 @@ $query = $db->prepare($sql);
 $query->bind_param("sssss", $firstName, $lastName, $userDescription, $email, $hashedPassword);
 $query->execute();
 
+// Getting the user's information
 $sql = "SELECT * FROM User WHERE (Email = ?)";
 $query = $db->prepare($sql);
 $query->bind_param("s", $email);

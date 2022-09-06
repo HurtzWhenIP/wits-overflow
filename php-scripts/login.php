@@ -8,7 +8,7 @@ $json = $json[$payloadLabel];
 $requestedEmail = $json['Email'];
 $hashedPassword = $json['HashedPassword'];
 
-// Generating and executing the SQL
+// Getting the user's information
 $sql = "SELECT * FROM User WHERE (Email = ? AND HashedPassword = ?)";
 $query = $db->prepare($sql);
 $query->bind_param("ss", $requestedEmail, $hashedPassword);
