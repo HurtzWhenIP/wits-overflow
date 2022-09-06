@@ -1,7 +1,7 @@
 <?php
 require_once "db.php";
 
-// Generating and executing the SQL
+// Getting all users from the database
 $sql = "SELECT * FROM User";
 $query = $db->prepare($sql);
 $query->execute();
