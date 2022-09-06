@@ -7,7 +7,7 @@ $json = $json[$payloadLabel];
 // Getting required fields from the request
 $requestedEmail = $json['Email'];
 
-// Generating and executing the SQL
+// Checking if user already exists
 $sql = "SELECT UserID FROM User WHERE (Email = ?)";
 $query = $db->prepare($sql);
 $query->bind_param("s", $requestedEmail);
