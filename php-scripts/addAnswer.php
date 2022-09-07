@@ -17,3 +17,5 @@ $query->execute();
 
 $query->close();
 $db->close();
+
+//obligatory comment
