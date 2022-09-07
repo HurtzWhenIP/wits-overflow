@@ -1,6 +1,6 @@
 ## CircleCI Badge
 
-[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
+[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP?branch=master)
 
 ## Code-Cov Badge
 
