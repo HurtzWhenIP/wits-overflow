@@ -1,4 +1,4 @@
-[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=shield)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
+[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
 
 
 # Getting Started with Create React App
