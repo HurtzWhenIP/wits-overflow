@@ -1,8 +1,8 @@
-[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
+
 
 ## CircleCI Badge
 
-[![CircleCI](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg&circle-token=c8a54c4d4cede23408c48eb8931b32de12a81f14)](https://app.circleci.com/pipelines/github/HurtzWhenIP/wits-overflow)
+[![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
 
 ## Code-Cov Badge
 
