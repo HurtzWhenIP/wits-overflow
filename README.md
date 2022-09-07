@@ -1,5 +1,12 @@
 [![HurtzWhenIP](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg)](https://app.circleci.com/pipelines/github/HurtzWhenIP)
 
+## CircleCI Badge
+
+[![CircleCI](https://circleci.com/gh/HurtzWhenIP/wits-overflow.svg?style=svg&circle-token=c8a54c4d4cede23408c48eb8931b32de12a81f14)](https://app.circleci.com/pipelines/github/HurtzWhenIP/wits-overflow)
+
+## Code-Cov Badge
+
+[![codecov](https://codecov.io/gh/MacroHard-Solutions/tournament-server/branch/code-cov/graph/badge.svg?token=X67KO80SL5)](https://codecov.io/gh/MacroHard-Solutions/tournament-server)
 
 # Getting Started with Create React App
 
