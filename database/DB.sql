@@ -31,7 +31,12 @@ CREATE TABLE AnswerPost (
 
 CREATE TABLE Comment (
     CommentID INT NOT NULL AUTO_INCREMENT,
-    ThreadID INT NOT NULL,
+    PostID INT NOT NULL,
+    UserID INT NOT NULL,
+    CommentContent TEXT NOT NULL,
+    IsQuestion BOOLEAN NOT NULL DEFAULT 0,
+    PRIMARY KEY (CommentID),
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
 
 /*
