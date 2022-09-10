@@ -29,7 +29,14 @@ CREATE TABLE AnswerPost (
     FOREIGN KEY (ParentPostID) REFERENCES QuestionPost(PostID)
 );
 
-/*Basic 3 tables. User, posts and answers
+CREATE TABLE Comment (
+    CommentID INT NOT NULL AUTO_INCREMENT,
+    ThreadID INT NOT NULL,
+);
+
+/*
+Basic 3 tables. User, posts and answers
 User stores Email, First name, Last name , hashed password
 QuestionsPost stores Post number, username, post title, post content, solved state
 AnswersPost stores Answer number, parent post number, username, answer content, edited state
+*/
