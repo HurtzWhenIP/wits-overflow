@@ -38,3 +38,12 @@ CREATE TABLE Comment (
     PRIMARY KEY (CommentID),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
+
+CREATE TABLE Vote (
+    UserID INT NOT NULL,
+    PostID INT NOT NULL,
+    IsQuestion BOOLEAN NOT NULL,
+    Vote BOOLEAN NOT NULL,
+    PRIMARY KEY (UserID, PostID, IsQuestion),
+    FOREIGN KEY (UserID) REFERENCES User(UserID)
+);
