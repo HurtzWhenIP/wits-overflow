@@ -1,0 +1,10 @@
+.tilesWrap{
+    border: 2.5px solid rgb(0,59,92);
+    margin: 1em;
+    padding: 1em;
+    width: 30em;
+    min-height: 30em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

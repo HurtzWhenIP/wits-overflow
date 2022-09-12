@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import '../styles/Questions.css';
 import Loading from "./Loading";
+import Question from './Question';
 
 function Questions({ data }) {
     //stores question set 
@@ -24,21 +25,9 @@ function Questions({ data }) {
     return (
         <>
             {loading && <Loading caption={"Turns out... Some questions may take longer to answer than others"}/>}
-            <div>
+            <div className="questionsHolder">
                 {questions && questions.map((question) => {
-                    const list = (
-                        <>
-                            <div className="tilesWrap" key={question.PostID}>
-                                <h2>{question.PostID}</h2>
-                                <h3>{question.PostTitle}</h3>
-                                <p>{question.PostContent}</p>
-                                <h3>{question.Solved}</h3>
-                                <button>Read more</button>
-                            </div>
-                            <hr />
-                        </>
-                    );
-                    return list;
+                    return(<Question question={question}/>)
                 })}
             </div>
         </>
