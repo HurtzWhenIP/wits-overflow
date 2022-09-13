@@ -24,7 +24,7 @@ CREATE TABLE AnswerPost (
     UserID INT NOT NULL,
     AnswerContent TEXT NOT NULL, 
     Edited BOOLEAN NOT NULL DEFAULT 0,
-    PRIMARY KEY(AnswerID),
+    PRIMARY KEY (AnswerID),
     FOREIGN KEY (UserID) REFERENCES User(UserID),
     FOREIGN KEY (ParentPostID) REFERENCES QuestionPost(PostID)
 );
