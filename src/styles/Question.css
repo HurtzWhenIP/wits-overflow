@@ -1,9 +1,9 @@
 .tilesWrap{
-    border: 2.5px solid rgb(0,59,92);
+    
     margin: 1em;
     padding: 1em;
     width: 30em;
-    min-height: 30em;
+    min-height: fit-content;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -12,20 +12,20 @@
 .tilesWrap .question {
 	display: inline-block;
 	width: 20%;
-	min-width: 200px;
-	max-width: 230px;
+	min-width: fit-content;
+	max-width: (fit-content + 30px);
 	padding: 80px 20px 40px;
 	position: relative;
 	vertical-align: top;
 	margin: 10px;
 	font-family: 'helvetica', san-serif;
 	min-height: 25vh;
-	background: #262a2b;
-	border: 1px solid #252727;
+    background: linear-gradient(to right, #aff4ff, #C9FFBF);
 	text-align: left;
 }
 .tilesWrap .question .head1 {
 	font-size: 114px;
+	
 	margin: 0;
 	position: absolute;
 	opacity: 0.2;
@@ -34,21 +34,21 @@
 	transition: all 0.3s ease-in-out;
 }
 .tilesWrap .question .head2 {
-	font-size: 20px;
-	color: #b7b7b7;
+	font-size: 25px;
+	color: #181414;
 	margin-bottom: 5px;
 }
 .tilesWrap .question .parag {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 18px;
-	color: #b7b7b7;
+	color: #1b1a1a;
 	margin-top: 5px;
 }
 .tilesWrap .question .quest_button {
 	background: transparent;
-	border: 1px solid #b7b7b7;
+	border: 1px solid #131212;
 	padding: 10px 20px;
-	color: #b7b7b7;
+	color: #0e0c0c;
 	border-radius: 3px;
 	position: relative;
 	transition: all 0.3s ease-in-out;
@@ -62,7 +62,7 @@
 	position: absolute;
 	height: 100%;
 	width: 120%;
-	background: #b7b7b7;
+	background: #28cac2;
 	top: 0;
 	opacity: 0;
 	left: -140px;
@@ -95,7 +95,6 @@
 	right: -2px;
 	bottom: -2px;
 	z-index: -1;
-	background: #fff;
 	transform: skew(2deg, 2deg);
 }
 .tilesWrap .question:after {
@@ -105,12 +104,11 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: rgba(255, 255, 255, 0.02);
 }
 .tilesWrap .question:nth-child(1):before {
 	background: #C9FFBF;
 background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);
-background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+background: linear-gradient(to right, #FFAFBD, #bfc9ff);
 }
 .tilesWrap .question:nth-child(2):before {
 	background: #f2709c;
