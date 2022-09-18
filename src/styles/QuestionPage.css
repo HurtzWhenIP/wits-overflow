@@ -27,3 +27,11 @@
     padding: 1em;
     border-radius: 2px;
 }
+
+.newAnswerBtn{
+    border-radius: 2em;
+}
+
+.newAnswerText{
+    margin-top: 2.5em;
+}

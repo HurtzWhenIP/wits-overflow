@@ -1,14 +1,54 @@
 import "../styles/Answer.css";
 import Voter from "./Voter";
 import Comments from "./Comments";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import useAxiosFunction from "../hooks/useAxiosFunction";
+import axios from '../apis/ForumServer';
+import Loading from "./Loading";
+import useStore from "../hooks/useStore";
 
 function Answer({ answer }) {
 
-    const [open,setOpen] = useState(false);
+  const userObj = useStore(state => state.userObj);
+
+  const [open, setOpen] = useState(false);
+  const [appendAnswer, setAppendanswer] = useState(false);
+  const [answerContent, setAnswercontent] = useState('');
+
+  const [status, response, error, loading, axiosFetch] = useAxiosFunction();
+
+  const submitAnswer = (e) => {
+    e.preventDefault();
+    setAppendanswer(!appendAnswer);
+
+    if (appendAnswer && (answerContent.length > 0)) {
+      axiosFetch({
+        axiosInstance: axios,
+        method: 'POST',
+        url: "updateAnswer.php",
+        requestConfig: {
+          data: {
+            "AnswerID": answer.AnswerID,
+            "AnswerContent": (answer.AnswerContent + answerContent),
+            "Edited": 0
+          }
+        }
+      });
+    }
+  }
+
+  useEffect(() => {
+    if(status === 200){
+      window.location.reload(false);
+    }
+    return () => {
+      console.log((status === 200) ? "Answer Updated" : "Updating Answer");
+    };
+  }, [status,response]);
 
   return (
     <div className="mainQuestionBox answerBoxx">
+      {loading && <Loading caption="Updating Answer"/>}
       <div className="answerBox">
         <div>
           <p>{answer.AnswerContent}</p>
@@ -22,12 +62,41 @@ function Answer({ answer }) {
         </div>
         <div>{answer && <Voter post={answer} isQuestion={false} />}</div>
       </div>
+
+      {appendAnswer && (
+        <div>
+          <div className="appendAnswerText">
+            <textarea
+              placeholder="Enter Your answer..."
+              className="descText"
+              id="descText"
+              cols="50"
+              rows="5"
+              onChange={(e) => {
+                setAnswercontent(e.target.value);
+              }}
+            ></textarea>
+          </div>
+        </div>
+      )}
+
+      {appendAnswer && (
+        <h4 style={{ color: "red" }}>answer submission incomplete</h4>
+      )}
+      {(userObj.UserID === answer.UserID) && <button
+        className="appendAnswerBtn"
+        style={{ marginTop: "0.5em" }}
+        onClick={submitAnswer}
+      >
+        {appendAnswer ? "Confirm Edit" : "Append Answer"}
+      </button>}
+
       {(open && answer) ? (
-        <Comments post={answer} isQuestion={false} closer={setOpen}/>
+        <Comments post={answer} isQuestion={false} closer={setOpen} />
       ) : (
         <span
-        className='commntBtn'
-        style={{margin: "1em"}}
+          className='commntBtn'
+          style={{ margin: "1em" }}
           onClick={() => {
             setOpen(!open);
           }}

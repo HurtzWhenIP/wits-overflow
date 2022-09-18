@@ -1,12 +1,10 @@
 .commntBtn{
     font-size: 2em;
-    border: 2px solid black;
     padding: 0.15em;
     transition: all 200ms ease-in-out;
 }
 
 .commntBtn:hover{
-    transform: scale(1.25);
     font-size: 2.5em;
     cursor: pointer;
 }
@@ -15,4 +13,18 @@
     border-top:  2px solid rgb(0,59,92);
     padding: 0.5em;
     
+}
+
+.commentsHolder{
+    display: flex;
+    flex-flow: column;
+}
+
+.newCommentBtn{
+    font-size: medium;
+    border-radius: 2em;
+    width: fit-content;
+    height: 0.5em;
+    margin: 0;
+    padding: 0.5em;
 }

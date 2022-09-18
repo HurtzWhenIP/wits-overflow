@@ -15,6 +15,10 @@
   flex-wrap: wrap;
 }
 
+.newQuestionBtn{
+  border-radius: 2em;
+}
+
 .wrapper .search_box{
   width: 500px;
   height:auto;

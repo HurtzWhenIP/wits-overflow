@@ -30,6 +30,7 @@ function MainQuestion({ question }) {
           >
             {question.Solved ? "Solved" : "Unsolved"}
           </h3>
+          
         </div>
         <div>
           <Voter post={question} />

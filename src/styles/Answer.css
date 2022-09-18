@@ -11,4 +11,12 @@
 
 .answerBoxx{
     margin-bottom: 1em;
+    display: flex;
+    flex-flow: column;
+}
+
+.appendAnswerBtn{
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
 }
