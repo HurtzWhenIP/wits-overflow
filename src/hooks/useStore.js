@@ -6,6 +6,8 @@ let store = (set) => ({
     setUserobj: (obj) => set((state) => ({ userObj: obj })),
     open: false,
     setOpen: (value) => set((state) => ({open: value})),
+    question: null,
+    setQuestion: (value) => set((state) =>({question: value}))
 });
 
 store = devtools(store);

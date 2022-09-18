@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Homepage from './Homepage'
 import Login from './Login'
 import Siginup from './Signup'
-import Questions from '../components/Questions'
+import QuestionPage from './QuestionPage';
 import Profile from './Profile'
 import Notfound from './Notfound'
 import Verifyplayer from './Verifyplayer';
@@ -17,6 +17,7 @@ function App() {
 
   //Pull useriobj from store
   const userObj = useStore(state => state.userObj);
+  const question = useStore(state => state.question);
 
   return (
     <Router>
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path='/profile'>
               {userObj ? <Profile/> : <Verifyplayer/>}
+            </Route>
+            <Route path='/question'>
+              {(question === null) ? <Homepage/> : <QuestionPage/>}
             </Route>
             <Route component={Notfound}/>
           </Switch>

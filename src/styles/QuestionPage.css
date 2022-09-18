@@ -1,0 +1,29 @@
+.QuestionPage{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1em;
+}
+
+.MainQuestion{
+    max-width: 70vw;
+    border: 0.25em solid rgb(0,59,92);
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.altText{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.mainQuestionBox{
+    border: 0.25em solid rgb(0, 114, 180);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    padding: 1em;
+    border-radius: 2px;
+}

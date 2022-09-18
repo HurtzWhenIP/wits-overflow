@@ -1,0 +1,33 @@
+.voterBox{
+    display: flex;
+    flex-flow: column;
+    min-height: 10em;
+    justify-content: space-evenly;
+    margin: 1em;
+}
+
+.voteupButton{
+    background-image: url('../imgs/arrow-upward.png');
+    height: 3em;
+    width: 3em;
+    background-size: contain;
+    background-color: green;
+}
+
+.votedownButton{
+    background-image: url('../imgs/down-arrow.png');
+    height: 3em;
+    width: 3em;
+    background-size: contain;
+    background-color: red;
+}
+
+.voteButton{
+    transition: all 200ms ease-in-out;
+    padding: 1px;
+}
+
+.voteButton:hover{
+    transform: scale(1.25);
+    cursor: pointer;
+}
