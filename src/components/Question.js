@@ -21,7 +21,6 @@ function Question({ question }) {
           {question.PostContent}
         </div>
         <h3 style={question.Solved ? {color: 'green'} : {color: 'red'}}>{question.Solved ? "Solved" : "Unsolved"}</h3>
-        {/*FIXME clickability defects*/}
         <div className="quest_button" onClick={()=> {openPage()}}>Read more</div>
       </div>
     </div>

@@ -47,6 +47,8 @@ function MainQuestion() {
     };
   }, [status, response]);
 
+  //TODO account for upvote downvote count
+
   return (
     <div className="mainQuestionBox">
       {loading && <Loading caption="Changing question state" />}
