@@ -35,3 +35,11 @@
 .newAnswerText{
     margin-top: 2.5em;
 }
+
+.markerBtn{
+    font-size: small;
+    margin: 0;
+    padding: 0 5px;
+    border: none;
+    letter-spacing: 0;
+}

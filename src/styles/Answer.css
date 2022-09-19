@@ -20,3 +20,8 @@
     height: fit-content;
     margin: 0;
 }
+
+.voteCounter{
+    display: flex;
+    flex-flow: row;
+}

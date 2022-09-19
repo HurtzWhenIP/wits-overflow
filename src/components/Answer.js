@@ -1,7 +1,7 @@
 import "../styles/Answer.css";
 import Voter from "./Voter";
 import Comments from "./Comments";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import useAxiosFunction from "../hooks/useAxiosFunction";
 import axios from '../apis/ForumServer';
 import Loading from "./Loading";
@@ -38,17 +38,17 @@ function Answer({ answer }) {
   }
 
   useEffect(() => {
-    if(status === 200){
+    if (status === 200) {
       window.location.reload(false);
     }
     return () => {
       console.log((status === 200) ? "Answer Updated" : "Updating Answer");
     };
-  }, [status,response]);
+  }, [status, response]);
 
   return (
     <div className="mainQuestionBox answerBoxx">
-      {loading && <Loading caption="Updating Answer"/>}
+      {loading && <Loading caption="Updating Answer" />}
       <div className="answerBox">
         <div>
           <p>{answer.AnswerContent}</p>
@@ -61,6 +61,11 @@ function Answer({ answer }) {
           </p>
         </div>
         <div>{answer && <Voter post={answer} isQuestion={false} />}</div>
+      </div>
+
+      <div className="voteCounter">
+        <span style={{ color: 'green',margin: " 0 2em" }}>Upvotes: {answer.UpVote}</span>
+        <span style={{ color: 'red',margin: "0 2em"}}>Downvotes: {answer.DownVote}</span>
       </div>
 
       {appendAnswer && (

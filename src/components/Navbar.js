@@ -60,7 +60,7 @@ export function DropdownMenu(){
     return(
         <div className='dropdown'>
             <DropdownItem icon={<FcContacts size={65}/>} path="/profile">Profile</DropdownItem>
-            <DropdownItem icon={<FcImport size={65}/>} path="#" log={true}>Log-out</DropdownItem>
+            <DropdownItem icon={<FcImport size={65}/>} path="/" log={true}>Log-out</DropdownItem>
             <DropdownItem icon={<FcSettings size={65}/>} path="/settings">Settings</DropdownItem>
         </div>
     )
