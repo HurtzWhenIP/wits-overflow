@@ -47,3 +47,22 @@ CREATE TABLE Vote (
     PRIMARY KEY (UserID, PostID, IsQuestion),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
+
+-- Create a view to keep record of votes per question and answer
+
+CREATE VIEW AnswerVoteTally as (
+    SELECT UpVotes.AnswerID, UpVotes, DownVotes
+        FROM (
+            SELECT PostID as AnswerID, COUNT(*) as DownVotes 
+            FROM Vote 
+            WHERE IsQuestion = 0 AND Vote = 0 
+            GROUP BY PostID
+        ) as DownVotes 
+    INNER JOIN (
+            SELECT PostID as AnswerID, COUNT(*) as UpVotes
+            FROM Vote
+            WHERE IsQuestion = 0 AND Vote = 1
+            GROUP BY PostID
+        ) as UpVotes 
+    ON UpVotes.AnswerID = DownVotes.AnswerID
+);
