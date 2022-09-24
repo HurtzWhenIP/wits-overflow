@@ -66,3 +66,20 @@ CREATE VIEW AnswerVoteTally as (
         ) as UpVotes 
     ON UpVotes.AnswerID = DownVotes.AnswerID
 );
+
+CREATE VIEW QuestionVoteTally as (
+    SELECT UpVotes.QuestionID, UpVotes, DownVotes
+        FROM (
+            SELECT PostID as QuestionID, COUNT(*) as DownVotes 
+            FROM Vote 
+            WHERE IsQuestion = 1 AND Vote = 0 
+            GROUP BY PostID
+        ) as DownVotes 
+    INNER JOIN (
+            SELECT PostID as QuestionID, COUNT(*) as UpVotes
+            FROM Vote
+            WHERE IsQuestion = 1 AND Vote = 1
+            GROUP BY PostID
+        ) as UpVotes 
+    ON UpVotes.QuestionID = DownVotes.QuestionID
+);
