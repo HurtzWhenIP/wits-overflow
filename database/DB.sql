@@ -51,20 +51,12 @@ CREATE TABLE Vote (
 -- Create a view to keep record of votes per question and answer
 
 CREATE VIEW AnswerVoteTally as (
-    SELECT UpVotes.AnswerID, UpVotes, DownVotes
-        FROM (
-            SELECT PostID as AnswerID, COUNT(*) as DownVotes 
-            FROM Vote 
-            WHERE IsQuestion = 0 AND Vote = 0 
-            GROUP BY PostID
-        ) as DownVotes 
-    INNER JOIN (
-            SELECT PostID as AnswerID, COUNT(*) as UpVotes
-            FROM Vote
-            WHERE IsQuestion = 0 AND Vote = 1
-            GROUP BY PostID
-        ) as UpVotes 
-    ON UpVotes.AnswerID = DownVotes.AnswerID
+    SELECT PostID as AnswerID, 
+    CAST(SUM(Vote = 1) as SIGNED) as UpVotes, 
+    CAST(SUM(Vote = 0) as SIGNED) as DownVotes 
+    FROM Vote 
+    WHERE(IsQuestion = 0) 
+    GROUP BY PostID
 );
 
 CREATE VIEW QuestionVoteTally as (
