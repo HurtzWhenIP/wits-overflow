@@ -28,10 +28,9 @@ function Comments({ post, closer, isQuestion }) {
     useEffect(() => {
         if (status === 200) {
             setData(response);
-            console.log(response);
         }
         return () => {
-            console.log(response);
+            console.log("Fetched Comments");
         };
     }, [status, response]);
 
@@ -81,6 +80,8 @@ function Comments({ post, closer, isQuestion }) {
                     );
                 })
             )}
+
+            {((response.length === 0) && (status === 200)) && <h4>No Comment...</h4>}
 
             {cloading && <Loading caption="Posting Comment"/>}
 

@@ -61,6 +61,7 @@ function Voter({post,isQuestion}){
             }else{
                 if(response[0]){
                     setQuestion(response[0]);
+                    window.location.reload(false);
                 }
             }
         }
