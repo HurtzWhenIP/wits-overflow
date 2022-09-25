@@ -13,6 +13,7 @@ function Voter({post,isQuestion}){
     const [status,response,error,loading,axiosFunction] = useAxiosFunction();
 
     const userObj = useStore(state => state.userObj);
+    const setQuestion = useStore(state => state.setQuestion);
 
     const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -28,10 +29,24 @@ function Voter({post,isQuestion}){
                         UserID: userObj.UserID,
                         PostID: isQuestion ? post.PostID : post.AnswerID,
                         IsQuestion: isQuestion ? 1 : 0,
-                        Vote: vote ? 1 : -1
+                        Vote: vote ? 1 : 0
                     }
                 }
             });
+
+            if(isQuestion){
+                //Refresh Global stored main question
+                axiosFunction({
+                    axiosInstance: axios,
+                    method: 'POST',
+                    url: 'getSingleQuestion.php',
+                    requestConfig: {
+                        data: {
+                            PostID: post.PostID
+                        }
+                    }
+                })
+            }
         }
 
         setTimer(false);
@@ -41,7 +56,13 @@ function Voter({post,isQuestion}){
 
     useEffect(() => {
         if(status === 200){
-            // window.location.reload(false);
+            if(!isQuestion){
+                window.location.reload(false);
+            }else{
+                if(response[0]){
+                    setQuestion(response[0]);
+                }
+            }
         }
         return () => {
             console.log(`Voted: ${indicator}`);

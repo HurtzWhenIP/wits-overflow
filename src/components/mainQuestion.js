@@ -49,8 +49,6 @@ function MainQuestion() {
 
   //TODO account for upvote downvote count
 
-  console.log(question);
-
   return (
     <div className="mainQuestionBox">
       {loading && <Loading caption="Changing question state" />}
