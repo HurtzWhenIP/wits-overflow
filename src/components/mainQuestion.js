@@ -49,6 +49,8 @@ function MainQuestion() {
 
   //TODO account for upvote downvote count
 
+  console.log(question);
+
   return (
     <div className="mainQuestionBox">
       {loading && <Loading caption="Changing question state" />}
@@ -81,6 +83,12 @@ function MainQuestion() {
           <Voter post={question} isQuestion={true}/>
         </div>
       </div>
+
+      <div className="voteCounter">
+        <span style={{ color: 'green',margin: " 0 2em" }}>Upvotes: {question.UpVotes}</span>
+        <span style={{ color: 'red',margin: "0 2em"}}>Downvotes: {question.DownVotes}</span>
+      </div>
+
       {(open && question) ? (
         <Comments closer={setOpen} post={question} isQuestion={true} />
       ) : (

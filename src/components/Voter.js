@@ -18,6 +18,7 @@ function Voter({post,isQuestion}){
 
     const handleClick = async (vote) => {
         if(timer){
+            
             axiosFunction({
                 axiosInstance: axios,
                 method: 'POST',
@@ -26,21 +27,21 @@ function Voter({post,isQuestion}){
                     data: {
                         UserID: userObj.UserID,
                         PostID: isQuestion ? post.PostID : post.AnswerID,
-                        IsQuestion: isQuestion,
-                        Vote: vote
+                        IsQuestion: isQuestion ? 1 : 0,
+                        Vote: vote ? 1 : -1
                     }
                 }
             });
         }
 
         setTimer(false);
-        await delay(7000);
+        await delay(3000);
         setTimer(true);
     }
 
     useEffect(() => {
         if(status === 200){
-            window.location.reload(false);
+            // window.location.reload(false);
         }
         return () => {
             console.log(`Voted: ${indicator}`);

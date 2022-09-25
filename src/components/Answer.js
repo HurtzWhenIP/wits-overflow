@@ -66,8 +66,8 @@ function Answer({ answer }) {
       </div>
 
       <div className="voteCounter">
-        <span style={{ color: 'green',margin: " 0 2em" }}>Upvotes: {answer.UpVote}</span>
-        <span style={{ color: 'red',margin: "0 2em"}}>Downvotes: {answer.DownVote}</span>
+        <span style={{ color: 'green',margin: " 0 2em" }}>Upvotes: {answer.UpVotes}</span>
+        <span style={{ color: 'red',margin: "0 2em"}}>Downvotes: {answer.DownVotes}</span>
       </div>
 
       {appendAnswer && (
