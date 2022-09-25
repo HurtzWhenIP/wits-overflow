@@ -1,0 +1,5 @@
+1.)Given I am a registered user, when I open a specific Question page then I should be able to comment on questions and answers
+2.)given I am a registered user, when i open a specific questions page then I should be able to up/down vote on questions and answers
+3.)Given i am a user who posted an answer on a question,when on that answers specific question page then i should be able to edit my answer by append to the end of the oriiginal answer 
+4.)Given i am a registered user when on the specific questions page, then i shuld be able to add answers to the queston 
+5.)Given i am the poster of a question, when on the specific question page, then i should be able to mark the question as resolved or unresolved
