@@ -68,18 +68,10 @@ CREATE VIEW AnswerVoteTally as (
 );
 
 CREATE VIEW QuestionVoteTally as (
-    SELECT UpVotes.QuestionID, UpVotes, DownVotes
-        FROM (
-            SELECT PostID as QuestionID, COUNT(*) as DownVotes 
-            FROM Vote 
-            WHERE IsQuestion = 1 AND Vote = 0 
-            GROUP BY PostID
-        ) as DownVotes 
-    INNER JOIN (
-            SELECT PostID as QuestionID, COUNT(*) as UpVotes
-            FROM Vote
-            WHERE IsQuestion = 1 AND Vote = 1
-            GROUP BY PostID
-        ) as UpVotes 
-    ON UpVotes.QuestionID = DownVotes.QuestionID
+    SELECT PostID as QuestionID, 
+    CAST(SUM(Vote = 1) as SIGNED) as UpVotes, 
+    CAST(SUM(Vote = 0) as SIGNED) as DownVotes 
+    FROM Vote 
+    WHERE(IsQuestion = 1) 
+    GROUP BY PostID
 );
