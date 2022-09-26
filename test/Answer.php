@@ -40,10 +40,10 @@ class Answer {
     $query = $db->prepare($sql);
     $query->execute();
   }
-  function createPost($uID, $parentPID, $content){
-    $userID = $uID
-    $parentPostID = $parentPID
-    $answerContent = $content
+  function createPost($uID, $parentPID, $content) {
+    $userID = $uID;
+    $parentPostID = $parentPID;
+    $answerContent = $content;
     // Generating and executing the SQL
     $sql = "INSERT INTO TestAnswerPost(UserID, ParentPostID, AnswerContent) VALUES (?, ?, ?)";
     $query = $db->prepare($sql);
