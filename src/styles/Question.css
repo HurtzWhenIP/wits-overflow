@@ -19,7 +19,7 @@
 	vertical-align: top;
 	margin: 10px;
 	font-family: 'helvetica', san-serif;
-	min-height: 25vh;
+	height: 25vh;
     background: linear-gradient(to right, #aff4ff, #C9FFBF);
 	text-align: left;
 }
