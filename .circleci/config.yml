@@ -87,7 +87,7 @@ jobs:
           name: Clone server
           working_directory: ~/workdir
           command: |
-            git clone git@github.com:HurtzWhenIP/wits-overflow.git
+            git clone https://${GITHUB_TOKEN}@github.com/HurtzWhenIP/wits-overflow.git
       - run:
           name: Trigger server deployment
           working_directory: ~/workdir/wits-overflow
@@ -101,7 +101,7 @@ jobs:
             git merge --no-edit dev-backend
             git commit --allow-empty -m "Trigger deployment"
             # Push quietly to prevent showing the token in log
-            git push -q https://${K3MPT_GITHUB_TOKEN}@github.com/K3MT/ShoppingList.git
+            git push -q https://${GITHUB_TOKEN}@github.com/HurtzWhenIP/wits-overflow.git
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
