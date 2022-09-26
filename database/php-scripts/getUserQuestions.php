@@ -5,7 +5,13 @@ $json = $json[$payloadLabel];
 $userID = $json['UserID'];
 
 // Generating and executing the SQL
-$sql = "SELECT * FROM QuestionPost WHERE UserID = ?";
+$sql = "SELECT QuestionPost.*, IFNULL(vt.UpVotes, 0) as UpVotes, " . 
+        "IFNULL(vt.DownVotes, 0) as DownVotes " . 
+        "FROM QuestionPost " . 
+        "LEFT JOIN QuestionVoteTally as vt " . 
+        "ON QuestionPost.PostID = vt.QuestionID " . 
+        "WHERE QuestionPost.UserID = ?";
+
 $query = $db->prepare($sql);
 $query->bind_param("s", $userID);
 $query->execute();
