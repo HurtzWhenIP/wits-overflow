@@ -50,6 +50,10 @@ class Answer {
     $query->bind_param("iis", $userID, $parentPostID, $answerContent);
     $query->execute();
 
+    $sql = "DROP TestAnswerPost IF EXISTS;";
+    $query = $db->prepare($sql);
+    $query->execute();
+
     $query->close();
     $db->close();
 

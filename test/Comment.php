@@ -3,7 +3,8 @@ class Comment {
     // Properties
     private $userID;
     private $parentPostID;
-    private $answerContent;
+    private $commentContent;
+    private $isQuestion;
     private $db;
 
   // Methods
@@ -26,19 +27,32 @@ class Comment {
     die("Connection failure: " . $conn->connect_error);
     }
 
-    $sql = "";
+    $sql = "CREATE TABLE TestComment (
+    CommentID INT NOT NULL AUTO_INCREMENT,
+    PostID INT NOT NULL,
+    UserID INT NOT NULL,
+    CommentContent TEXT NOT NULL,
+    IsQuestion BOOLEAN NOT NULL DEFAULT 0,
+    PRIMARY KEY (CommentID),
+    FOREIGN KEY (UserID) REFERENCES TestUser(UserID)
+    );";
 
     $query = $db->prepare($sql);
     $query->execute();
   }
-  function createComment($uID, $parentPID, $content){
-    $userID = $uID
-    $parentPostID = $parentPID
-    $answerContent = $content
+  function createComment($uID, $parentPID, $content, $question){
+    $userID = $uID;
+    $parentPostID = $parentPID;
+    $commentContent = $content;
+    $isQuestion = $question;
     // Generating and executing the SQL
-    $sql = "INSERT INTO TestAnswerPost(UserID, ParentPostID, AnswerContent) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO TestComment(UserID, PostID, CommentContent, IsQuestion) VALUES (?, ?, ?, ?)";
     $query = $db->prepare($sql);
-    $query->bind_param("iis", $userID, $parentPostID, $answerContent);
+    $query->bind_param("iisi", $userID, $postID, $commentContent, $isQuestion);
+    $query->execute();
+
+    $sql = "DROP TestComment IF EXISTS;";
+    $query = $db->prepare($sql);
     $query->execute();
 
     $query->close();
@@ -52,9 +66,13 @@ class Comment {
   {
     return $parentPostID;
   }
-  function getanswerContent()
+  function getcommentContent()
   {
-    return $answerContent;
+    return $commentContent;
+  }
+  function getIsQuestion()
+  {
+    return $isQuestion;
   }
 }
 ?>

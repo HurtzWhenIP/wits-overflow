@@ -52,12 +52,12 @@ class Question {
     $query->bind_param("iss", $userID, $postTitle, $postContent);
     $query->execute();
 
-    $query->close();
-    $db->close();
-    
-    $sql = "DROP TestPost IF EXISTS;";
+    $sql = "DROP TestQuestionPost IF EXISTS;";
     $query = $db->prepare($sql);
     $query->execute();
+
+    $query->close();
+    $db->close();
 
   }
   function getUserID(){
