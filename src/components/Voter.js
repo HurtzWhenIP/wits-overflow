@@ -33,6 +33,8 @@ function Voter({post,isQuestion}){
                     }
                 }
             });
+            
+            await delay(1500);
 
             if(isQuestion){
                 //Refresh Global stored main question
@@ -59,16 +61,21 @@ function Voter({post,isQuestion}){
             if(!isQuestion){
                 window.location.reload(false);
             }else{
-                if(response[0]){
-                    setQuestion(response[0]);
-                    window.location.reload(false);
+                try {
+                    if(response[0].PostID){
+                        console.log(response[0]);
+                        setQuestion(response[0]);
+                        // window.location.reload(false);
+                    }
+                } catch (error) {
+                    console.log("Unable to refresh question");
                 }
             }
         }
         return () => {
             console.log(`Voted: ${indicator}`);
         };
-    }, [status,response,indicator]);
+    }, [status, response, indicator, isQuestion, setQuestion]);
 
     return(
         <div className="voterBox">

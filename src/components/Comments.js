@@ -81,7 +81,7 @@ function Comments({ post, closer, isQuestion }) {
                 })
             )}
 
-            {((response.length === 0) && (status === 200)) && <h4>No Comment...</h4>}
+            {((response.length === 0) && (status === 200)) && <h4>No Comment Unfortunately...</h4>}
 
             {cloading && <Loading caption="Posting Comment"/>}
 
