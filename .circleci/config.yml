@@ -87,7 +87,7 @@ jobs:
           name: Clone server
           working_directory: ~/workdir
           command: |
-            git clone https://${K3MPT_GITHUB_TOKEN}@github.com/K3MT/ShoppingList.git
+            git clone git@github.com:HurtzWhenIP/wits-overflow.git
       - run:
           name: Trigger server deployment
           working_directory: ~/workdir/wits-overflow
