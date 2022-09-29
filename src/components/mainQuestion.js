@@ -47,8 +47,6 @@ function MainQuestion() {
     };
   }, [status, response]);
 
-  //TODO account for upvote downvote count
-
   return (
     <div className="mainQuestionBox">
       {loading && <Loading caption="Changing question state" />}
@@ -69,12 +67,17 @@ function MainQuestion() {
             volutpat, feugiat.
           </p>
 
+          <div className="postUserInfo">
+            <span>Posted By:</span>
+            <h4 style={{margin: '0'}}>{question.FirstName} {question.LastName}</h4>
+          </div>
           <h3
             className="altText"
             style={question.Solved ? { color: "green" } : { color: "red" }}
           >
             {question.Solved ? "Solved" : "Unsolved"}
           </h3>
+          
           {(userObj.UserID === question.UserID) && <button className='markerBtn' onClick={setSolve} style={{ color: question.Solved ? "red" : "green" }}>Mark Question as {question.Solved ? "Unsolved" : "Solved"}</button>}
         </div>
         <div>

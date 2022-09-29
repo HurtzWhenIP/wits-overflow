@@ -51,7 +51,6 @@ function Profile(){
                     paddingBottom: "0.3em",
                     fontSize: "2.5rem",
                 }}>Your Questions:</h1>
-                {/*FIXME repair question object on profile page*/}
                 <Questions data={data}/>
             </div>
         </div>

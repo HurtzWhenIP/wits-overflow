@@ -8,7 +8,6 @@
 
 .MainQuestion{
     max-width: 70vw;
-    border: 0.25em solid rgb(0,59,92);
     padding: 1em 2em;
     margin-bottom: 1em;
     border-radius: 5px;
@@ -43,3 +42,32 @@
     border: none;
     letter-spacing: 0;
 }
+
+.postUserInfo{
+    width:fit-content;
+    float: right !important;   
+}
+
+
+
+.postUserInfo {
+    background-color: rgb(0, 114, 180);
+    box-shadow: 0 5px 0 darkblue;
+    color: white;
+    padding: 0.5em 0.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .postUserInfo:hover {
+    background-color:rgb(0, 0, 155);
+    cursor: pointer;
+  }
+  
+  .postUserInfo:active {
+    box-shadow: none;
+    top: 5px;
+  }
+  
+  

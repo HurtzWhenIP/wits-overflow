@@ -73,15 +73,14 @@ function QuestionPage() {
     };
   }, [astatus,aresponse]);
 
+  //TODO Change question data at top and include question asker
+
   return (
     <div className="QuestionPage">
       {loading && (
         <Loading caption="Hmm... Maybe it just isn't a question worth answers" />
       )}
       {aloading && <Loading caption="Posting Answer"/>}
-      <span style={{ fontSize: "3em", margin: "0.5em" }}>
-        Question: {question.PostID}
-      </span>
       <div>
         <MainQuestion question={question} />
       </div>

@@ -46,8 +46,6 @@ function Answer({ answer }) {
     };
   }, [status, response]);
 
-  //TODO Make sure answers are showing
-
   return (
     <div className="mainQuestionBox answerBoxx">
       {loading && <Loading caption="Updating Answer" />}
@@ -63,6 +61,11 @@ function Answer({ answer }) {
           </p>
         </div>
         <div>{answer && <Voter post={answer} isQuestion={false} />}</div>
+
+        <div className="postUserInfo" style={{float: "right !important"}}>
+            <span>Posted By:</span>
+            <h4 style={{margin: '0'}}>{answer.FirstName} {answer.LastName}</h4>
+          </div>
       </div>
 
       <div className="voteCounter">

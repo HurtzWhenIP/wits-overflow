@@ -3,10 +3,6 @@ Reveiw:
 -comments on main questions page: more card centralized layout
 -UI will be fleshed out as sprints go on 
 
-
-
-
-
 Sprint 2: (Due 19th Sept)
 	Specific Question Page: (5 user stories) user stories:
 		Answers => text-based
@@ -17,25 +13,41 @@ Sprint 2: (Due 19th Sept)
 		Vote on question and answer => one vote per user
 		Person who asked a question can mark answer as helpful or correct 
 		
-Sprint3:
-	-User Engagements stats:
+Sprint3: (Due 10th oct)
+	-Update Ui to include who asked/posted (1 user story)
+	=> Flesh out profile
+	-User Engagements stats: (2 user stories = tracking + showing)
 		how many questionas asked => upvs and downvs for answers
 		how many upvs and downvs on answers
 		hot many comments user has
-	=> Flesh out profile
 	
+	-View another users profile + place to navigate profiles (2 user stories => viewing + searching)
+		-edit whats viewable
+		-click on "poster" on comments/questions/answers to take you to poster profile
+		
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	-Including Forums in app: (Forums Page)
 		click on forum => gneral page for a specific forum => Signup to be a mod + sub to forum
 		specific forums for specific questions
 		forums will have subscribers, owner, moderators(validate ans + ques) 
 		to become mod => sub to forum and owner validates moderator, however there is a required engagement value to be held
-
+ 
 Further Forward:	
 	-Achievments:
 	
 	-mods can 
 	
 	-filters + tags
+	
+===========================================================================================================================================================================================================
+8. User engagement stats (keep track of these): (1)
+	(num questions asked) 1
+	(num questions answered) 1
+	(num comments made) 0.1
+	(num upvotes and downvotes received - forum and in general)
+	(user engagement value - weighting of all things above)
+	
+9. View another user's profile - check stats, questions asked and answered, achievements (later on), spaces in (later on), follow them (later on)
 
 
 ===========================================================================================================From Nico=======================================================================================
