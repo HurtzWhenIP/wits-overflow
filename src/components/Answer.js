@@ -6,10 +6,14 @@ import useAxiosFunction from "../hooks/useAxiosFunction";
 import axios from '../apis/ForumServer';
 import Loading from "./Loading";
 import useStore from "../hooks/useStore";
+import { useHistory } from "react-router-dom";
 
 function Answer({ answer }) {
+  const history = useHistory();
+
 
   const userObj = useStore(state => state.userObj);
+  const setUserobjexplore = useStore(state => state.setUserobjexplore);
 
   const [open, setOpen] = useState(false);
   const [appendAnswer, setAppendanswer] = useState(false);
@@ -46,9 +50,37 @@ function Answer({ answer }) {
     };
   }, [status, response]);
 
+  //handle viewing of posted user
+  const [profstatus, profresponse, proferror, profloading, profaxiosFetch] = useAxiosFunction();
+
+  const viewPoster = () => {
+    //send request for user profile 
+    profaxiosFetch({
+      axiosInstance: axios,
+      method: 'POST',
+      url: 'getUserProfile.php',
+      requestConfig: {
+        data: {
+          UserID: answer.UserID,
+        }
+      }
+    });
+  }
+
+  useEffect(() => {
+    if(profstatus === 200){
+      setUserobjexplore(profresponse[0]);
+      history.push('profile');
+    }
+    return () => {
+      console.log((status === 200) ? 'fetched profile' : 'fetching profile...');
+    };
+  }, [profstatus,profresponse]);
+
   return (
     <div className="mainQuestionBox answerBoxx">
       {loading && <Loading caption="Updating Answer" />}
+      {profloading && <Loading caption="Fetching User Credentials" />}
       <div className="answerBox">
         <div>
           <p>{answer.AnswerContent}</p>
@@ -62,7 +94,7 @@ function Answer({ answer }) {
         </div>
         <div>{answer && <Voter post={answer} isQuestion={false} />}</div>
 
-        <div className="postUserInfo" style={{float: "right !important"}}>
+        <div className="postUserInfo" style={{float: "right !important"}} onClick={viewPoster}>
             <span>Posted By:</span>
             <h4 style={{margin: '0'}}>{answer.FirstName} {answer.LastName}</h4>
           </div>

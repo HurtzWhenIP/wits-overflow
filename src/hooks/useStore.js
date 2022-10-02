@@ -7,7 +7,9 @@ let store = (set) => ({
     open: false,
     setOpen: (value) => set((state) => ({open: value})),
     question: null,
-    setQuestion: (value) => set((state) =>({question: value}))
+    setQuestion: (value) => set((state) =>({question: value})),
+    userObjExplore: null,
+    setUserobjexplore: (value) => set((state) => ({userObjExplore: value})),
 });
 
 store = devtools(store);

@@ -7,14 +7,19 @@ import useStore from '../hooks/useStore';
 import axios from '../apis/ForumServer';
 import { useEffect } from 'react';
 import Loading from '../components/Loading';
+import { useHistory } from "react-router-dom";
 
 function MainQuestion() {
+
+  const history = useHistory();
+
   const [open, setOpen] = useState(false);
   const [toggle,setToggle] = useState(false);
 
   const question = useStore(state => state.question);
   const setQuestion = useStore(state => state.setQuestion);
   const userObj = useStore(state => state.userObj);
+  const setUserobjexplore = useStore(state => state.setUserobjexplore);
 
   const [status, response, error, loading, axiosFetch] = useAxiosFunction();
 
@@ -47,9 +52,37 @@ function MainQuestion() {
     };
   }, [status, response]);
 
+  //handle viewing of posted user
+  const [profstatus, profresponse, proferror, profloading, profaxiosFetch] = useAxiosFunction();
+
+  const viewPoster = () => {
+    //send request for user profile 
+    profaxiosFetch({
+      axiosInstance: axios,
+      method: 'POST',
+      url: 'getUserProfile.php',
+      requestConfig: {
+        data: {
+          UserID: question.UserID,
+        }
+      }
+    });
+  }
+
+  useEffect(() => {
+    if(profstatus === 200){
+      setUserobjexplore(profresponse[0]);
+      history.push('profile');
+    }
+    return () => {
+      console.log((status === 200) ? 'fetched profile' : 'fetching profile...');
+    };
+  }, [profstatus,profresponse]);
+
   return (
     <div className="mainQuestionBox">
       {loading && <Loading caption="Changing question state" />}
+      {profloading && <Loading caption="Fetching User Credentials" />}
       <div className="MainQuestion">
         <div>
           <h1 className="altText">{question.PostiTitle}</h1>
@@ -67,10 +100,12 @@ function MainQuestion() {
             volutpat, feugiat.
           </p>
 
-          <div className="postUserInfo">
+          <div className="postUserInfo" onClick={viewPoster}>
             <span>Posted By:</span>
             <h4 style={{margin: '0'}}>{question.FirstName} {question.LastName}</h4>
           </div>
+
+
           <h3
             className="altText"
             style={question.Solved ? { color: "green" } : { color: "red" }}

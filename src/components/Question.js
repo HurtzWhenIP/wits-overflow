@@ -21,7 +21,7 @@ function Question({ question }) {
           {question.PostContent}
         </div>
         <h3 style={question.Solved ? {color: 'green'} : {color: 'red'}}>{question.Solved ? "Solved" : "Unsolved"}</h3>
-        <h3 className="quest_button" onClick={()=> {openPage()}}>Read more</h3>
+        <span className="quest_button" onClick={()=> {openPage()}}>Read more</span>
       </div>
     </div>
   );

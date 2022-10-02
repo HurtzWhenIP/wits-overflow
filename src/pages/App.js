@@ -8,6 +8,7 @@ import QuestionPage from './QuestionPage';
 import Profile from './Profile'
 import Notfound from './Notfound'
 import Verifyplayer from './Verifyplayer';
+import Community from './Community';
 import useStore from '../hooks/useStore';
 import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route path='/question'>
               {(question === null) ? <Homepage/> : <QuestionPage/>}
+            </Route>
+            <Route path='/community'>
+              <Community/>
             </Route>
             <Route component={Notfound}/>
           </Switch>

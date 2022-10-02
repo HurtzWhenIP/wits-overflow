@@ -24,8 +24,8 @@ function Questions({ data }) {
 
     return (
         <>
-            {loading && <Loading caption={"Turns out... Some questions may take longer to answer than others"}/>}
             <div className="questionsHolder">
+                {loading && <h2>No Questions Posted</h2>}
                 {questions && questions.map((question) => {
                     return(<Question question={question}/>)
                 })}

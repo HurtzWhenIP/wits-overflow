@@ -14,7 +14,11 @@ function Profile(){
     const [edit,setEdit] = useState(false);
 
     //pulluser object from store
-    const userObj = useStore((state) => {return(state.userObj)});
+    const userObjExplore = useStore((state) => {return(state.userObjExplore)});
+    const userObjSelf = useStore((state) => {return(state.userObj)});
+    //current user object to use
+    const userObj = (userObjExplore === null) ? userObjSelf : userObjExplore;
+
 
     //request users question
     const [status,response,error,loading,refetch] = useAxios({
@@ -37,13 +41,20 @@ function Profile(){
         return(() => {console.log(Array(response))});
     }, [response]);
 
+    useEffect(() => {
+        if(userObjExplore === null){
+            refetch();
+        }
+    }, [userObj,userObjExplore]);
+
     return(
         <div className='profileBkg'>
             {loading && <Loading caption={"Validating Credentials..."}/>}
             <div className='profileBox userDetails'>
+                
                 {edit ? 
                 <ProfileEdit userObj={userObj} edit={edit} setEdit={setEdit}/> : 
-                <ProfileInfo userObj={userObj} edit={edit} setEdit={setEdit}/>}
+                <ProfileInfo visiting={false} userObj={userObj} edit={edit} setEdit={setEdit}/>}
             </div>
 
             <div className='profileBox userQuestions'>
