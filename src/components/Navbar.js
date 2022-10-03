@@ -40,7 +40,7 @@ export function DropdownMenu(){
     const setUserobjexplore = useStore(state => state.setUserobjexplore);
 
 
-    const style = {"background-color": "inherit"}
+    const style = {"backgroundColor": "inherit"}
 
     function DropdownItem({children,icon,path,log,profile}){
 

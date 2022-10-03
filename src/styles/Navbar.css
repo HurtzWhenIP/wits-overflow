@@ -50,7 +50,7 @@
 }
 
 .dropdown{
-    position: absolute;
+    position: fixed;
     top: 5em;
     width: 300px;
     transform: translateX(-45%);
@@ -59,6 +59,7 @@
     border-radius: 8px;
     padding: 1rem;
     overflow: hidden;
+    z-index: 100000;
 }
 
 .menu-item{

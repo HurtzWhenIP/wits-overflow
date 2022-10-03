@@ -1,0 +1,14 @@
+.userBox{
+    border: 2px solid rgb(0,59,92);
+    width: 25em;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: background 200ms ease-in-out;
+}
+
+.userBox:hover{
+    background: linear-gradient(to right, #aff4ff, #C9FFBF);
+    cursor: pointer;
+}

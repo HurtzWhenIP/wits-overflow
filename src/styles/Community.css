@@ -1,7 +1,10 @@
 .searchbar {
     width: 100%;
-    max-width: 300px;
+    max-width: 20em;
+    height: 2em;
     display: inline-flex;
+    margin: 1em auto;
+    font-size: 2rem;
 }
 
 .searchbar--max-width {
@@ -9,6 +12,7 @@
 }
 
 .searchbar__input {
+    font-size: 1.5rem;
     flex-grow: 1;
     padding: 10px;
     outline: none;
@@ -46,6 +50,7 @@
 }
 
 .communityBox{
+    margin: auto auto;
     width: max-content;
     height: max-content;
     display: flex;
