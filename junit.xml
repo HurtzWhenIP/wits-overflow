@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.035885">
+    <testsuite name="Backend API" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.035885">
+      <testsuite name="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.035885">
+        <testcase name="testValidCall" class="LoginTest" classname="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" line="33" assertions="1" time="0.035885"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
