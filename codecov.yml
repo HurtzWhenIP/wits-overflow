@@ -1,6 +1,6 @@
 codecov:
-token: 8e5b843c-4f30-4a6f-bb87-a27dae9f5035
-  require_ci_to_pass: false
+  token: 8e5b843c-4f30-4a6f-bb87-a27dae9f5035
+  require_ci_to_pass: true
 
 coverage:
   status:
