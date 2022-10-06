@@ -24,7 +24,7 @@ function Homepage() {
   const [status, response, error, loading, refetch] = useAxios({
     axiosInstance: axios,
     method: "GET",
-    url: "getAllQuestions.php",
+    url: "GetAllQuestions.php",
   });
 
   //hook to handle posting new Question
@@ -52,7 +52,7 @@ function Homepage() {
       axiosFetch({
         axiosInstance: axios,
         method: "POST",
-        url: "addQuestion.php",
+        url: "AddQuestion.php",
         requestConfig: {
           data: {
             UserID: userObj.UserID,

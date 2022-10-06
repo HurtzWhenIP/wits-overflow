@@ -16,7 +16,7 @@ function Comments({ post, closer, isQuestion }) {
     const [status, response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
         method: "POST",
-        url: "getComments.php",
+        url: "GetComments.php",
         requestConfig: {
             data: {
                 PostID: isQuestion ? post.PostID : post.AnswerID,
@@ -45,7 +45,7 @@ function Comments({ post, closer, isQuestion }) {
             axiosFetch({
                 axiosInstance: axios,
                 method: 'POST',
-                url: 'addComment.php',
+                url: 'AddComment.php',
                 requestConfig: {
                     data: {
                         UserID: userObj.UserID,

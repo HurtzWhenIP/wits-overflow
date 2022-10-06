@@ -14,7 +14,7 @@ function Community() {
     const [status,response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
         method: 'GET',
-        url: 'getUsers.php'
+        url: 'GetUsers.php'
     });
 
     useEffect(() => {
@@ -33,7 +33,7 @@ function Community() {
         fetch({
             axiosInstance: axios,
             method: 'POST',
-            url: 'searchUsers.php',
+            url: 'SearchUsers.php',
             requestConfig: {
                 data: {
                     Username: search,

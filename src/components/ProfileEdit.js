@@ -17,7 +17,7 @@ function ProfileEdit({userObj,edit,setEdit}){
         axiosFetch({
             axiosInstance: axios,
             method: "POST",
-            url: "updateUser.php",
+            url: "UpdateUser.php",
             requestConfig: {
                 data: {
                     UserID: userObj.USerID,

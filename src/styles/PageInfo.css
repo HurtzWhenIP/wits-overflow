@@ -1,5 +1,5 @@
 .infoBox{
-    padding: 2em;
+    padding: 5px 2em;
     font-size: larger;
     display: flex;
     flex-flow: column;
@@ -13,6 +13,7 @@
     display: flex;
     flex-flow: row;
     margin: 1em;
+    border-radius: 5px;
 }
 
 .profImg{
@@ -21,4 +22,18 @@
     width: 12em;
     border-radius: 5px;
     background-size: cover;
+}
+
+.statsBox{
+    border: 2.5px solid rgb(0,59,92);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    border-radius: 5px;
+}
+
+h5{
+    margin: 0.2em;
+}
+
+.score{
+    margin: 0.2em;
 }

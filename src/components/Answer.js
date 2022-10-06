@@ -29,7 +29,7 @@ function Answer({ answer }) {
       axiosFetch({
         axiosInstance: axios,
         method: 'POST',
-        url: "updateAnswer.php",
+        url: "UpdateAnswer.php",
         requestConfig: {
           data: {
             "AnswerID": answer.AnswerID,
@@ -58,7 +58,7 @@ function Answer({ answer }) {
     profaxiosFetch({
       axiosInstance: axios,
       method: 'POST',
-      url: 'getUserProfile.php',
+      url: 'GetUserProfile.php',
       requestConfig: {
         data: {
           UserID: answer.UserID,

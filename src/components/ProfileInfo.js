@@ -11,7 +11,7 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
     const [status,response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
         method: 'POST',
-        url: 'getUserStats.php',
+        url: 'GetUserStats.php',
         requestConfig: {
             data: {
                 UserID: userObj.UserID,
@@ -21,7 +21,7 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
 
     useEffect(() => {
         if(status === 200){
-            setData(response);
+            setData(response[0]);
         }
         return () => {
             console.log(response[0]);
@@ -34,7 +34,7 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
             <h1
             style={{
                 textDecoration: "underline",
-                margin: "0.2em 0 0.5em 0",
+                margin: "0 0 0 0",
                 fontSize: "xxx-large",
             }}
             >Profile Information:</h1>
@@ -46,12 +46,21 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
                         margin: "1.8em 0.2em"
                     }}
                     >{`Name: ${userObj.FirstName} ${userObj.LastName}`}</h2>
-                    <h4>{`Email: ${userObj.Email}`}</h4>
+                    <h5>{`Email: ${userObj.Email}`}</h5>
                 </div>
             </div>
             <>
                     <h1>{userObj.UserDescription}</h1>
             </>
+
+            {data && <div className='statsBox'>
+                <h3 style={{textDecoration: 'underline',margin: "0.35em"}}>User Stats:</h3>
+                <h5>Questions Asked: {data.AskedCount}</h5>
+                <h5>Questions Answered: {data.AnsweredCount}</h5>
+                <h5>Up-votes received: {data.UpVotes}</h5>
+                <h5>Down-votes received: {data.DownVotes}</h5>
+                <h3 className='score'>Score: {data.Score}</h3>
+            </div>}
 
             {!visiting && <button onClick={(e) => {
                 e.preventDefault();

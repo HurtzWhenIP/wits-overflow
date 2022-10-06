@@ -45,7 +45,7 @@ function Login(){
             axiosFetch({
                 axiosInstance: axios,
                 method: 'POST',
-                url: 'login.php',
+                url: 'Login.php',
                 requestConfig: {
                     data: {
                         "Email": username,

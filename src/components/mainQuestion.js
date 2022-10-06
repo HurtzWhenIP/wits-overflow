@@ -29,7 +29,7 @@ function MainQuestion() {
     axiosFetch({
       axiosInstance: axios,
       method: 'POST',
-      url: 'setQuestionSolved.php',
+      url: 'SetQuestionSolved.php',
       requestConfig: {
         data: {
           UserID: userObj.UserID,
@@ -60,7 +60,7 @@ function MainQuestion() {
     profaxiosFetch({
       axiosInstance: axios,
       method: 'POST',
-      url: 'getUserProfile.php',
+      url: 'GetUserProfile.php',
       requestConfig: {
         data: {
           UserID: question.UserID,

@@ -78,7 +78,7 @@ function Signup(){
             axiosFetch({
                 axiosInstance: axios,
                 method: "POST",
-                url: "validateUser.php",
+                url: "ValidateUser.php",
                 requestConfig: {
                     data: {
                         "Email": email
@@ -93,7 +93,7 @@ function Signup(){
         axiosFetch({
             axiosInstance: axios,
             method: "POST",
-            url: "register.php",
+            url: "Register.php",
             requestConfig: {
                 data: {
                     "FirstName": fname,

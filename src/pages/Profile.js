@@ -24,7 +24,7 @@ function Profile(){
     const [status,response,error,loading,refetch] = useAxios({
         axiosInstance: axios,
         method: "POST",
-        url: 'getUserQuestions.php',
+        url: 'GetUserQuestions.php',
         requestConfig: {
             data: {
                 "UserID": userObj.UserID,
@@ -38,7 +38,7 @@ function Profile(){
             setData(Array(response));
         }
 
-        return(() => {console.log(Array(response))});
+        // return(() => {console.log(Array(response))});
     }, [response]);
 
     useEffect(() => {

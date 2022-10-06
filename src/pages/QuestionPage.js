@@ -19,7 +19,7 @@ function QuestionPage() {
   const [status, response, error, loading, refetch] = useAxios({
     axiosInstance: axios,
     method: "POST",
-    url: "getUserAnswers.php",
+    url: "GetUserAnswers.php",
     requestConfig: {
       data: {
         ParentPostID: question.PostID,
@@ -49,7 +49,7 @@ function QuestionPage() {
         axiosFetch({
             axiosInstance: axios,
             method: 'POST',
-            url: 'addAnswer.php',
+            url: 'AddAnswer.php',
             requestConfig: {
                 data: {
                     UserID: userObj.UserID,

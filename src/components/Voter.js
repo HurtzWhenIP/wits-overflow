@@ -23,7 +23,7 @@ function Voter({post,isQuestion}){
             axiosFunction({
                 axiosInstance: axios,
                 method: 'POST',
-                url: 'makeVote.php',
+                url: 'MakeVote.php',
                 requestConfig: {
                     data: {
                         UserID: userObj.UserID,
@@ -41,7 +41,7 @@ function Voter({post,isQuestion}){
                 axiosFunction({
                     axiosInstance: axios,
                     method: 'POST',
-                    url: 'getSingleQuestion.php',
+                    url: 'GetSingleQuestion.php',
                     requestConfig: {
                         data: {
                             PostID: post.PostID
