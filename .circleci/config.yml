@@ -42,10 +42,3 @@ workflows:
           branches:
             only:
               devbackend
-      - deploy-to-main-backend:
-#          requires:
-#            - build-test-codecov
-          filters:
-            branches:
-              only:
-                dev-backend
