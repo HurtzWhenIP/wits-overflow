@@ -1,0 +1,4 @@
+vendor/
+INPUT_TEST_FILE
+testInput.txt
+.phpunit.result.cache
