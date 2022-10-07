@@ -1,24 +1,23 @@
 <?php
 use \PhpUnit\Framework\TestCase;
-use App\GetComments;
+use App\GetUserProfile;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 /**
-    @covers \App\GetComments
+    @covers \App\GetUserProfile
 */
-class GetCommentsTest extends \PHPUnit\Framework\TestCase 
+class GetUserProfileTest extends \PHPUnit\Framework\TestCase 
 {
     private static function generateInput() 
     {
-        $request = new stdClass();
+        $Request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->PostID = 1; //not sure what actual ID should be?
-        $bodyContent->isQuestion = false;
+        $bodyContent->UserID = 20;
 
-        $request->data = $bodyContent;
-        $json = json_encode($request);
+        $Request->data = $bodyContent;
+        $json = json_encode($Request);
         
         $_SERVER["REQUEST_METHOD"] = "GET";
         $fileWriter = fopen(INPUT_TEST_FILE, "w");
@@ -33,9 +32,9 @@ class GetCommentsTest extends \PHPUnit\Framework\TestCase
     public function testValidCall() 
     {
         self::generateInput();
-        $expectedPID = 1;
-        $this->expectOutputRegex('/\"PostID\":' . $expectedPID . '/');
-        GetComments::makeCall();
+        $expectedEmail = "345678@students.wits.ac.za";
+        $this->expectOutputRegex('/\"Email\":' . $expectedEmail . '/');
+        GetUserProfile::makeCall();
         fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

@@ -1,21 +1,20 @@
 <?php
 use \PhpUnit\Framework\TestCase;
-use App\GetComments;
+use App\GetUserAnswers;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 /**
-    @covers \App\GetComments
+    @covers \App\GetUserAnswers
 */
-class GetCommentsTest extends \PHPUnit\Framework\TestCase 
+class GetUserAnswersTest extends \PHPUnit\Framework\TestCase 
 {
     private static function generateInput() 
     {
         $request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->PostID = 1; //not sure what actual ID should be?
-        $bodyContent->isQuestion = false;
+        $bodyContent->PostID = 3; //not sure what actual ID should be?
 
         $request->data = $bodyContent;
         $json = json_encode($request);
@@ -33,9 +32,9 @@ class GetCommentsTest extends \PHPUnit\Framework\TestCase
     public function testValidCall() 
     {
         self::generateInput();
-        $expectedPID = 1;
+        $expectedPID = 3;
         $this->expectOutputRegex('/\"PostID\":' . $expectedPID . '/');
-        GetComments::makeCall();
+        GetUserAnswers::makeCall();
         fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }
