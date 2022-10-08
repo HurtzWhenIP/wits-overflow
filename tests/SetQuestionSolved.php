@@ -16,7 +16,7 @@ class SearchQuestionTest extends \PHPUnit\Framework\TestCase
         $bodyContent = new stdClass();
         $bodyContent->UserID = 20;
         $bodyContent->PostID = 5;
-        $bodyContent->solved = true; 
+        $bodyContent->Solved = true; 
 
         $request->data = $bodyContent;
         $json = json_encode($request);
@@ -37,6 +37,5 @@ class SearchQuestionTest extends \PHPUnit\Framework\TestCase
         $expectedOutcome = 1;
         $this->expectOutputRegex('/\"Solved\":' . $expectedOutcome . '/');
         SearchQuestion::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

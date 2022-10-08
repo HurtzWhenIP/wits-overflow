@@ -3,14 +3,14 @@ namespace App;
 
 require_once "db.php";
 
-class SearchQuestions {
+class SearchQuestion {
     public static function makeCall() {
         DB::init();
         $json = DB::$json;
 
         // Reading in the request
         $json = $json[DB::$payloadLabel];
-
+        
         // Getting required fields from the request
         $question = $json['Question'];
         
@@ -33,4 +33,4 @@ class SearchQuestions {
     }
 }
 
-echo SearchQuestions::makeCall();
+echo SearchQuestion::makeCall();

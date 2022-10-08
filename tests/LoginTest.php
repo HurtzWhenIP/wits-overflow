@@ -36,6 +36,5 @@ class LoginTest extends \PHPUnit\Framework\TestCase
         $expectedUID = 20;
         $this->expectOutputRegex('/\"UserID\":' . $expectedUID . '/');
         Login::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

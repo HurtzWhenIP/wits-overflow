@@ -14,11 +14,11 @@ class RegisterTest extends \PHPUnit\Framework\TestCase
         $Request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->firstName = "First";
-        $bodyContent->lastName = "Last";
+        $bodyContent->FirstName = "First";
+        $bodyContent->LastName = "Last";
         $bodyContent->Email = "99999@students.wits.ac.za";
         $bodyContent->HashedPassword = "abcd";
-        $bodyContent->userDescription = "Tester at heart";
+        $bodyContent->UserDescription = "Tester at heart";
 
         $Request->data = $bodyContent;
         $json = json_encode($Request);
@@ -37,8 +37,7 @@ class RegisterTest extends \PHPUnit\Framework\TestCase
     {
         self::generateInput();
         $expectedEmail = "99999@students.wits.ac.za";
-        $this->expectOutputRegex('/\"Email\":' . $expectedEmail . '/');
+        $this->expectOutputRegex('/\"Email\":"' . $expectedEmail . '"/');
         Register::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

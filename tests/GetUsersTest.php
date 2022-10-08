@@ -11,14 +11,14 @@ class GetUsersTest extends \PHPUnit\Framework\TestCase
 {
     private static function generateInput() 
     {
-        $Request = new stdClass();
+        $request = new stdClass();
 
         $bodyContent = new stdClass();
 
-        $Request->data = $bodyContent;
-        $json = json_encode($Request);
+        $request->data = $bodyContent;
+        $json = json_encode($request);
         
-        $_SERVER["REQUEST_METHOD"] = "GET";
+        $_SERVER["REQUEST_METHOD"] = "POST";
         $fileWriter = fopen(INPUT_TEST_FILE, "w");
 
         fwrite($fileWriter, $json);
@@ -33,7 +33,6 @@ class GetUsersTest extends \PHPUnit\Framework\TestCase
         self::generateInput();
         $expectedUID = 20;
         $this->expectOutputRegex('/\"UserID\":' . $expectedUID . '/');
-        Login::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
+        GetUsers::makeCall();
     }
 }

@@ -14,7 +14,7 @@ class GetSingleQuestionTest extends \PHPUnit\Framework\TestCase
         $request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->PostID = 1; //not sure what actual ID should be?
+        $bodyContent->PostID = 1;
 
         $request->data = $bodyContent;
         $json = json_encode($request);

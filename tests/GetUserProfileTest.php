@@ -19,7 +19,7 @@ class GetUserProfileTest extends \PHPUnit\Framework\TestCase
         $Request->data = $bodyContent;
         $json = json_encode($Request);
         
-        $_SERVER["REQUEST_METHOD"] = "GET";
+        $_SERVER["REQUEST_METHOD"] = "POST";
         $fileWriter = fopen(INPUT_TEST_FILE, "w");
 
         fwrite($fileWriter, $json);
@@ -33,8 +33,7 @@ class GetUserProfileTest extends \PHPUnit\Framework\TestCase
     {
         self::generateInput();
         $expectedEmail = "345678@students.wits.ac.za";
-        $this->expectOutputRegex('/\"Email\":' . $expectedEmail . '/');
+        $this->expectOutputRegex('/\"Email\":"' . $expectedEmail . '"/');
         GetUserProfile::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

@@ -1,25 +1,25 @@
 <?php
 use \PhpUnit\Framework\TestCase;
-use App\SearchQuestion;
+use App\SearchUsers;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 /**
-    @covers \App\SearchQuestion
+    @covers \App\SearchUsers
 */
-class SearchQuestionTest extends \PHPUnit\Framework\TestCase 
+class SearchUserTest extends \PHPUnit\Framework\TestCase 
 {
     private static function generateInput() 
     {
         $request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->name = "Name"; 
+        $bodyContent->Username = "Ki"; 
 
         $request->data = $bodyContent;
         $json = json_encode($request);
-        
-        $_SERVER["REQUEST_METHOD"] = "GET";
+
+        $_SERVER["REQUEST_METHOD"] = "POST";
         $fileWriter = fopen(INPUT_TEST_FILE, "w");
 
         fwrite($fileWriter, $json);
@@ -32,9 +32,8 @@ class SearchQuestionTest extends \PHPUnit\Framework\TestCase
     public function testValidCall() 
     {
         self::generateInput();
-        $expectedName = "Solved";
-        $this->expectOutputRegex('/\"Username\":' . $expectedName . '/');
-        SearchQuestion::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
+        $userID = 4;
+        $this->expectOutputRegex('/\"UserID\":' . $userID . '/');
+        SearchUsers::makeCall();
     }
 }

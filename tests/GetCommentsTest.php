@@ -15,7 +15,7 @@ class GetCommentsTest extends \PHPUnit\Framework\TestCase
 
         $bodyContent = new stdClass();
         $bodyContent->PostID = 1; //not sure what actual ID should be?
-        $bodyContent->isQuestion = false;
+        $bodyContent->IsQuestion = false;
 
         $request->data = $bodyContent;
         $json = json_encode($request);

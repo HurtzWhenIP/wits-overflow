@@ -14,12 +14,12 @@ class SearchQuestionTest extends \PHPUnit\Framework\TestCase
         $request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->question = "Why"; 
+        $bodyContent->Question = "Why"; 
 
         $request->data = $bodyContent;
         $json = json_encode($request);
         
-        $_SERVER["REQUEST_METHOD"] = "GET";
+        $_SERVER["REQUEST_METHOD"] = "POST";
         $fileWriter = fopen(INPUT_TEST_FILE, "w");
 
         fwrite($fileWriter, $json);
@@ -32,9 +32,8 @@ class SearchQuestionTest extends \PHPUnit\Framework\TestCase
     public function testValidCall() 
     {
         self::generateInput();
-        $expectedQuestion = "Why";
-        $this->expectOutputRegex('/\"Question\":' . $expectedQuestion . '/');
+        $expectedQuestion = "Sometimes they're just so hurtful";
+        $this->expectOutputRegex('/\"PostContent\":"' . $expectedQuestion . '"/');
         SearchQuestion::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

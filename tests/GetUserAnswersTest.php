@@ -14,8 +14,7 @@ class GetUserAnswersTest extends \PHPUnit\Framework\TestCase
         $request = new stdClass();
 
         $bodyContent = new stdClass();
-        $bodyContent->PostID = 3; //not sure what actual ID should be?
-
+        $bodyContent->ParentPostID = 1;
         $request->data = $bodyContent;
         $json = json_encode($request);
         
@@ -32,8 +31,8 @@ class GetUserAnswersTest extends \PHPUnit\Framework\TestCase
     public function testValidCall() 
     {
         self::generateInput();
-        $expectedPID = 3;
-        $this->expectOutputRegex('/\"PostID\":' . $expectedPID . '/');
+        $expectedPID = 1;
+        $this->expectOutputRegex('/\"ParentPostID\":' . $expectedPID . '/');
         GetUserAnswers::makeCall();
         fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }

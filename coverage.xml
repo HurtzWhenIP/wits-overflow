@@ -1,10 +1,626 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.042253521126761" branch-rate="0" lines-covered="15" lines-valid="355" branches-covered="0" branches-valid="0" complexity="9" version="0.4" timestamp="1664992923">
+<coverage line-rate="0.31904761904762" branch-rate="0" lines-covered="134" lines-valid="420" branches-covered="0" branches-valid="0" complexity="60" version="0.4" timestamp="1665224260">
   <sources>
     <source>/var/www/wits-overflow/src</source>
   </sources>
   <packages>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\AddAnswer" filename="AddAnswer.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="10" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="10" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\AddComment" filename="AddComment.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\AddQuestion" filename="AddQuestion.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="11" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="11" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\DeleteUser" filename="DeleteUser.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="11" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="11" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetAllAnswers" filename="GetAllAnswers.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="33" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="33" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetAllQuestions" filename="GetAllQuestions.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="10" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="38" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="10" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="38" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetAllVotes" filename="GetAllVotes.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="29" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="29" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.88888888888889" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetComments" filename="GetComments.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="15" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+                <line number="36" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+            <line number="36" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetPopularQuestions" filename="GetPopularQuestions.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="33" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="33" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.88235294117647" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetSingleQuestion" filename="GetSingleQuestion.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="11" hits="1"/>
+                <line number="14" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="36" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="11" hits="1"/>
+            <line number="14" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="36" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.88235294117647" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetUserAnswers" filename="GetUserAnswers.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="9" hits="1"/>
+                <line number="10" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="13" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="37" hits="1"/>
+                <line number="38" hits="1"/>
+                <line number="40" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="1"/>
+            <line number="10" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="13" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="37" hits="1"/>
+            <line number="38" hits="1"/>
+            <line number="40" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.875" branch-rate="0" complexity="2">
+      <classes>
+        <class name="App\GetUserProfile" filename="GetUserProfile.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="2">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="15" hits="1"/>
+                <line number="18" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="20" hits="1"/>
+                <line number="21" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="18" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="20" hits="1"/>
+            <line number="21" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetUserQuestions" filename="GetUserQuestions.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="10" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="24" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="38" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="10" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="24" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="38" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetUserStats" filename="GetUserStats.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="11" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="14" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="37" hits="0"/>
+                <line number="47" hits="0"/>
+                <line number="48" hits="0"/>
+                <line number="51" hits="0"/>
+                <line number="53" hits="0"/>
+                <line number="54" hits="0"/>
+                <line number="55" hits="0"/>
+                <line number="59" hits="0"/>
+                <line number="60" hits="0"/>
+                <line number="61" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="11" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="14" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="37" hits="0"/>
+            <line number="47" hits="0"/>
+            <line number="48" hits="0"/>
+            <line number="51" hits="0"/>
+            <line number="53" hits="0"/>
+            <line number="54" hits="0"/>
+            <line number="55" hits="0"/>
+            <line number="59" hits="0"/>
+            <line number="60" hits="0"/>
+            <line number="61" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.84615384615385" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\GetUsers" filename="GetUsers.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="11" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="13" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="20" hits="1"/>
+                <line number="21" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="11" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="13" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="20" hits="1"/>
+            <line number="21" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
     <package name="" line-rate="0.88235294117647" branch-rate="0" complexity="2">
       <classes>
         <class name="App\Login" filename="Login.php" line-rate="1" branch-rate="0" complexity="2">
@@ -49,14 +665,365 @@
         </class>
       </classes>
     </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
+    <package name="" line-rate="0" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\MakeVote" filename="MakeVote.php" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="34" hits="0"/>
+                <line number="35" hits="0"/>
+                <line number="36" hits="0"/>
+                <line number="38" hits="0"/>
+                <line number="39" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="34" hits="0"/>
+            <line number="35" hits="0"/>
+            <line number="36" hits="0"/>
+            <line number="38" hits="0"/>
+            <line number="39" hits="0"/>
+          </lines>
+        </class>
+      </classes>
     </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
+    <package name="" line-rate="0.90909090909091" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\Register" filename="Register.php" line-rate="1" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="11" hits="1"/>
+                <line number="14" hits="1"/>
+                <line number="15" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="17" hits="1"/>
+                <line number="18" hits="1"/>
+                <line number="21" hits="1"/>
+                <line number="22" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="29" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="33" hits="1"/>
+                <line number="34" hits="1"/>
+                <line number="35" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="11" hits="1"/>
+            <line number="14" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="17" hits="1"/>
+            <line number="18" hits="1"/>
+            <line number="21" hits="1"/>
+            <line number="22" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="29" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="33" hits="1"/>
+            <line number="34" hits="1"/>
+            <line number="35" hits="1"/>
+          </lines>
+        </class>
+      </classes>
     </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
+    <package name="" line-rate="0.875" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\SearchQuestion" filename="SearchQuestion.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="15" hits="1"/>
+                <line number="17" hits="1"/>
+                <line number="18" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="22" hits="1"/>
+                <line number="24" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="30" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="17" hits="1"/>
+            <line number="18" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="22" hits="1"/>
+            <line number="24" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="30" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0.875" branch-rate="0" complexity="3">
+      <classes>
+        <class name="App\SearchUsers" filename="SearchUsers.php" line-rate="1" branch-rate="0" complexity="3">
+          <methods>
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
+              <lines>
+                <line number="8" hits="1"/>
+                <line number="9" hits="1"/>
+                <line number="12" hits="1"/>
+                <line number="15" hits="1"/>
+                <line number="18" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="20" hits="1"/>
+                <line number="23" hits="1"/>
+                <line number="26" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="33" hits="1"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1"/>
+            <line number="9" hits="1"/>
+            <line number="12" hits="1"/>
+            <line number="15" hits="1"/>
+            <line number="18" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="20" hits="1"/>
+            <line number="23" hits="1"/>
+            <line number="26" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="33" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\SetQuestionSolved" filename="SetQuestionSolved.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="11" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="11" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\UpdateAnswer" filename="UpdateAnswer.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="26" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="26" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="1">
+      <classes>
+        <class name="App\UpdateUser" filename="UpdateUser.php" line-rate="0" branch-rate="0" complexity="1">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
+              <lines>
+                <line number="8" hits="0"/>
+                <line number="9" hits="0"/>
+                <line number="12" hits="0"/>
+                <line number="15" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="17" hits="0"/>
+                <line number="18" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="23" hits="0"/>
+                <line number="26" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="30" hits="0"/>
+                <line number="31" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0"/>
+            <line number="9" hits="0"/>
+            <line number="12" hits="0"/>
+            <line number="15" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="17" hits="0"/>
+            <line number="18" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="23" hits="0"/>
+            <line number="26" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="30" hits="0"/>
+            <line number="31" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="" line-rate="0" branch-rate="0" complexity="2">
+      <classes>
+        <class name="App\ValidateUser" filename="ValidateUser.php" line-rate="0" branch-rate="0" complexity="2">
+          <methods>
+            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="9" hits="0"/>
+                <line number="10" hits="0"/>
+                <line number="13" hits="0"/>
+                <line number="16" hits="0"/>
+                <line number="19" hits="0"/>
+                <line number="20" hits="0"/>
+                <line number="21" hits="0"/>
+                <line number="22" hits="0"/>
+                <line number="25" hits="0"/>
+                <line number="27" hits="0"/>
+                <line number="28" hits="0"/>
+                <line number="31" hits="0"/>
+                <line number="32" hits="0"/>
+                <line number="34" hits="0"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="0"/>
+            <line number="10" hits="0"/>
+            <line number="13" hits="0"/>
+            <line number="16" hits="0"/>
+            <line number="19" hits="0"/>
+            <line number="20" hits="0"/>
+            <line number="21" hits="0"/>
+            <line number="22" hits="0"/>
+            <line number="25" hits="0"/>
+            <line number="27" hits="0"/>
+            <line number="28" hits="0"/>
+            <line number="31" hits="0"/>
+            <line number="32" hits="0"/>
+            <line number="34" hits="0"/>
+          </lines>
+        </class>
+      </classes>
     </package>
     <package name="" line-rate="0" branch-rate="0" complexity="0">
       <classes/>
@@ -122,66 +1089,6 @@
           </lines>
         </class>
       </classes>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
     </package>
   </packages>
 </coverage>
