@@ -4,7 +4,7 @@
 
 ## Code-Cov Badge
 
-[![codecov](https://codecov.io/gh/HurtzWhenIP/wits-overflow/branch/devbackend/graph/badge.svg?token=NYK8S2FSQ4)](https://codecov.io/gh/HurtzWhenIP/wits-overflow)
+[![codecov](https://codecov.io/gh/HurtzWhenIP/wits-overflow/branch/backend/graph/badge.svg?token=NYK8S2FSQ4)](https://codecov.io/gh/HurtzWhenIP/wits-overflow)
 
 # Getting Started with Create React App
 
