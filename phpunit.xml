@@ -15,6 +15,16 @@
         <include>
             <directory suffix=".php">src</directory>
         </include>
+        <exclude>
+            <directory prefix="Add">src</directory>
+            <directory prefix="Update">src</directory>
+            <directory prefix="GetAll">src</directory>
+            <file>src/MakeVote.php</file>
+            <file>src/DeleteUser.php</file>
+            <file>src/SetQuestionSolved.php</file>
+            <file>src/ValidateUser.php</file>
+            <file>src/DB.php</file>
+        </exclude>
         <report>
             <cobertura outputFile="coverage.xml"/>
             <html outputDirectory="public_html"/>
