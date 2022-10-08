@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.67" branch-rate="0" lines-covered="134" lines-valid="200" branches-covered="0" branches-valid="0" complexity="31" version="0.4" timestamp="1665228552">
+<coverage line-rate="0.65775401069519" branch-rate="0" lines-covered="123" lines-valid="187" branches-covered="0" branches-valid="0" complexity="28" version="0.4" timestamp="1665229990">
   <sources>
     <source>/var/www/wits-overflow/src</source>
   </sources>
@@ -261,42 +261,6 @@
             <line number="36" hits="0"/>
             <line number="37" hits="0"/>
             <line number="38" hits="0"/>
-          </lines>
-        </class>
-      </classes>
-    </package>
-    <package name="" line-rate="0.84615384615385" branch-rate="0" complexity="3">
-      <classes>
-        <class name="App\GetUsers" filename="GetUsers.php" line-rate="1" branch-rate="0" complexity="3">
-          <methods>
-            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="3">
-              <lines>
-                <line number="8" hits="1"/>
-                <line number="11" hits="1"/>
-                <line number="12" hits="1"/>
-                <line number="13" hits="1"/>
-                <line number="16" hits="1"/>
-                <line number="19" hits="1"/>
-                <line number="20" hits="1"/>
-                <line number="21" hits="1"/>
-                <line number="24" hits="1"/>
-                <line number="25" hits="1"/>
-                <line number="26" hits="1"/>
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="8" hits="1"/>
-            <line number="11" hits="1"/>
-            <line number="12" hits="1"/>
-            <line number="13" hits="1"/>
-            <line number="16" hits="1"/>
-            <line number="19" hits="1"/>
-            <line number="20" hits="1"/>
-            <line number="21" hits="1"/>
-            <line number="24" hits="1"/>
-            <line number="25" hits="1"/>
-            <line number="26" hits="1"/>
           </lines>
         </class>
       </classes>
