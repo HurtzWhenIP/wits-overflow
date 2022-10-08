@@ -36,6 +36,5 @@ class GetCommentsTest extends \PHPUnit\Framework\TestCase
         $expectedPID = 1;
         $this->expectOutputRegex('/\"PostID\":' . $expectedPID . '/');
         GetComments::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }

@@ -21,11 +21,8 @@
             <directory prefix="GetAll">src</directory>
             <file>src/MakeVote.php</file>
             <file>src/GetUserStats.php</file>
-            <file>src/GetUserQuestions.php</file>
-            <file>src/GetPopularQuestions.php</file>
             <file>src/DeleteUser.php</file>
             <file>src/SetQuestionSolved.php</file>
-            <file>src/ValidateUser.php</file>
             <file>src/db.php</file>
         </exclude>
         <report>

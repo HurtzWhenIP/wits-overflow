@@ -34,6 +34,5 @@ class GetUserAnswersTest extends \PHPUnit\Framework\TestCase
         $expectedPID = 1;
         $this->expectOutputRegex('/\"ParentPostID\":' . $expectedPID . '/');
         GetUserAnswers::makeCall();
-        fwrite(STDERR, $_SERVER["REQUEST_METHOD"]);
     }
 }
