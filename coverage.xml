@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.31904761904762" branch-rate="0" lines-covered="134" lines-valid="420" branches-covered="0" branches-valid="0" complexity="60" version="0.4" timestamp="1665224260">
+<coverage line-rate="0.31904761904762" branch-rate="0" lines-covered="420" lines-valid="420" branches-covered="0" branches-valid="0" complexity="60" version="0.4" timestamp="1665224260">
   <sources>
     <source>/var/www/wits-overflow/src</source>
   </sources>
