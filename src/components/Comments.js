@@ -28,6 +28,7 @@ function Comments({ post, closer, isQuestion }) {
     useEffect(() => {
         if (status === 200) {
             setData(response);
+            console.log(response);
         }
         return () => {
             console.log("Fetched Comments");
@@ -76,6 +77,7 @@ function Comments({ post, closer, isQuestion }) {
                     return (
                         <div className="commentText">
                             <span>{comment.CommentContent}</span>
+                            <span id='commPoster'>~{comment.FirstName} {comment.LastName}</span>
                         </div>
                     );
                 })

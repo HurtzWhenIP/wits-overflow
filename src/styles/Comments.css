@@ -1,30 +1,32 @@
-.commntBtn{
-    font-size: 2em;
-    padding: 0.15em;
-    transition: all 200ms ease-in-out;
+.commntBtn {
+  font-size: 2em;
+  padding: 0.15em;
+  transition: all 200ms ease-in-out;
 }
 
-.commntBtn:hover{
-    font-size: 2.5em;
-    cursor: pointer;
+.commntBtn:hover {
+  font-size: 2.5em;
+  cursor: pointer;
 }
 
-.commentText{
-    border-top:  2px solid rgb(0,59,92);
-    padding: 0.5em;
-    
+.commentText {
+  border-top: 2px solid rgb(0, 59, 92);
+  padding: 0.5em;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
-.commentsHolder{
-    display: flex;
-    flex-flow: column;
+.commentsHolder {
+  display: flex;
+  flex-flow: column;
 }
 
-.newCommentBtn{
-    font-size: medium;
-    border-radius: 2em;
-    width: fit-content;
-    height: 0.5em;
-    margin: 0;
-    padding: 0.5em;
+.newCommentBtn {
+  font-size: medium;
+  border-radius: 2em;
+  width: fit-content;
+  height: 0.5em;
+  margin: 0;
+  padding: 0.5em;
 }

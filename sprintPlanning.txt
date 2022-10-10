@@ -14,7 +14,8 @@ Sprint 2: (Due 19th Sept)
 		Person who asked a question can mark answer as helpful or correct 
 		
 Sprint3: (Due 10th oct)
-	-Update Ui to include who asked/posted (1 user story)
+	-Update Ui to include who asked/posted (1 user story) 
+	"Given I am a registered user, when i am on a specific question page, then I should be able to see the user who posted the viewable question and answers"
 	=> Flesh out profile
 	-User Engagements stats: (2 user stories = tracking + showing)
 		how many questionas asked => upvs and downvs for answers
