@@ -66,7 +66,6 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
                 e.preventDefault();
                 setEdit(!edit)
             }}
-
             style={{
                 margin: "0.5em 3em",
             }}>Edit Profile</button>}

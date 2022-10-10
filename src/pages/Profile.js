@@ -54,7 +54,7 @@ function Profile(){
                 
                 {edit ? 
                 <ProfileEdit userObj={userObj} edit={edit} setEdit={setEdit}/> : 
-                <ProfileInfo visiting={false} userObj={userObj} edit={edit} setEdit={setEdit}/>}
+                <ProfileInfo visiting={(userObjExplore !== null)} userObj={userObj} edit={edit} setEdit={setEdit}/>}
             </div>
 
             <div className='profileBox userQuestions'>
