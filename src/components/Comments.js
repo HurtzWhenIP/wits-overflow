@@ -77,7 +77,7 @@ function Comments({ post, closer, isQuestion }) {
                     return (
                         <div className="commentText">
                             <span>{comment.CommentContent}</span>
-                            <span id='commPoster'>~{comment.FirstName} {comment.LastName}</span>
+                            <span>~{comment.FirstName} {comment.LastName}</span>
                         </div>
                     );
                 })
