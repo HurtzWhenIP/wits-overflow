@@ -7,11 +7,7 @@ require_once "db.php";
 class GetAllQuestions {
     public static function makeCall() {
         DB::init();
-        $json = DB::$json;
 
-        $json = $json[DB::$payloadLabel];
-
-        // Generating and executing the SQL
         $sql = "SELECT User.FirstName, User.LastName, QuestionPost.*, " . 
                 "IFNULL(vt.UpVotes, 0) as UpVotes, " . 
                 "IFNULL(vt.DownVotes, 0) as DownVotes " . 

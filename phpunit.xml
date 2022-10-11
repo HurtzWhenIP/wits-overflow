@@ -20,7 +20,7 @@
             <directory prefix="Update">src</directory>
             <directory prefix="GetAll">src</directory>
             <file>src/MakeVote.php</file>
-            <file>src/GetUserStats.php</file>
+            <!-- <file>src/GetUserStats.php</file> -->
             <file>src/GetPopularQuestions.php</file>
             <file>src/GetUsers.php</file>
             <file>src/DeleteUser.php</file>
