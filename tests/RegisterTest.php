@@ -14,6 +14,7 @@ class RegisterTest extends \PHPUnit\Framework\TestCase
         $Request = new stdClass();
 
         $bodyContent = new stdClass();
+        // Testing data
         $bodyContent->FirstName = "First";
         $bodyContent->LastName = "Last";
         $bodyContent->Email = "99999@students.wits.ac.za";
