@@ -14,6 +14,8 @@ CREATE TABLE QuestionPost (
     PostTitle TEXT NOT NULL, 
     PostContent TEXT NOT NULL,
     Solved BOOLEAN NOT NULL DEFAULT 0,
+    IsUnderReview BOOLEAN DEFAULT 0,
+    IsHidden BOOLEAN DEFAULT 0,
     PRIMARY KEY(PostID),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
@@ -66,4 +68,13 @@ CREATE VIEW QuestionVoteTally as (
     FROM Vote 
     WHERE(IsQuestion = 1) 
     GROUP BY PostID
+);
+
+CREATE TABLE PostReports (
+    ReportID INT NOT NULL AUTO_INCREMENT,
+    PostID INT NOT NULL,
+    IsQuestion BOOLEAN NOT NULL DEFAULT 0,
+    Topic TEXT,
+    Comments TEXT,
+    PRIMARY KEY(ReportID)
 );
