@@ -24,6 +24,15 @@ class MakeReport {
         $query->bind_param("iiss", $postID, $isQuestion, $reportTopic, $reportComments);
         $query->execute();
 
+        if (isQuestion == 0) 
+            $sql = "UPDATE AnswerPost SET IsUnderReview = 1 WHERE AnswerID = ?";
+        else
+            $sql = "UPDATE QuestionPost SET IsUnderReview = 1 WHERE PostID = ?";
+
+        $query = DB::$db->prepare($sql);
+        $query->bind_param("i", $postID);
+        $query->execute();
+
         $query->close();
         DB::$db->close();
     }
