@@ -10,6 +10,8 @@ let store = (set) => ({
     setQuestion: (value) => set((state) =>({question: value})),
     userObjExplore: null,
     setUserobjexplore: (value) => set((state) => ({userObjExplore: value})),
+    currPost: null,
+    setCurrpost: (value) => set((state) => ({currPost: value})),
 });
 
 store = devtools(store);

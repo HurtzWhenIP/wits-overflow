@@ -1,7 +1,7 @@
 .prompt {
     background: #fff;
     padding: 20em;
-    z-index: 2;
+    z-index: 20;
     border-radius: 0.5em;
     margin-left: -half_of_the_div;
     position: fixed;

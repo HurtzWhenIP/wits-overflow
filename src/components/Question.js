@@ -1,11 +1,12 @@
 import '../styles/Question.css';
 import { useHistory } from 'react-router-dom';
 import useStore from '../hooks/useStore';
+import Reportbtn from '../components/Reportbtn';
 
 function Question({ question }) {
 
   const history = useHistory();
-  const setQuestion = useStore(state=> state.setQuestion);
+  const setQuestion = useStore(state => state.setQuestion);
 
   const openPage = () => {
     setQuestion(question);
@@ -20,8 +21,9 @@ function Question({ question }) {
         <div className="parag">
           {question.PostContent}
         </div>
-        <h3 style={question.Solved ? {color: 'green'} : {color: 'red'}}>{question.Solved ? "Solved" : "Unsolved"}</h3>
-        <span className="quest_button" onClick={()=> {openPage()}}>Read more</span>
+        <h3 style={question.Solved ? { color: 'green' } : { color: 'red' }}>{question.Solved ? "Solved" : "Unsolved"}</h3>
+        <span className="quest_button" onClick={() => { openPage() }}>Read more</span>
+        <Reportbtn post={question} isQuestion={true}/>
       </div>
     </div>
   );

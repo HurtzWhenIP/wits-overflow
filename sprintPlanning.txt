@@ -1,78 +1,53 @@
-Reveiw:
--Pleased with Ui and deliverables
--comments on main questions page: more card centralized layout
--UI will be fleshed out as sprints go on 
 
-Sprint 2: (Due 19th Sept)
-	Specific Question Page: (5 user stories) user stories:
-		Answers => text-based
-		card format for question page
-		Create new answer button 
-		Edit an answer => Only add to end of answer
-		Drop down render => View all Comments + add comments
-		Vote on question and answer => one vote per user
-		Person who asked a question can mark answer as helpful or correct 
-		
-Sprint3: (Due 10th oct)
-	-Update Ui to include who asked/posted (1 user story) 
-	"Given I am a registered user, when i am on a specific question page, then I should be able to see the user who posted the viewable question and answers"
-	=> Flesh out profile
-	-User Engagements stats: (2 user stories = tracking + showing)
-	"Given i am a user, when i interact with the forum functions such as asking/answering and voting on questions/answers then my engagements stats should be tracked and monitored"
-	"Given i am a user, when my interactions with the forum functions such as asking/answering and voting on questions/answers are tracked, then i should be able to view my engagements and be shown a metric based on my interactions"
-		how many questionas asked => upvs and downvs for answers
-		how many upvs and downvs on answers
-		hot many comments user has
-	
-	-View another users profile + place to navigate profiles (2 user stories => viewing + searching)
-	"Given i am a user when i open the community section of the webapp, then i should be able to list and search for other users"
-	"given i am a user when i select a user from the community section of the webapp then i should be able to view their profile information"
-		-edit whats viewable
-		-click on "poster" on comments/questions/answers to take you to poster profile
-		
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	-Including Forums in app: (Forums Page)
-		click on forum => gneral page for a specific forum => Signup to be a mod + sub to forum
-		specific forums for specific questions
-		forums will have subscribers, owner, moderators(validate ans + ques) 
-		to become mod => sub to forum and owner validates moderator, however there is a required engagement value to be held
- 
-Further Forward:	
-	-Achievments:
-	
-	-mods can 
-	
-	-filters + tags
-	
-===========================================================================================================================================================================================================
-8. User engagement stats (keep track of these): (1)
-	(num questions asked) 1
-	(num questions answered) 1
-	(num comments made) 0.1
-	(num upvotes and downvotes received - forum and in general)
-	(user engagement value - weighting of all things above)
-	
-9. View another user's profile - check stats, questions asked and answered, achievements (later on), spaces in (later on), follow them (later on)
+Sprint 4
+* Moderate questions and answers (4 user stories)
+* Achievements (1)
+
+In detail:
+1. Moderate questions:
+
+    Allow any user to make a report against a question, report button goto -> question report page
+    The report page has:
+        the question at the top with its details (user who asked, upvotes, downvotes)
+        report option checkboxes (inappropriate, false information, etc.)
+        a description textbox for more details (not necessary to fill in)
+        submit button or discard button (just go back and nothing changes if discard)
+    If a report is made for a question, moderation is done in the backend - count num reports plus net votes and decide to delete questions or not. (Decide moderation model here - consider stats we collected)
+    If a question gets deleted, it does not appear in the questions page and only the question maker can view his deleted question in his profile page. Clicking on it will take the user to a page where everything is disabled and there is a report message for it being removed.
+
+2. Moderate answers:
+
+    Allow any user to make a report against an answer, report button goto-> answer report page
+    The report page is similar to the question one but with the answer and its details at the top.
+    Once a report is made, then the answer is under moderation - active reports exist.
+    For the user who made the answer, their answer will have a flag saying it is under moderation - nothing else. They won't get notifications. They will only see this if they view their answer in that page.
+    For the question maker, they will see that an answer is under moderation and will click on a button to moderate it goto-> report summary page.
+    The report summary page has:
+        The answer at the top.
+        Each report listed below in chronological order where active reports are highlighted.
+        Options at the bottom to keep or remove the answer.
+    If an answer is removed, then it won't appear for anyone (not even the answer maker).
+    If an answer is kept, then everything goes back to normal. The answer still and exists and is no longer under moderation (i.e. no active reports exist). Question maker can still view the report summary page but no interactions.
+    If a new report is made on an answer that already had previous reports then the process is repeated.
+
+3. Moderate comments:
+
+    The post maker (question maker or answer maker) is allowed to delete a comment under their post.
+    The comment will then be rewritten as comment deleted but still remain there.
+    The comment maker can still see their comment but it will also have a message stating their comment was deleted and not visible to the public. (Maybe have a stroke through their comment?)
+
+4. Achievements:
+
+     Section in profile page;
+     A badge (icon) for a specific achievement plus a description of this achievement.
+     Other users should be able to see this when they view another user's profile page.
+     At least 5 varying achievements.
 
 
-===========================================================================================================From Nico=======================================================================================
+The user stories are:
 
-Sprint 2:
-	5. Specific Question Page - The question at the top, followed by answers to the questions (3 user stories)
-		(Question - who asked, description, metadata)
-		(Answers - who answered, description)
-		(Create a new answer)
-		(Editing - add to the end) 
-	6. Comment on questions and answers (1)
-	7. Vote on questions and answers and question asker can mark a correct answer (1/2)
-	
-Sprint 3: 
-	8. User engagement stats (keep track of these): (1)
-		(num questions asked) 1
-		(num questions answered) 1
-		(num comments made) 0.1
-		(num upvotes and downvotes received - forum and in general)
-		(user engagement value - weighting of all things above)
-	9. View another user's profile - check stats, questions asked and answered, achievements (later on), spaces in (later on), follow them (later on)
-
-	10. Spaces/forums - specific spaces where you ask and answer questions in a field like cs, phys
+    moderate questions
+    moderate answers
+    view and interact with report summary page
+    moderate comments
+    achievements

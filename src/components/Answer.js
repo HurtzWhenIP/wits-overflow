@@ -7,6 +7,7 @@ import axios from '../apis/ForumServer';
 import Loading from "./Loading";
 import useStore from "../hooks/useStore";
 import { useHistory } from "react-router-dom";
+import Reportbtn from "./Reportbtn";
 
 function Answer({ answer }) {
   const history = useHistory();
@@ -68,14 +69,14 @@ function Answer({ answer }) {
   }
 
   useEffect(() => {
-    if(profstatus === 200){
+    if (profstatus === 200) {
       setUserobjexplore(profresponse[0]);
       history.push('profile');
     }
     return () => {
       console.log((status === 200) ? 'fetched profile' : 'fetching profile...');
     };
-  }, [profstatus,profresponse]);
+  }, [profstatus, profresponse]);
 
   return (
     <div className="mainQuestionBox answerBoxx">
@@ -94,15 +95,17 @@ function Answer({ answer }) {
         </div>
         <div>{answer && <Voter post={answer} isQuestion={false} />}</div>
 
-        <div className="postUserInfo" style={{float: "right !important"}} onClick={viewPoster}>
-            <span>Posted By:</span>
-            <h4 style={{margin: '0'}}>{answer.FirstName} {answer.LastName}</h4>
-          </div>
+        <div className="postUserInfo" style={{ float: "right !important" }} onClick={viewPoster}>
+          <span>Posted By:</span>
+          <h4 style={{ margin: '0' }}>{answer.FirstName} {answer.LastName}</h4>
+        </div>
+
+        <Reportbtn post={answer} isQuestion={false}/>
       </div>
 
       <div className="voteCounter">
-        <span style={{ color: 'green',margin: " 0 2em" }}>Upvotes: {answer.UpVotes}</span>
-        <span style={{ color: 'red',margin: "0 2em"}}>Downvotes: {answer.DownVotes}</span>
+        <span style={{ color: 'green', margin: " 0 2em" }}>Upvotes: {answer.UpVotes}</span>
+        <span style={{ color: 'red', margin: "0 2em" }}>Downvotes: {answer.DownVotes}</span>
       </div>
 
       {appendAnswer && (

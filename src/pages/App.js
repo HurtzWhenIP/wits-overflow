@@ -12,6 +12,7 @@ import Community from './Community';
 import useStore from '../hooks/useStore';
 import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
+import Reportpage from './Reportpage';
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
             </Route>
             <Route path='/community'>
               <Community/>
+            </Route>
+            <Route path='/reportpage'>
+              <Reportpage/>
             </Route>
             <Route component={Notfound}/>
           </Switch>

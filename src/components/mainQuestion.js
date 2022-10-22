@@ -8,6 +8,7 @@ import axios from '../apis/ForumServer';
 import { useEffect } from 'react';
 import Loading from '../components/Loading';
 import { useHistory } from "react-router-dom";
+import Reportbtn from "./Reportbtn";
 
 function MainQuestion() {
 
@@ -114,6 +115,8 @@ function MainQuestion() {
           </h3>
           
           {(userObj.UserID === question.UserID) && <button className='markerBtn' onClick={setSolve} style={{ color: question.Solved ? "red" : "green" }}>Mark Question as {question.Solved ? "Unsolved" : "Solved"}</button>}
+
+          <Reportbtn post={question} isQuestion={true}/>
         </div>
         <div>
           <Voter post={question} isQuestion={true}/>
