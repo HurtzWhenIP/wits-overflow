@@ -10,15 +10,14 @@ class GetReportSummary {
 
         // Reading in the request
         $json = $json[DB::$payloadLabel];
-        $postID = $json['PostID'];
-        $isQuestion = $json['IsQuestion'];
+        $answerID = $json['AnswerID'];
 
         $sql = "SELECT Topic, Comments, DateCreated FROM Reports " . 
-               "WHERE PostID = ? AND IsQuestion = ? AND IsReviewed = FALSE " . 
+               "WHERE PostID = ? AND IsQuestion = 0 AND IsReviewed = 0 " . 
                "ORDER BY DateCreated DESC";
 
         $query = DB::$db->prepare($sql);
-        $query->bind_param("ii", $postID, $isQuestion);
+        $query->bind_param("i", $answerID);
         $query->execute();
 
         // Formatting the output into a json array

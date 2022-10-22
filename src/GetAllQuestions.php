@@ -14,7 +14,7 @@ class GetAllQuestions {
                 "FROM User, QuestionPost " . 
                 "LEFT JOIN QuestionVoteTally as vt " . 
                 "ON QuestionPost.PostID = vt.QuestionID " . 
-                "WHERE User.UserID = QuestionPost.UserID";
+                "WHERE User.UserID = QuestionPost.UserID AND QuestionPost.IsHidden = 0";
 
         $query = DB::$db->prepare($sql);
         $query->execute();

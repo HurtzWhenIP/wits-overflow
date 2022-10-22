@@ -10,22 +10,18 @@ class IgnoreReports {
 
         // Reading in the request
         $json = $json[DB::$payloadLabel];
-        $postID = $json['PostID'];
-        $isQuestion = $json['IsQuestion'];
+        $answerID = $json['AnswerID'];
 
-        $sql = "UPDATE Reports SET IsReviewed = 1 WHERE PostID = ? AND IsQuestion = ?";
+        $sql = "UPDATE Reports SET IsReviewed = 1 WHERE PostID = ? AND IsQuestion = 0";
 
         $query = DB::$db->prepare($sql);
-        $query->bind_param("ii", $postID, $isQuestion);
+        $query->bind_param("i", $answerID);
         $query->execute();
 
-        if (isQuestion == 0) 
-            $sql = "UPDATE AnswerPost SET IsUnderReview = 0 WHERE AnswerID = ?";
-        else
-            $sql = "UPDATE QuestionPost SET IsUnderReview = 0 WHERE PostID = ?";
+        $sql = "UPDATE AnswerPost SET IsUnderReview = 1 WHERE AnswerID = ?";
 
         $query = DB::$db->prepare($sql);
-        $query->bind_param("i", $postID);
+        $query->bind_param("i", $answerID);
         $query->execute();
 
         $query->close();
