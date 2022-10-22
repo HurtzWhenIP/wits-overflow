@@ -13,6 +13,7 @@ import useStore from '../hooks/useStore';
 import {Navbar,NavItem,DropdownMenu} from '../components/Navbar';
 import {FcHome,FcExpand} from 'react-icons/fc';
 import Reportpage from './Reportpage';
+import Reportsummary from './Reportsummary';
 
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
             </Route>
             <Route path='/reportpage'>
               <Reportpage/>
+            </Route>
+            <Route path='/reportsummary'>
+              <Reportsummary/>
             </Route>
             <Route component={Notfound}/>
           </Switch>

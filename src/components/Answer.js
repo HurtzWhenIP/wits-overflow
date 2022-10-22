@@ -8,12 +8,14 @@ import Loading from "./Loading";
 import useStore from "../hooks/useStore";
 import { useHistory } from "react-router-dom";
 import Reportbtn from "./Reportbtn";
+import ReportSummbtn from "./ReportSummbtn";
 
 function Answer({ answer }) {
   const history = useHistory();
 
 
   const userObj = useStore(state => state.userObj);
+  const question = useStore(state => state.question);
   const setUserobjexplore = useStore(state => state.setUserobjexplore);
 
   const [open, setOpen] = useState(false);
@@ -101,12 +103,18 @@ function Answer({ answer }) {
         </div>
 
         <Reportbtn post={answer} isQuestion={false}/>
+
+        {(answer.UserID === userObj.UserID) && <h3 style={{color: 'red'}}>{answer.IsUnderReview ? "Under Review" : ""}</h3>}
+
+        {(userObj.UserID === question.UserID) && <ReportSummbtn post={answer} isQuestion={false}/>}
       </div>
 
       <div className="voteCounter">
         <span style={{ color: 'green', margin: " 0 2em" }}>Upvotes: {answer.UpVotes}</span>
         <span style={{ color: 'red', margin: "0 2em" }}>Downvotes: {answer.DownVotes}</span>
       </div>
+
+      
 
       {appendAnswer && (
         <div>
