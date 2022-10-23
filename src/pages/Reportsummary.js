@@ -103,7 +103,6 @@ function Reportsummary() {
 
             <div className='reportBox'>
                 {(reports !== null) && reports.map((report) => {
-                    console.log('fuck');
                     return(<Report report={report}/>);
                     })}
             </div>

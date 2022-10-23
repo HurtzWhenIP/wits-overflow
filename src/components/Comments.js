@@ -55,29 +55,46 @@ function Comments({ post, closer, isQuestion }) {
                         CommentContent: commentContent
                     }
                 }
-            })
+            });
         }
     };
 
     useEffect(() => {
-        if(cstatus === 200){
+        if (cstatus === 200) {
             window.location.reload(false);
         }
         return () => {
             console.log((cstatus === 200) ? "Posted Comment" : "Posting Comment...?");
         };
-    }, [cstatus,cresponse]);
+    }, [cstatus, cresponse]);
+
+    const handleClick = (cid) => {
+        axiosFetch({
+            axiosInstance: axios,
+            method: 'POST',
+            url: 'HideComment.php',
+            requestConfig: {
+                data: {
+                    CommentID: cid
+                }
+            }
+        });
+    };
 
     return (
         <div className="commentsHolder">
-            {loading && !data ? (
+            {(loading) && !data ? (
                 <span>Loading...</span>
             ) : (
                 data.map((comment) => {
                     return (
                         <div className="commentText">
-                            <span>{comment.CommentContent}</span>
+                            <span style={{textDecoration: (comment.IsHidden && (comment.UserID === userObj.UserID)) ? 'line-through' : 'none'}}>{((comment.UserID !== userObj.UserID) && comment.IsHidden) ? "COMMENT REMOVED" : comment.CommentContent}</span>
                             <span>~{comment.FirstName} {comment.LastName}</span>
+                            {(post.UserID === userObj.UserID) && <button className='commentBtn' onClick={(e) => {
+                                e.preventDefault();
+                                handleClick(comment.CommentID);
+                            }}>delete</button>}
                         </div>
                     );
                 })
@@ -85,7 +102,7 @@ function Comments({ post, closer, isQuestion }) {
 
             {((response.length === 0) && (status === 200)) && <h4>No Comment Unfortunately...</h4>}
 
-            {cloading && <Loading caption="Posting Comment"/>}
+            {cloading && <Loading caption="Posting Comment" />}
 
             {newComment && (
                 <div style={{ marginTop: "1em" }}>

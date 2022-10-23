@@ -37,7 +37,7 @@ function QuestionPage() {
   }, [response, status]);
 
   //handling posting of new answer
-  const [astatus,aresponse,aerror,aloading,axiosFetch] = useAxiosFunction();
+  const [astatus, aresponse, aerror, aloading, axiosFetch] = useAxiosFunction();
 
   const submitAnswer = (e) => {
     e.preventDefault();
@@ -45,33 +45,33 @@ function QuestionPage() {
     setInvalid(false);
 
     //post answer
-    if(newAnswer && (answerContent.length > 0)){
-        axiosFetch({
-            axiosInstance: axios,
-            method: 'POST',
-            url: 'AddAnswer.php',
-            requestConfig: {
-                data: {
-                    UserID: userObj.UserID,
-                    ParentPostID: question.PostID,
-                    AnswerContent: answerContent
-                }
-            }
-        })
+    if (newAnswer && (answerContent.length > 0)) {
+      axiosFetch({
+        axiosInstance: axios,
+        method: 'POST',
+        url: 'AddAnswer.php',
+        requestConfig: {
+          data: {
+            UserID: userObj.UserID,
+            ParentPostID: question.PostID,
+            AnswerContent: answerContent
+          }
+        }
+      })
     }
-    else{
-        setInvalid(true);
+    else {
+      setInvalid(true);
     }
   };
 
   useEffect(() => {
-    if(astatus === 200){
-        window.location.reload(false);
+    if (astatus === 200) {
+      window.location.reload(false);
     }
     return () => {
-        console.log((astatus === 200) ? "Answer Posted" : "Posting Answer...");
+      console.log((astatus === 200) ? "Answer Posted" : "Posting Answer...");
     };
-  }, [astatus,aresponse]);
+  }, [astatus, aresponse]);
 
   //TODO Change question data at top and include question asker
 
@@ -80,46 +80,50 @@ function QuestionPage() {
       {loading && (
         <Loading caption="Hmm... Maybe it just isn't a question worth answers" />
       )}
-      {aloading && <Loading caption="Posting Answer"/>}
+      {aloading && <Loading caption="Posting Answer" />}
       <div>
         <MainQuestion question={question} />
       </div>
-
-      {newAnswer && (
-        <div>
-          <div className="newAnswerText">
-            <textarea
-              placeholder="Enter Your answer..."
-              className="descText"
-              id="descText"
-              cols="50"
-              rows="6"
-              onChange={(e) => {
-                setAnswercontent(e.target.value);
-              }}
-            ></textarea>
+        { question.IsHidden ? <h1 style={{color: 'red'}}>Post removed by moderator</h1>
+     : <>
+        {newAnswer && (
+          <div>
+            <div className="newAnswerText">
+              <textarea
+                placeholder="Enter Your answer..."
+                className="descText"
+                id="descText"
+                cols="50"
+                rows="6"
+                onChange={(e) => {
+                  setAnswercontent(e.target.value);
+                }}
+              ></textarea>
+            </div>
           </div>
+        )}
+
+        {newAnswer && invalid && (
+          <h4 style={{ color: "red" }}>answer submission incomplete</h4>
+        )}
+        <button
+          className="newAnswerBtn"
+          style={{ marginTop: "2.5em" }}
+          onClick={submitAnswer}
+        >
+          {newAnswer ? "Post Answer" : "New Answer +"}
+        </button>
+
+        <span style={{ fontSize: "3em", margin: "0.5em" }}>Answers</span>
+        <div className="answerHolder">
+          {(!loading && answers) &&
+            answers.map((answer) => {
+              return <Answer answer={answer} key={answer.AnswerID} />;
+            })}
         </div>
-      )}
-
-      {newAnswer && invalid && (
-        <h4 style={{ color: "red" }}>answer submission incomplete</h4>
-      )}
-      <button
-        className="newAnswerBtn"
-        style={{ marginTop: "2.5em" }}
-        onClick={submitAnswer}
-      >
-        {newAnswer ? "Post Answer" : "New Answer +"}
-      </button>
-
-      <span style={{ fontSize: "3em", margin: "0.5em" }}>Answers</span>
-      <div className="answerHolder">
-        {(!loading && answers) &&
-          answers.map((answer) => {
-            return <Answer answer={answer} key={answer.AnswerID} />;
-          })}
-      </div>
+      
+      </>
+      }
     </div>
   );
 }

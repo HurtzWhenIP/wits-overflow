@@ -7,6 +7,7 @@ import Loading from './Loading';
 function ProfileInfo({visiting,userObj,edit,setEdit}){
 
     const [data,setData] = useState(null);
+    const [achievements,setAchievements] = useState(null);
 
     const [status,response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
@@ -19,6 +20,26 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
         }
     });
 
+    const [astatus,aresponse, aerror, aloading, arefetch] = useAxios({
+        axiosInstance: axios,
+        method: 'POST',
+        url: 'GetAchievements.php',
+        requestConfig: {
+            data: {
+                UserID: userObj.UserID
+            }
+        }
+    });
+
+    useEffect(() => {
+        if(astatus === 200){
+            setAchievements(aresponse[0]);
+        }
+        return(() => {
+            console.log(aresponse);
+        })
+    },[astatus,aresponse]);
+
     useEffect(() => {
         if(status === 200){
             setData(response[0]);
@@ -27,6 +48,13 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
             console.log(response[0]);
         };
     }, [status,response]);
+
+    //Achievements
+    //AnswersAsked => Problem Solver
+    //QuestionAsked => Enquisitionor
+    //AnswerUpVote => Quality Solutions
+    //QuestionUpVote => Riddle me this
+    //UpVotes => POWER USER
 
     return(
         <div className="infoBox">
@@ -41,12 +69,11 @@ function ProfileInfo({visiting,userObj,edit,setEdit}){
             <div className="infoBox1">
                 <div className="profImg"></div>
                 <div className='infoBox2'>
-                    <h2
-                    style={{
-                        margin: "1.8em 0.2em"
-                    }}
-                    >{`Name: ${userObj.FirstName} ${userObj.LastName}`}</h2>
+                    <h5>{`Name: ${userObj.FirstName} ${userObj.LastName}`}</h5>
                     <h5>{`Email: ${userObj.Email}`}</h5>
+                    <div className='achievements'>
+
+                    </div>
                 </div>
             </div>
             <>

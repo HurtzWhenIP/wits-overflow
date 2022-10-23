@@ -12,9 +12,8 @@
 .commentText {
   border-top: 2px solid rgb(0, 59, 92);
   padding: 0.5em;
-  display: flex;
-  align-content: space-between;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 6fr 1fr 0.8fr;
 }
 
 .commentsHolder {
@@ -29,4 +28,14 @@
   height: 0.5em;
   margin: 0;
   padding: 0.5em;
+}
+
+.commentBtn{
+  padding: 0em 0.2em;
+  display: inline-block;
+  font-size: 24px;
+  transform: scale(.7, .7);
+  margin: 0;
+  background-color: rgb(187, 0, 0);
+  border: red;
 }
