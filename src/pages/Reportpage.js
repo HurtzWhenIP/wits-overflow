@@ -39,7 +39,7 @@ function Reportpage() {
                 requestConfig: {
                     data: {
                         PostID: isQuestion ? currPost.PostID : currPost.AnswerID,
-                        "isQuestion": isQuestion,
+                        "IsQuestion": isQuestion ? 1 : 0,
                         ReportTopic: topic,
                         ReportComments: desc
                     }
