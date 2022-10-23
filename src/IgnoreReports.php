@@ -18,7 +18,7 @@ class IgnoreReports {
         $query->bind_param("i", $answerID);
         $query->execute();
 
-        $sql = "UPDATE AnswerPost SET IsUnderReview = 1 WHERE AnswerID = ?";
+        $sql = "UPDATE AnswerPost SET IsUnderReview = 0 WHERE AnswerID = ?";
 
         $query = DB::$db->prepare($sql);
         $query->bind_param("i", $answerID);

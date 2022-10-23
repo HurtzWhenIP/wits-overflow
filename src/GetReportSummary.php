@@ -12,9 +12,9 @@ class GetReportSummary {
         $json = $json[DB::$payloadLabel];
         $answerID = $json['AnswerID'];
 
-        $sql = "SELECT Topic, Comments, DateCreated FROM Reports " . 
-               "WHERE PostID = ? AND IsQuestion = 0 AND IsReviewed = 0 " . 
-               "ORDER BY DateCreated DESC";
+        $sql = "SELECT Topic, Comments, DateCreated, IsReviewed FROM Reports " . 
+               "WHERE PostID = ? AND IsQuestion = 0 " . 
+               "ORDER BY DateCreated, IsReviewed DESC";
 
         $query = DB::$db->prepare($sql);
         $query->bind_param("i", $answerID);
