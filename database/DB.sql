@@ -38,6 +38,7 @@ CREATE TABLE Comment (
     UserID INT NOT NULL,
     CommentContent TEXT NOT NULL,
     IsQuestion BOOLEAN NOT NULL DEFAULT 0,
+    IsHidden BOOLEAN DEFAULT 0,
     PRIMARY KEY (CommentID),
     FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
@@ -71,11 +72,12 @@ CREATE VIEW QuestionVoteTally as (
     GROUP BY PostID
 );
 
-CREATE TABLE PostReports (
+CREATE TABLE Reports (
     ReportID INT NOT NULL AUTO_INCREMENT,
     PostID INT NOT NULL,
     IsQuestion BOOLEAN NOT NULL DEFAULT 0,
     Topic TEXT,
     Comments TEXT,
+    IsReviewed BOOLEAN DEFAULT 0,
     PRIMARY KEY(ReportID)
 );
