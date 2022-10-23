@@ -14,7 +14,7 @@ class GetReportSummary {
 
         $sql = "SELECT Topic, Comments, DateCreated, IsReviewed FROM Reports " . 
                "WHERE PostID = ? AND IsQuestion = 0 " . 
-               "ORDER BY DateCreated, IsReviewed DESC";
+               "ORDER BY IsReviewed, DateCreated DESC";
 
         $query = DB::$db->prepare($sql);
         $query->bind_param("i", $answerID);
