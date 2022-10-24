@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="11" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.102710">
-    <testsuite name="Backend API" tests="11" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.102710">
-      <testsuite name="GetUserAnswersTest" file="/var/www/wits-overflow/tests/GetUserAnswersTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.018111">
-        <testcase name="testValidCall" class="GetUserAnswersTest" classname="GetUserAnswersTest" file="/var/www/wits-overflow/tests/GetUserAnswersTest.php" line="31" assertions="1" time="0.018111"/>
+  <testsuite name="" tests="12" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.104034">
+    <testsuite name="Backend API" tests="12" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.104034">
+      <testsuite name="GetReportSummaryTest" file="/var/www/wits-overflow/tests/GetReportSummaryTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.008897">
+        <testcase name="testValidCall" class="GetReportSummaryTest" classname="GetReportSummaryTest" file="/var/www/wits-overflow/tests/GetReportSummaryTest.php" line="32" assertions="1" time="0.008897"/>
       </testsuite>
-      <testsuite name="ValidateQuestionAuthorTest" file="/var/www/wits-overflow/tests/ValidateQuestionAuthorTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.008971">
-        <testcase name="testValidCall" class="ValidateQuestionAuthorTest" classname="ValidateQuestionAuthorTest" file="/var/www/wits-overflow/tests/ValidateQuestionAuthorTest.php" line="15" assertions="1" time="0.008971"/>
+      <testsuite name="GetUserAnswersTest" file="/var/www/wits-overflow/tests/GetUserAnswersTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.011669">
+        <testcase name="testValidCall" class="GetUserAnswersTest" classname="GetUserAnswersTest" file="/var/www/wits-overflow/tests/GetUserAnswersTest.php" line="31" assertions="1" time="0.011669"/>
       </testsuite>
-      <testsuite name="GetCommentsTest" file="/var/www/wits-overflow/tests/GetCommentsTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006719">
-        <testcase name="testValidCall" class="GetCommentsTest" classname="GetCommentsTest" file="/var/www/wits-overflow/tests/GetCommentsTest.php" line="33" assertions="1" time="0.006719"/>
+      <testsuite name="ValidateQuestionAuthorTest" file="/var/www/wits-overflow/tests/ValidateQuestionAuthorTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.007077">
+        <testcase name="testValidCall" class="ValidateQuestionAuthorTest" classname="ValidateQuestionAuthorTest" file="/var/www/wits-overflow/tests/ValidateQuestionAuthorTest.php" line="15" assertions="1" time="0.007077"/>
       </testsuite>
-      <testsuite name="GetSingleQuestionTest" file="/var/www/wits-overflow/tests/GetSingleQuestionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.007169">
-        <testcase name="testValidCall" class="GetSingleQuestionTest" classname="GetSingleQuestionTest" file="/var/www/wits-overflow/tests/GetSingleQuestionTest.php" line="32" assertions="1" time="0.007169"/>
+      <testsuite name="GetCommentsTest" file="/var/www/wits-overflow/tests/GetCommentsTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005732">
+        <testcase name="testValidCall" class="GetCommentsTest" classname="GetCommentsTest" file="/var/www/wits-overflow/tests/GetCommentsTest.php" line="33" assertions="1" time="0.005732"/>
       </testsuite>
-      <testsuite name="GetUserProfileTest" file="/var/www/wits-overflow/tests/GetUserProfileTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005041">
-        <testcase name="testValidCall" class="GetUserProfileTest" classname="GetUserProfileTest" file="/var/www/wits-overflow/tests/GetUserProfileTest.php" line="32" assertions="1" time="0.005041"/>
+      <testsuite name="GetSingleQuestionTest" file="/var/www/wits-overflow/tests/GetSingleQuestionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.007249">
+        <testcase name="testValidCall" class="GetSingleQuestionTest" classname="GetSingleQuestionTest" file="/var/www/wits-overflow/tests/GetSingleQuestionTest.php" line="32" assertions="1" time="0.007249"/>
       </testsuite>
-      <testsuite name="GetUsersTest" file="/var/www/wits-overflow/tests/GetUsersTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005088">
-        <testcase name="testValidCall" class="GetUsersTest" classname="GetUsersTest" file="/var/www/wits-overflow/tests/GetUsersTest.php" line="31" assertions="1" time="0.005088"/>
+      <testsuite name="GetUserProfileTest" file="/var/www/wits-overflow/tests/GetUserProfileTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005727">
+        <testcase name="testValidCall" class="GetUserProfileTest" classname="GetUserProfileTest" file="/var/www/wits-overflow/tests/GetUserProfileTest.php" line="32" assertions="1" time="0.005727"/>
       </testsuite>
-      <testsuite name="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005003">
-        <testcase name="testValidCall" class="LoginTest" classname="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" line="33" assertions="1" time="0.005003"/>
+      <testsuite name="GetUsersTest" file="/var/www/wits-overflow/tests/GetUsersTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006170">
+        <testcase name="testValidCall" class="GetUsersTest" classname="GetUsersTest" file="/var/www/wits-overflow/tests/GetUsersTest.php" line="31" assertions="1" time="0.006170"/>
       </testsuite>
-      <testsuite name="RegisterTest" file="/var/www/wits-overflow/tests/RegisterTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.024838">
-        <testcase name="testValidCall" class="RegisterTest" classname="RegisterTest" file="/var/www/wits-overflow/tests/RegisterTest.php" line="37" assertions="1" time="0.024838"/>
+      <testsuite name="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005865">
+        <testcase name="testValidCall" class="LoginTest" classname="LoginTest" file="/var/www/wits-overflow/tests/LoginTest.php" line="33" assertions="1" time="0.005865"/>
       </testsuite>
-      <testsuite name="SearchQuestionTest" file="/var/www/wits-overflow/tests/SearchQuestionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006169">
-        <testcase name="testValidCall" class="SearchQuestionTest" classname="SearchQuestionTest" file="/var/www/wits-overflow/tests/SearchQuestionTest.php" line="32" assertions="1" time="0.006169"/>
+      <testsuite name="RegisterTest" file="/var/www/wits-overflow/tests/RegisterTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.022450">
+        <testcase name="testValidCall" class="RegisterTest" classname="RegisterTest" file="/var/www/wits-overflow/tests/RegisterTest.php" line="37" assertions="1" time="0.022450"/>
       </testsuite>
-      <testsuite name="SearchUserTest" file="/var/www/wits-overflow/tests/SearchUserTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005930">
-        <testcase name="testValidCall" class="SearchUserTest" classname="SearchUserTest" file="/var/www/wits-overflow/tests/SearchUserTest.php" line="32" assertions="1" time="0.005930"/>
+      <testsuite name="SearchQuestionTest" file="/var/www/wits-overflow/tests/SearchQuestionTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006742">
+        <testcase name="testValidCall" class="SearchQuestionTest" classname="SearchQuestionTest" file="/var/www/wits-overflow/tests/SearchQuestionTest.php" line="32" assertions="1" time="0.006742"/>
       </testsuite>
-      <testsuite name="UserStatsTest" file="/var/www/wits-overflow/tests/UserStatsTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.009671">
-        <testcase name="testValidCall" class="UserStatsTest" classname="UserStatsTest" file="/var/www/wits-overflow/tests/UserStatsTest.php" line="32" assertions="1" time="0.009671"/>
+      <testsuite name="SearchUserTest" file="/var/www/wits-overflow/tests/SearchUserTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005900">
+        <testcase name="testValidCall" class="SearchUserTest" classname="SearchUserTest" file="/var/www/wits-overflow/tests/SearchUserTest.php" line="32" assertions="1" time="0.005900"/>
+      </testsuite>
+      <testsuite name="UserStatsTest" file="/var/www/wits-overflow/tests/UserStatsTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.010557">
+        <testcase name="testValidCall" class="UserStatsTest" classname="UserStatsTest" file="/var/www/wits-overflow/tests/UserStatsTest.php" line="32" assertions="1" time="0.010557"/>
       </testsuite>
     </testsuite>
   </testsuite>
