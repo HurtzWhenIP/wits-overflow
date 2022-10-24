@@ -15,7 +15,9 @@ class SearchUsers {
         $username = $json['Username'];
 
         // Generating and executing the SQL
-        $sql = "SELECT UserID, FirstName, LastName FROM User WHERE CONCAT(FirstName, LastName) LIKE '%" . $username . "%'";
+        $sql = "SELECT UserID, FirstName, LastName, Email FROM User " . 
+        "WHERE CONCAT(FirstName, LastName) LIKE '%" . $username . "%'" . 
+        " OR Email LIKE '%" . $username . "%'";
         $query = DB::$db->prepare($sql);
         $query->execute();
 
