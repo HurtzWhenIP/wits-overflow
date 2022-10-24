@@ -35,8 +35,8 @@ class GetAchievements {
 
         // Generating and executing the SQL
         $sql = "SELECT " . 
-            "IF(QAsk.AskedCount > 3, 1, 0) as AnswerAskedAchievement, " . 
-            "IF(QAns.AnsweredCount > 3, 1, 0) as QuestionAskedAchievement, " . 
+            "IF(QAns.AnsweredCount > 3, 1, 0) as AnswerAskedAchievement, " . 
+            "IF(QAsk.AskedCount > 3, 1, 0) as QuestionAskedAchievement, " . 
             "IF(IFNULL(AV.UpVotes, 0) > 3, 1, 0) as AnswerUpVoteAchievement, " . 
             "IF(IFNULL(QV.UpVotes, 0) > 3, 1, 0) as QuestionUpVoteAchievement " . 
             "FROM (" . $userQuestionsAsked . ") as QAsk, " . 
