@@ -47,7 +47,19 @@ In detail:
 The user stories are:
 
     moderate questions
+    	-Backend Moderation
+    	-Question gets "removed" at report threshold(report limit > 10)
+    	-Question poster can still find question on profile page => indicate removal
     moderate answers
+    	-Answ maker only sees under report flag
+    	-Ques owner has access to report summary page per answer => "deactivate" reports || remove answer
     view and interact with report summary page
+    	-report summary will show reports in order => highlight "active" reports
+    	-"deactivate" reports || remove answer
     moderate comments
+    	-post owner can 'hide' comments
+    	-arbitrary users will only see "COMMENT REMOVED"
+    	-comment owners will see a line through indicating comment removal
     achievements
+    	-5 achievements
+    	-achiement summary page

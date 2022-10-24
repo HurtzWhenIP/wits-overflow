@@ -34,6 +34,14 @@ function ProfileInfo({ visiting, userObj, edit, setEdit }) {
     });
 
     useEffect(() => {
+        arefetch();
+        refetch();
+        return () => {
+            console.log(visiting ? "Visiting User" : "User Page");
+        };
+    }, [visiting]);
+
+    useEffect(() => {
         if (astatus === 200) {
             setAchievements(aresponse[0]);
         }
@@ -96,18 +104,18 @@ function ProfileInfo({ visiting, userObj, edit, setEdit }) {
                 <h1>{userObj.UserDescription}</h1>
             </>
 
-            {achievements && <div className='achievements'>
+            {(achievements) && <div className='achievements'>
                 <h3 style={{ textDecoration: 'underline', margin: '0', flexGrow: '2' }}><FcInfo
                     onMouseOver={showInfo}
                     onMouseLeave={hideInfo}
                     size={25}
                     className='infoBtn'/> User Achievements: </h3>
                 <div className='achievHolder'>
-                    {achievements.AnswerAskedAchievement && <h4 className="achievTxt"><FcApproval size={30} /> Problem Solver</h4>}
-                    {achievements.QuestionAskedAchievement && <h4 className="achievTxt"><FcDecision size={30} /> Enquisitionor</h4>}
-                    {achievements.AnswerUpVoteAchievement && <h4 className="achievTxt"> <FcRating size={30} /> Quality Solutions</h4>}
-                    {achievements.QuestionUpVoteAchievement && <h4 className="achievTxt"> <FcPuzzle size={30} /> Golden Curiosity</h4>}
-                    {(achievements.QuestionUpVoteAchievement && achievements.AnswerUpVoteAchievement) && <h4 className="achievTxt"><FcVip size={30} /> POWER USER</h4>}
+                    {achievements.AnswerAskedAchievement ? <h4 className="achievTxt"><FcApproval size={30} /> Problem Solver</h4> : <p></p>}
+                    {achievements.QuestionAskedAchievement ? <h4 className="achievTxt"><FcDecision size={30} /> Enquisitionor</h4> : <p></p>}
+                    {achievements.AnswerUpVoteAchievement ? <h4 className="achievTxt"> <FcRating size={30} /> Quality Solutions</h4> : <p></p>}
+                    {achievements.QuestionUpVoteAchievement ? <h4 className="achievTxt"> <FcPuzzle size={30} /> Golden Curiosity</h4> : <p></p>}
+                    {(achievements.QuestionUpVoteAchievement && achievements.AnswerUpVoteAchievement) ? <h4 className="achievTxt"><FcVip size={30} /> POWER USER</h4> : <p></p>}
 
                 </div>
             </div>}

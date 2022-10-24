@@ -91,7 +91,7 @@ function Comments({ post, closer, isQuestion }) {
                         <div className="commentText">
                             <span style={{textDecoration: (comment.IsHidden && (comment.UserID === userObj.UserID)) ? 'line-through' : 'none'}}>{((comment.UserID !== userObj.UserID) && comment.IsHidden) ? "COMMENT REMOVED" : comment.CommentContent}</span>
                             <span>~{comment.FirstName} {comment.LastName}</span>
-                            {(post.UserID === userObj.UserID) && <button className='commentBtn' onClick={(e) => {
+                            {((post.UserID === userObj.UserID) && (!comment.IsHidden)) && <button className='commentBtn' onClick={(e) => {
                                 e.preventDefault();
                                 handleClick(comment.CommentID);
                             }}>delete</button>}

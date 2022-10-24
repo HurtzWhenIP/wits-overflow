@@ -81,7 +81,7 @@ function MainQuestion() {
   }, [profstatus,profresponse]);
 
   return (
-    <div className="mainQuestionBox">
+    <div className="mainQuestionBox" disabled={question.IsHidden ? true : false} style={{pointerEvents: question.IsHidden && 'none'}}>
       {loading && <Loading caption="Changing question state" />}
       {profloading && <Loading caption="Fetching User Credentials" />}
       <div className="MainQuestion">
