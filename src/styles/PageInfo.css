@@ -1,39 +1,83 @@
-.infoBox{
-    padding: 5px 2em;
-    font-size: larger;
-    display: flex;
-    flex-flow: column;
-    text-align: center;
+.infoBox {
+  padding: 5px 2em;
+  font-size: larger;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
 }
 
-.infoBox1{
-    padding: 1em;
-    border: 2.5px solid rgb(0,59,92);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    display: flex;
-    flex-flow: row;
-    margin: 1em;
-    border-radius: 5px;
+.infoBox1 {
+  padding: 1em;
+  border: 2.5px solid rgb(0, 59, 92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  display: flex;
+  flex-flow: row;
+  margin: 1em;
+  border-radius: 5px;
 }
 
-.profImg{
-    background-image: url('../imgs/witsKudu.png');
-    height: 12em;
-    width: 12em;
-    border-radius: 5px;
-    background-size: cover;
+.profImg {
+  background-image: url("../imgs/witsKudu.png");
+  height: 12em;
+  width: 12em;
+  border-radius: 5px;
+  background-size: cover;
 }
 
-.statsBox{
-    border: 2.5px solid rgb(0,59,92);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    border-radius: 5px;
+.statsBox {
+  border: 2.5px solid rgb(0, 59, 92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  border-radius: 5px;
 }
 
-h5{
-    margin: 0.2em;
+h5 {
+  margin: 0.2em;
 }
 
-.score{
-    margin: 0.2em;
+.score {
+  margin: 0.2em;
+}
+
+.achievTxt {
+  margin: 0.5em;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.achievements {
+  border: 2.5px solid rgb(0, 59, 92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 7.5px;
+  border-radius: 5px;
+  height: 11em;
+}
+
+.achievHolder {
+  height: 10em;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+}
+
+.achievInfoBox {
+  padding: 1em;
+  position: absolute;
+  top: 12vh;
+  left: 25vw;
+  z-index: 11;
+  height: 75vh;
+  width: 50vw;
+  border: 2.5px solid rgb(0, 59, 92);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 16px 30px;
+  border-radius: 5px;
+  background-color: azure;
+}
+
+.infoBtn {
+  position: relative;
+  float: left;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  cursor: pointer;
 }

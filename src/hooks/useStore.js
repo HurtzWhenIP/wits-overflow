@@ -15,7 +15,7 @@ let store = (set) => ({
 });
 
 store = devtools(store);
-// store = persist(store, { name: 'user_data' });
+store = persist(store, { name: 'user_data' });
 
 const useStore = create(store);
 
