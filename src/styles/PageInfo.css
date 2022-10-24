@@ -80,4 +80,9 @@ h5 {
   padding-left: 1em;
   padding-top: 0.2em;
   cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+
+.infoBtn:hover{
+  transform: scale(1.25);
 }

@@ -101,7 +101,7 @@ function ProfileInfo({ visiting, userObj, edit, setEdit }) {
                 </div>
             </div>
             <>
-                <h1>{userObj.UserDescription}</h1>
+                <h1 style={{margin: '0.35em'}}>{userObj.UserDescription}</h1>
             </>
 
             {(achievements) && <div className='achievements'>

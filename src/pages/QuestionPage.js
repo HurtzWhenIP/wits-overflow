@@ -76,7 +76,7 @@ function QuestionPage() {
   //TODO Change question data at top and include question asker
 
   return (
-    <div className="QuestionPage">
+    <div className="QuestionPage" style={{pointerEvents: question.IsHidden && 'none'}}>
       {loading && (
         <Loading caption="Hmm... Maybe it just isn't a question worth answers" />
       )}
@@ -84,8 +84,7 @@ function QuestionPage() {
       <div>
         <MainQuestion question={question} />
       </div>
-        { question.IsHidden ? <h1 style={{color: 'red'}}>Post removed by moderator</h1>
-     : <>
+        
         {newAnswer && (
           <div>
             <div className="newAnswerText">
@@ -121,9 +120,6 @@ function QuestionPage() {
               return <Answer answer={answer} key={answer.AnswerID} />;
             })}
         </div>
-      
-      </>
-      }
     </div>
   );
 }

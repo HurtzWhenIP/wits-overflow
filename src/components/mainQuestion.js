@@ -101,10 +101,10 @@ function MainQuestion() {
             volutpat, feugiat.
           </p>
 
-          <div className="postUserInfo" onClick={viewPoster}>
+          {!question.IsHidden && <div className="postUserInfo" onClick={viewPoster}>
             <span>Posted By:</span>
             <h4 style={{margin: '0'}}>{question.FirstName} {question.LastName}</h4>
-          </div>
+          </div>}
 
 
           <h3
@@ -114,12 +114,12 @@ function MainQuestion() {
             {question.Solved ? "Solved" : "Unsolved"}
           </h3>
           
-          {(userObj.UserID === question.UserID) && <button className='markerBtn' onClick={setSolve} style={{ color: question.Solved ? "red" : "green" }}>Mark Question as {question.Solved ? "Unsolved" : "Solved"}</button>}
+          {((userObj.UserID === question.UserID) && !question.IsHidden) && <button className='markerBtn' onClick={setSolve} style={{ color: question.Solved ? "red" : "green" }}>Mark Question as {question.Solved ? "Unsolved" : "Solved"}</button>}
 
-          <Reportbtn post={question} isQuestion={true}/>
+          {!question.IsHidden && <Reportbtn post={question} isQuestion={true}/>}
         </div>
         <div>
-          <Voter post={question} isQuestion={true}/>
+          {!question.IsHidden && <Voter post={question} isQuestion={true}/>}
         </div>
       </div>
 
