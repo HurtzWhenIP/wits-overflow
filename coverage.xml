@@ -1,44 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.73563218390805" branch-rate="0" lines-covered="192" lines-valid="261" branches-covered="0" branches-valid="0" complexity="36" version="0.4" timestamp="1666650298">
+<coverage line-rate="0.82730923694779" branch-rate="0" lines-covered="206" lines-valid="249" branches-covered="0" branches-valid="0" complexity="35" version="0.4" timestamp="1666650593">
   <sources>
     <source>/var/www/wits-overflow/src</source>
   </sources>
   <packages>
-    <package name="" line-rate="0" branch-rate="0" complexity="1">
-      <classes>
-        <class name="App\DeleteAnswer" filename="DeleteAnswer.php" line-rate="0" branch-rate="0" complexity="1">
-          <methods>
-            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="1">
-              <lines>
-                <line number="8" hits="0"/>
-                <line number="10" hits="0"/>
-                <line number="13" hits="0"/>
-                <line number="16" hits="0"/>
-                <line number="19" hits="0"/>
-                <line number="20" hits="0"/>
-                <line number="21" hits="0"/>
-                <line number="22" hits="0"/>
-                <line number="24" hits="0"/>
-                <line number="25" hits="0"/>
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="8" hits="0"/>
-            <line number="10" hits="0"/>
-            <line number="13" hits="0"/>
-            <line number="16" hits="0"/>
-            <line number="19" hits="0"/>
-            <line number="20" hits="0"/>
-            <line number="21" hits="0"/>
-            <line number="22" hits="0"/>
-            <line number="24" hits="0"/>
-            <line number="25" hits="0"/>
-          </lines>
-        </class>
-      </classes>
-    </package>
     <package name="" line-rate="0.91666666666667" branch-rate="0" complexity="3">
       <classes>
         <class name="App\GetAchievements" filename="GetAchievements.php" line-rate="1" branch-rate="0" complexity="3">
@@ -635,44 +601,44 @@
         </class>
       </classes>
     </package>
-    <package name="" line-rate="0" branch-rate="0" complexity="2">
+    <package name="" line-rate="0.875" branch-rate="0" complexity="2">
       <classes>
-        <class name="App\ValidateUser" filename="ValidateUser.php" line-rate="0" branch-rate="0" complexity="2">
+        <class name="App\ValidateUser" filename="ValidateUser.php" line-rate="1" branch-rate="0" complexity="2">
           <methods>
-            <method name="makeCall" signature="" line-rate="0" branch-rate="0" complexity="2">
+            <method name="makeCall" signature="" line-rate="1" branch-rate="0" complexity="2">
               <lines>
-                <line number="9" hits="0"/>
-                <line number="10" hits="0"/>
-                <line number="13" hits="0"/>
-                <line number="16" hits="0"/>
-                <line number="19" hits="0"/>
-                <line number="20" hits="0"/>
-                <line number="21" hits="0"/>
-                <line number="22" hits="0"/>
-                <line number="25" hits="0"/>
-                <line number="27" hits="0"/>
-                <line number="28" hits="0"/>
-                <line number="31" hits="0"/>
-                <line number="32" hits="0"/>
-                <line number="34" hits="0"/>
+                <line number="9" hits="1"/>
+                <line number="10" hits="1"/>
+                <line number="13" hits="1"/>
+                <line number="16" hits="1"/>
+                <line number="19" hits="1"/>
+                <line number="20" hits="1"/>
+                <line number="21" hits="1"/>
+                <line number="22" hits="1"/>
+                <line number="25" hits="1"/>
+                <line number="27" hits="1"/>
+                <line number="28" hits="1"/>
+                <line number="31" hits="1"/>
+                <line number="32" hits="1"/>
+                <line number="34" hits="1"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="9" hits="0"/>
-            <line number="10" hits="0"/>
-            <line number="13" hits="0"/>
-            <line number="16" hits="0"/>
-            <line number="19" hits="0"/>
-            <line number="20" hits="0"/>
-            <line number="21" hits="0"/>
-            <line number="22" hits="0"/>
-            <line number="25" hits="0"/>
-            <line number="27" hits="0"/>
-            <line number="28" hits="0"/>
-            <line number="31" hits="0"/>
-            <line number="32" hits="0"/>
-            <line number="34" hits="0"/>
+            <line number="9" hits="1"/>
+            <line number="10" hits="1"/>
+            <line number="13" hits="1"/>
+            <line number="16" hits="1"/>
+            <line number="19" hits="1"/>
+            <line number="20" hits="1"/>
+            <line number="21" hits="1"/>
+            <line number="22" hits="1"/>
+            <line number="25" hits="1"/>
+            <line number="27" hits="1"/>
+            <line number="28" hits="1"/>
+            <line number="31" hits="1"/>
+            <line number="32" hits="1"/>
+            <line number="34" hits="1"/>
           </lines>
         </class>
       </classes>

@@ -25,6 +25,7 @@
             <file>src/GetPopularQuestions.php</file>
             <file>src/GetUsers.php</file>
             <file>src/DeleteUser.php</file>
+            <file>src/DeleteAnswer.php</file>
             <file>src/SetQuestionSolved.php</file>
             <file>src/db.php</file>
         </exclude>
