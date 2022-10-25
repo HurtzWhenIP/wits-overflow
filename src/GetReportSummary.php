@@ -12,6 +12,15 @@ class GetReportSummary {
         $json = $json[DB::$payloadLabel];
         $answerID = $json['AnswerID'];
 
+        /*
+            Get all report information about a specific post
+            based on it's PostID and IsQuestion values.
+            The order will be based on the unreviewed
+            reports in order of recency by the date created.
+            Thereafter, the reviewed reports would be also
+            ordered by the date created
+        */
+
         $sql = "SELECT Topic, Comments, DateCreated, IsReviewed FROM Reports " . 
                "WHERE PostID = ? AND IsQuestion = 0 " . 
                "ORDER BY IsReviewed, DateCreated DESC";

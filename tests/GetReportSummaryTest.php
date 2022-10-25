@@ -13,6 +13,11 @@ class GetReportSummaryTest extends \PHPUnit\Framework\TestCase
     {
         $request = new stdClass();
 
+        /*
+            Create a request with
+            AnswerID = 1
+        */
+
         $bodyContent = new stdClass();
         $bodyContent->AnswerID = 1;
 

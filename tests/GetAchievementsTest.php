@@ -13,6 +13,11 @@ class GetAchievementsTest extends \PHPUnit\Framework\TestCase
     {
         $request = new stdClass();
 
+        /*
+            Create a request for the achievements
+            with a UserID of 4
+        */
+
         $bodyContent = new stdClass();
         $bodyContent->UserID = 4;
 
@@ -31,6 +36,7 @@ class GetAchievementsTest extends \PHPUnit\Framework\TestCase
     */
     public function testValidCall() 
     {
+        // Confirm the achievements
         self::generateInput();
         $this->expectOutputRegex('/\"AnswerAskedAchievement\":1/');
         $this->expectOutputRegex('/\"QuestionAskedAchievement\":0/');

@@ -13,8 +13,13 @@ class GetCommentsTest extends \PHPUnit\Framework\TestCase
     {
         $request = new stdClass();
 
+        /*
+            Create a request for comments with
+            PostID of 1 and IsQuestion being false
+        */
+
         $bodyContent = new stdClass();
-        $bodyContent->PostID = 1; //not sure what actual ID should be?
+        $bodyContent->PostID = 1;
         $bodyContent->IsQuestion = false;
 
         $request->data = $bodyContent;

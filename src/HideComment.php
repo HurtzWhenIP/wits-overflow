@@ -12,6 +12,7 @@ class HideComment {
         $json = $json[DB::$payloadLabel];
         $answerID = $json['CommentID'];
 
+        // Set the comment's hidden property to true
         $sql = "UPDATE Comment SET IsHidden = 1 WHERE CommentID = ?";
 
         $query = DB::$db->prepare($sql);

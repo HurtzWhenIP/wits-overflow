@@ -31,6 +31,12 @@ class MakeReport {
         $query->bind_param("iissi", $postID, $isQuestion, $reportTopic, $reportComments, $isReviewed);
         $query->execute();
 
+        /*
+            Based on whether the request if for a question or answer,
+            either the UnderReview for the answer or for the question
+            must be enabled.
+        */
+        
         if ($isQuestion == 0) 
             $sql = "UPDATE AnswerPost SET IsUnderReview = 1 WHERE AnswerID = ?";
         else
@@ -40,6 +46,7 @@ class MakeReport {
         $query->bind_param("i", $postID);
         $query->execute();
 
+        // Backend moderation for question report limit
         if ($isQuestion == 1 && self::getQuestionReportCount($postID) > self::REPORT_LIMIT) {
             $sql = "UPDATE QuestionPost SET IsUnderReview = 0, IsHidden = 1 " . 
                    "WHERE PostID = ?"; 
@@ -52,6 +59,7 @@ class MakeReport {
         DB::$db->close();
     }
 
+    // Return the number of reports a specific question has so far
     public static function getQuestionReportCount($postID) {
         $sql = "SELECT COUNT(*) as CountReports " .
                "FROM Reports " . 
