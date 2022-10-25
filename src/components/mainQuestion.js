@@ -11,7 +11,7 @@ import { useHistory } from "react-router-dom";
 import Reportbtn from "./Reportbtn";
 
 function MainQuestion() {
-
+  //hook to handle navigation within app
   const history = useHistory();
 
   const [open, setOpen] = useState(false);

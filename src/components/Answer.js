@@ -13,17 +13,17 @@ import ReportSummbtn from "./ReportSummbtn";
 function Answer({ answer }) {
   const history = useHistory();
 
-
+  //objects to use from global store
   const userObj = useStore(state => state.userObj);
   const question = useStore(state => state.question);
   const setUserobjexplore = useStore(state => state.setUserobjexplore);
-
+  //stateful components
   const [open, setOpen] = useState(false);
   const [appendAnswer, setAppendanswer] = useState(false);
   const [answerContent, setAnswercontent] = useState('');
-
+  //hook for http reqs
   const [status, response, error, loading, axiosFetch] = useAxiosFunction();
-
+  //request handler function with incl verification/validation 
   const submitAnswer = (e) => {
     e.preventDefault();
     setAppendanswer(!appendAnswer);

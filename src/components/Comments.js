@@ -7,12 +7,13 @@ import useAxiosFunction from "../hooks/useAxiosFunction";
 import Loading from '../components/Loading';
 
 function Comments({ post, closer, isQuestion }) {
+    //stateful component initialization
     const [data, setData] = useState(null);
     const [newComment, setNewComment] = useState(false);
     const [commentContent, setCommentcontent] = useState("");
-
+    //object from global store
     const userObj = useStore((state) => state.userObj);
-
+    //immediate hook for http req
     const [status, response, error, loading, refetch] = useAxios({
         axiosInstance: axios,
         method: "POST",
@@ -35,9 +36,9 @@ function Comments({ post, closer, isQuestion }) {
         };
     }, [status, response]);
 
-    //handle submiting a new comment
+    //hook for http req usage
     const [cstatus, cresponse, cerror, cloading, axiosFetch] = useAxiosFunction();
-
+    //handle submiting a new comment
     const submitComment = (e) => {
         e.preventDefault();
         setNewComment(!newComment);
@@ -68,6 +69,7 @@ function Comments({ post, closer, isQuestion }) {
         };
     }, [cstatus, cresponse]);
 
+    //handle 'deletion' of comment
     const handleClick = (cid) => {
         axiosFetch({
             axiosInstance: axios,

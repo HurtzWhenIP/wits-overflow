@@ -1,4 +1,5 @@
 async function hash(string) {
+  //function to hash text using sha-256 encryption
     const utf8 = new TextEncoder().encode(string);
     const hashBuffer = await crypto.subtle.digest('SHA-256', utf8);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
