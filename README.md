@@ -6,6 +6,43 @@
 
 [![codecov](https://codecov.io/gh/HurtzWhenIP/wits-overflow/branch/devbackend/graph/badge.svg?token=NYK8S2FSQ4)](https://codecov.io/gh/HurtzWhenIP/wits-overflow)
 
+<h1>Wits-Overflow</h1>
+<hr><p>In this project you will be able to interact with an online forum for the Wits school
+of CSAM, in the vein of other such forums like Stack Overflow</p><h2>General Information</h2>
+<hr><ul>
+<li>Providing a general forum for use across Wits CSAM allows for a platform for students to connect and discuss Computer Science and Mathematics related topics</li>
+</ul><ul>
+<li>Imagine needing help/guidance for an assignment and you've been completely stuck for weeks? Imagine being able to help students/classmates and wits alumni alike who are in need of assistance?</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>php</li>
+</ul><ul>
+<li>MySQL</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>Ask and answer questions</li>
+</ul><ul>
+<li>Comment on questions and answers</li>
+</ul><ul>
+<li>Vote on questions and answers</li>
+</ul><ul>
+<li>Mark answers as correct (question asker)</li>
+</ul><ul>
+<li>Moderate questions and answers (moderator)</li>
+</ul><ul>
+<li>Earn achievements for participating in the forum</li>
+</ul><ul>
+<li>etc..</li>
+</ul>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
