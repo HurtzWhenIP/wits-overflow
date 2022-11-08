@@ -112,7 +112,7 @@ function QuestionPage() {
         >
           {newAnswer ? "Post Answer" : "New Answer +"}
         </button>
-
+        {question.IsHidden && <h1 style={{color: 'red',fontSize: 'xxx-large'}}>Question Removed by Moderation</h1>}
         <span style={{ fontSize: "3em", margin: "0.5em" }}>Answers</span>
         <div className="answerHolder">
           {(!loading && answers) &&
